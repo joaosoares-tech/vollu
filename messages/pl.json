@@ -1,0 +1,88 @@
+{
+  "Index": {
+    "badge": "Bezpieczna Platforma Europejska",
+    "title": "Bezpieczne Europejskie Narzędzia Web",
+    "description": "Potężne aplikacje w przeglądarce, działające w całości online. Szybkie, prywatne i w pełni zaszyfrowane.",
+    "searchPlaceholder": "Szukaj narzędzi...",
+    "platform": "Platforma",
+    "toolsTitle": "Narzędzia Dla Ciebie",
+    "pdfMergeTitle": "Połącz PDF",
+    "pdfMergeDesc": "Łącz wiele plików PDF w jeden dokument bezpiecznie w swojej przeglądarce.",
+    "videoEditorSoon": "Edytor Wideo (Wkrótce)",
+    "videoEditorDesc": "Przycinaj, wycinaj i ulepszaj wideo bezpośrednio w przeglądarce.",
+    "gdpr": "Zgodność z RODO",
+    "euInfra": "Europejska Infrastruktura Serwerowa",
+    "encrypted": "Szyfrowanie End-to-End",
+    "splitPdfTitle": "Rozdziel PDF",
+    "splitPdfDesc": "Wyodrębnij konkretne strony lub podziel PDF na wiele plików.",
+    "pdfToImageTitle": "PDF do Obrazu",
+    "pdfToImageDesc": "Błyskawicznie konwertuj strony PDF na wysokiej jakości obrazy JPG.",
+    "protectPdfTitle": "Chroń PDF",
+    "protectPdfDesc": "Zabezpiecz swój PDF hasłem lub usuń istniejące zabezpieczenie."
+  },
+  "PdfMerge": {
+    "back": "Powrót do Narzędzi",
+    "title": "Połącz Pliki PDF",
+    "description": "Łącz wiele plików PDF bezpiecznie. Twoje pliki nigdy nie opuszczają Twojego urządzenia.",
+    "selectFiles": "Wybierz pliki PDF",
+    "dropHint": "Upuść pliki tutaj lub kliknij, aby przeglądać",
+    "btnMerging": "Łączenie na Twoim urządzeniu...",
+    "btnMerge": "Połącz PDF Teraz",
+    "success": "PDF Połączone Pomyślnie!",
+    "btnDownload": "Pobierz PDF",
+    "btnMore": "Połącz Więcej",
+    "trust": "Przetwarzane lokalnie. Żadne pliki nie są przesyłane na nasze serwery."
+  },
+  "Layout": {
+    "footerRights": "Wszelkie prawa zastrzeżone.",
+    "privacy": "Polityka Prywatności",
+    "terms": "Warunki Świadczenia Usług",
+    "contact": "Kontakt"
+  },
+  "Legal": {
+    "backToTools": "Powrót do Narzędzi",
+    "termsTitle": "Warunki Świadczenia Usług",
+    "termsIntro": "Korzystając z VOLLU.app, zgadzasz się na niniejsze warunki. Prosimy o ich uważne przeczytanie.",
+    "liabilityTitle": "Wyłączenie Odpowiedzialności",
+    "liabilityText": "VOLLU.app jest dostarczany w stanie 'TAKIM, JAKIM JEST', bez żadnych gwarancji. Nie ponosimy odpowiedzialnosti za utratę danych, uszkodzenie plików lub pośrednie konsekwencje wynikające z korzystania z naszych narzędzi. Użytkownik bierze na siebie całe ryzyko związane z przetwarzaniem plików.",
+    "privacyTitle": "Polityka Prywatności",
+    "privacyIntro": "Twoja prywatność jest naszą główną obietnicą. Wierzymy w radykalną prywatność dla wszystkich użytkowników.",
+    "dataHandlingTitle": "Jak postępujemy z plikami",
+    "dataHandlingText": "Żadne pliki nigdy nie są przesyłane na nasze serwery. Całe przetwarzanie (łączenie, edycja, konwersja) odbywa się całkowicie w Twojej przeglądarce przy użyciu technologii WebAssembly. Twoje dane pozostają na Twoim urządzeniu.",
+    "useOfServiceTitle": "1. Korzystanie z Usługi",
+    "useOfServiceText": "VOLLU.app zapewnia narzędzia oparte na przeglądarce do użytku osobistego i profesjonalnego. Zgadzasz się korzystać z tych narzędzi zgodnie ze wszystkimi obowiązującymi przepisami prawa i regulacjami.",
+    "performanceTitle": "2. Wydajność",
+    "performanceText": "Ponieważ całe przetwarzanie odbywa się po stronie klienta, wydajność zależy od specyfikacji Twojego urządzenia. VOLLU nie gwarantuje konkretnych prędkości przetwarzania.",
+    "noTrackingTitle": "1. Brak Plików Cookie Śledzących",
+    "noTrackingText": "VOLLU.app nie używa śledzących plików cookie. Używamy Umami (samodzielnie hostowanego narzędzia analitycznego skoncentrowanego na prywatności) do zbierania anonimowych danych o użytkowaniu bez identyfikacji poszczególnych użytkowników.",
+    "zeroUploadTitle": "2. Polityka Zero Upload",
+    "zeroUploadText": "Nasza technologia opiera się na WebAssembly. Pozwala to silnikom konwersji PDF i edycji wideo działać bezpośrednio w Twojej przeglądarce. Nigdy nie widzimy Twoich plików, nigdy nie przechowujemy Twoich danych i nigdy nie udostępniamy Twoich informacji."
+  },
+  "SplitPDF": {
+    "title": "Rozdziel Strony PDF",
+    "description": "Wyodrębnij konkretne strony lub zakresy lokalnie ze swojego dokumentu.",
+    "rangePlaceholder": "np. 1-3, 5, 8-10",
+    "btnSplit": "Rozdziel PDF Teraz",
+    "btnSplitting": "Rozdzielanie lokalnie...",
+    "invalidRange": "Nieprawidłowy format zakresu stron.",
+    "pageCount": "dokument ma {count} stron"
+  },
+  "PDFToImage": {
+    "title": "Konwerter PDF do Obrazu",
+    "description": "Konwertuj strony PDF na wysokiej jakości obrazy JPG (skala 2x).",
+    "btnConvert": "Konwertuj na Obrazy",
+    "btnConverting": "Renderowanie stron {current}/{total}...",
+    "downloadAll": "Pobierz Wszystko (ZIP)",
+    "resolution": "Wysoka Rozdzielczość (odpowiednik 300 DPI)"
+  },
+  "Security": {
+    "title": "Chroń i Odblokuj PDF",
+    "description": "Zabezpiecz swoje dokumenty szyfrowaniem AES-128 lub usuń hasła.",
+    "modeProtect": "Chroń PDF",
+    "modeUnlock": "Odblokuj PDF",
+    "password": "Hasło",
+    "btnProtect": "Zaszyfruj PDF",
+    "btnUnlock": "Usuń Zabezpieczenie",
+    "statusLocal": "Plik przetworzony lokalnie. Dane nie zostały wysłane na serwer."
+  }
+}

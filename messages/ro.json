@@ -1,0 +1,88 @@
+{
+  "Index": {
+    "badge": "Platformă Europeană Secură",
+    "title": "Instrumente Web Europene Secure",
+    "description": "Aplicații puternice bazate pe browser care rulează complet online. Rapide, private și complet criptate.",
+    "searchPlaceholder": "Căutați instrumente...",
+    "platform": "Platformă",
+    "toolsTitle": "Instrumente Pentru Tine",
+    "pdfMergeTitle": "Îmbinare PDF",
+    "pdfMergeDesc": "Combinați mai multe fișiere PDF într-un singur document în siguranță în browser.",
+    "videoEditorSoon": "Editor Video (În curând)",
+    "videoEditorDesc": "Tăiați, decupați și îmbunătățiți videoclipuri direct în browser.",
+    "gdpr": "Conform GDPR",
+    "euInfra": "Infrastructură de Server în UE",
+    "encrypted": "Criptat End-to-End",
+    "splitPdfTitle": "Divizare PDF",
+    "splitPdfDesc": "Extrageți pagini specifice sau separați PDF-ul în mai multe fișiere.",
+    "pdfToImageTitle": "PDF în Imagine",
+    "pdfToImageDesc": "Convertiți instantaneu paginile PDF în imagini JPG de înaltă calitate.",
+    "protectPdfTitle": "Protejare PDF",
+    "protectPdfDesc": "Protejați PDF-ul cu o parolă sau eliminați protecția existentă."
+  },
+  "PdfMerge": {
+    "back": "Înapoi la Instrumente",
+    "title": "Îmbinare Fișiere PDF",
+    "description": "Combinați mai multe PDF-uri în siguranță. Fișierele nu părăsesc niciodată dispozitivul.",
+    "selectFiles": "Selectați fișierele PDF",
+    "dropHint": "Trageți fișierele aici sau faceți clic pentru a răsfoi",
+    "btnMerging": "Îmbinare pe dispozitivul tău...",
+    "btnMerge": "Îmbină PDF-urile acum",
+    "success": "PDF-uri îmbinate cu succes!",
+    "btnDownload": "Descărcare PDF",
+    "btnMore": "Îmbină mai multe",
+    "trust": "Procesat local. Niciun fișier nu este încărcat pe serverele noastre."
+  },
+  "Layout": {
+    "footerRights": "Toate drepturile rezervate.",
+    "privacy": "Politica de Confidențialitate",
+    "terms": "Termeni și Condiții",
+    "contact": "Contact"
+  },
+  "Legal": {
+    "backToTools": "Înapoi la Instrumente",
+    "termsTitle": "Termeni și Condiții",
+    "termsIntro": "Prin utilizarea VOLLU.app, sunteți de acord cu acești termeni. Vă rugăm să îi citiți cu atenție.",
+    "liabilityTitle": "Exonerarea de Răspundere",
+    "liabilityText": "VOLLU.app este furnizat 'AȘA CUM ESTE' fără nicio garanție. Nu suntem responsabili pentru nicio pierdere de date, deteriorare a fișierelor sau consecințe indirecte rezultate din utilizarea instrumentelor noastre. Utilizatorul își asumă toate riscurile asociate procesării fișierelor.",
+    "privacyTitle": "Politica de Confidențialitate",
+    "privacyIntro": "Confidențialitatea ta este promisiunea noastră de bază. Credem în confidențialitatea radicală pentru toți utilizatorii.",
+    "dataHandlingTitle": "Cum gestionăm fișierele",
+    "dataHandlingText": "Niciun fișier nu este încărcat vreodată pe serverele noastre. Toată procesarea (îmbinare, editare, conversie) are loc integral în browserul tău, folosind tehnologia WebAssembly. Datele tale rămân pe dispozitivul tău.",
+    "useOfServiceTitle": "1. Utilizarea Serviciului",
+    "useOfServiceText": "VOLLU.app oferă instrumente bazate pe browser pentru uz personal și profesional. Sunteți de acord să utilizați aceste instrumente în conformitate cu toate legile și reglementările aplicabile.",
+    "performanceTitle": "2. Performanță",
+    "performanceText": "Deoarece toată procesarea este pe partea clientului, performanța depinde de specificațiile dispozitivului tău. VOLLU nu garantează viteze de procesare specifice.",
+    "noTrackingTitle": "1. Fără Cookie-uri de Urmărire",
+    "noTrackingText": "VOLLU.app nu utilizează cookie-uri de urmărire. Folosim Umami (un instrument de analiză găzduit pe servere proprii și axat pe confidențialitate) pentru a colecta date anonime de utilizare fără a identifica utilizatorii individuali.",
+    "zeroUploadTitle": "2. Politica Zero Upload",
+    "zeroUploadText": "Tehnologia noastră se bazează pe WebAssembly. Acest lucru permite motoarelor de conversie PDF și editare video să ruleze direct în browserul tău. Nu vedem niciodată fișierele tale, nu stocăm niciodată datele tale și nu partajăm niciodată informațiile tale."
+  },
+  "SplitPDF": {
+    "title": "Divizare Pagini PDF",
+    "description": "Extrageți pagini sau intervale specifice local din documentul dumneavoastră.",
+    "rangePlaceholder": "ex: 1-3, 5, 8-10",
+    "btnSplit": "Divide PDF acum",
+    "btnSplitting": "Divizare locală...",
+    "invalidRange": "Format de interval de pagini nevalid.",
+    "pageCount": "documentul are {count} pagini"
+  },
+  "PDFToImage": {
+    "title": "Convertor PDF în Imagine",
+    "description": "Convertiți paginile PDF în imagini JPG de înaltă calitate (scară 2x).",
+    "btnConvert": "Convertire în Imagini",
+    "btnConverting": "Randare pagini {current}/{total}...",
+    "downloadAll": "Descărcare Tot (ZIP)",
+    "resolution": "Rezoluție Înaltă (echivalent 300 DPI)"
+  },
+  "Security": {
+    "title": "Protejare și Deblocare PDF",
+    "description": "Securizați documentele cu criptare AES-128 sau eliminați parolele.",
+    "modeProtect": "Protejare PDF",
+    "modeUnlock": "Deblocare PDF",
+    "password": "Parolă",
+    "btnProtect": "Criptare PDF",
+    "btnUnlock": "Eliminare Protecție",
+    "statusLocal": "Fișier procesat local. Nu au fost trimise date către server."
+  }
+}

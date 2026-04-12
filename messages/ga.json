@@ -1,0 +1,88 @@
+{
+  "Index": {
+    "badge": "Ardán Slán Eorpach",
+    "title": "Uirlisí Gréasáin Eorpacha Slána",
+    "description": "Feidhmchláir chumhachtacha bunaithe ar bhrabhsálaí a ritheann go hiomlán ar líne. Tapa, príobháideach, agus criptithe go hiomlán.",
+    "searchPlaceholder": "Cuardaigh uirlisí...",
+    "platform": "Ardán",
+    "toolsTitle": "Uirlisí Duitse",
+    "pdfMergeTitle": "Cumaisc PDF",
+    "pdfMergeDesc": "Comhcheangail comhaid PDF iolracha i ndoiciméad amháin go slán i do bhrabhsálaí.",
+    "videoEditorSoon": "Eagarthóir Físe (Go luath)",
+    "videoEditorDesc": "Baileáil, gearr agus feabhsaigh físeáin go díreach i do bhrabhsálaí.",
+    "gdpr": "Comhlíontach le GDPR",
+    "euInfra": "Bonneagar Freastalaí an AE",
+    "encrypted": "Criptithe Deireadh go Deireadh",
+    "splitPdfTitle": "Roinn PDF",
+    "splitPdfDesc": "Bain leathanaigh ar leith nó scar do PDF ina chomhaid iolracha.",
+    "pdfToImageTitle": "PDF go hÍomhá",
+    "pdfToImageDesc": "Tiontaigh leathanaigh PDF go híomhánna JPG ardchaighdeáin láithreach.",
+    "protectPdfTitle": "Cosain PDF",
+    "protectPdfDesc": "Cosain do PDF le pasfhocal nó bain an chosaint atá ann cheana."
+  },
+  "PdfMerge": {
+    "back": "Ar ais chuig na hUirlisí",
+    "title": "Cumaisc Comhaid PDF",
+    "description": "Comhcheangail PDFanna iolracha go slán. Ní fhágann do chomhaid do ghléas riamh.",
+    "selectFiles": "Roghnaigh comhaid PDF",
+    "dropHint": "Scaoil comhaid anseo nó cliceáil chun brabhsáil",
+    "btnMerging": "Ag cumasc ar do ghléas...",
+    "btnMerge": "Cumaisc PDFanna Anois",
+    "success": "PDFanna Cumaiscthe go Rathúil!",
+    "btnDownload": "Íoslódáil PDF",
+    "btnMore": "Cumaisc Níos Mó",
+    "trust": "Próiseáilte go háitiúil. Ní dhéantar aon chomhaid a uaslódáil chuig ár bhfreastalaithe."
+  },
+  "Layout": {
+    "footerRights": "Gach ceart ar cosaint.",
+    "privacy": "Polasaí Príobháideachta",
+    "terms": "Téarmaí Seirbhíse",
+    "contact": "Teagmháil"
+  },
+  "Legal": {
+    "backToTools": "Ar ais chuig na hUirlisí",
+    "termsTitle": "Téarmaí Seirbhíse",
+    "termsIntro": "Trí VOLLU.app a úsáid, aontaíonn tú leis na téarmaí seo. Léigh go cúramach iad, le do thoil.",
+    "liabilityTitle": "Díolúine ó Dhliteanas",
+    "liabilityText": "Soláthraítear VOLLU.app 'MAR ATÁ' gan aon bharántas. Nílimid freagrach as aon chaillteanas sonraí, damáiste do chomhaid, nó iarmhairtí indíreacha a eascraíonn as úsáid ár n-uirlisí. Glacann an t-úsáideoir le gach riosca a bhaineann le próiseáil comhad.",
+    "privacyTitle": "Polasaí Príobháideachta",
+    "privacyIntro": "Is í do phríobháideacht ár bpríomh-gheallúint. Creidimid i bpríobháideacht radacach do gach úsáideoir.",
+    "dataHandlingTitle": "Conas a láimhseálaimid comhaid",
+    "dataHandlingText": "Ní dhéantar aon chomhaid a uaslódáil chuig ár bhfreastalaithe riamh. Tarlaíonn an phróiseáil ar fad (cumasc, eagarthóireacht, tiontú) go hiomlán i do bhrabhsálaí trí úsáid a bhaint as teicneolaíocht WebAssembly. Fanann do shonraí ar do ghléas.",
+    "useOfServiceTitle": "1. Úsáid na Seirbhíse",
+    "useOfServiceText": "Soláthraíonn VOLLU.app uirlisí bunaithe ar bhrabhsálaí le haghaidh úsáid phearsanta agus ghairmiúil. Aontaíonn tú na huirlisí seo a úsáid de réir gach dlí agus rialachán is infheidhme.",
+    "performanceTitle": "2. Feidhmíocht",
+    "performanceText": "Ós rud é go bhfuil an phróiseáil ar fad ar thaobh an chliaint, braitheann feidhmíocht ar shonraíochtaí do ghléis. Ní ráthaíonn VOLLU luasanna próiseála ar leith.",
+    "noTrackingTitle": "1. Gan Fianáin Rianaithe",
+    "noTrackingText": "Ní úsáideann VOLLU.app fianáin rianaithe. Úsáidimid Umami (uirlis anailíse féin-óstáilte, atá dírithe ar phríobháideacht) chun sonraí úsáide gan ainm a bhailiú gan úsáideoirí aonair a aithint.",
+    "zeroUploadTitle": "2. Polasaí Zero Upload",
+    "zeroUploadText": "Tá ár dteicneolaíocht bunaithe ar WebAssembly. Ligeann sé seo do na hinnill tiontaithe PDF agus eagarthóireachta físe rith go díreach i do bhrabhsálaí. Ní fheicimid do chomhaid riamh, ní stórálaimid do shonraí riamh, agus ní roinnimid do chuid faisnéise riamh."
+  },
+  "SplitPDF": {
+    "title": "Roinn Leathanaigh PDF",
+    "description": "Bain leathanaigh nó raonta ar leith go háitiúil ó do dhoiciméad.",
+    "rangePlaceholder": "m.sh. 1-3, 5, 8-10",
+    "btnSplit": "Roinn PDF Anois",
+    "btnSplitting": "Ag roinnt go háitiúil...",
+    "invalidRange": "Formáid raon leathanach neamhbhailí.",
+    "pageCount": "tá {count} leathanach sa doiciméad"
+  },
+  "PDFToImage": {
+    "title": "Tiontaire PDF go hÍomhá",
+    "description": "Tiontaigh leathanaigh PDF go híomhánna JPG ardchaighdeáin (scála 2x).",
+    "btnConvert": "Tiontaigh go hÍomhánna",
+    "btnConverting": "Ag rindreáil leathanaigh {current}/{total}...",
+    "downloadAll": "Íoslódáil Gach Rud (ZIP)",
+    "resolution": "Ardtaifeach (coibhéis 300 DPI)"
+  },
+  "Security": {
+    "title": "Cosain & Díghlasáil PDF",
+    "description": "Slánaigh do dhoiciméid le criptiú AES-128 nó bain pasfhocail.",
+    "modeProtect": "Cosain PDF",
+    "modeUnlock": "Díghlasáil PDF",
+    "password": "Pasfhocal",
+    "btnProtect": "Criptigh PDF",
+    "btnUnlock": "Bain an Chosaint",
+    "statusLocal": "Comhad próiseáilte go háitiúil. Níor seoladh aon sonraí chuig an bhfreastalaí."
+  }
+}

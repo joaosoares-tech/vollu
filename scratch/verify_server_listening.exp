@@ -1,0 +1,14 @@
+#!/usr/bin/expect -f
+set password "UfQ4U4jNpS7nSthh"
+set host "212.95.40.164"
+set user "root"
+
+spawn ssh -oStrictHostKeyChecking=no $user@$host {
+    echo "--- PM2 Status ---"
+    su - vollu -c "pm2 list"
+    echo "--- Port 3011 Check ---"
+    ss -tlpn | grep 3011
+}
+expect "password:"
+send "$password\r"
+expect eof

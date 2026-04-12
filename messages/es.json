@@ -1,0 +1,88 @@
+{
+  "Index": {
+    "badge": "Plataforma Europea Segura",
+    "title": "Herramientas Web Europeas Seguras",
+    "description": "Potentes aplicaciones basadas en el navegador que funcionan completamente online. Rápidas, privadas και totalmente encriptadas.",
+    "searchPlaceholder": "Buscar herramientas...",
+    "platform": "Plataforma",
+    "toolsTitle": "Herramientas Para Ti",
+    "pdfMergeTitle": "Unir PDF",
+    "pdfMergeDesc": "Combina varios archivos PDF en un solo documento de forma segura en tu navegador.",
+    "videoEditorSoon": "Editor de Vídeo (Próximamente)",
+    "videoEditorDesc": "Recorta, corta y mejora vídeos directamente en tu navegador.",
+    "gdpr": "Cumple con el RGPD",
+    "euInfra": "Infraestructura de Servidores en la UE",
+    "encrypted": "Encriptación de Extremo a Extremo",
+    "splitPdfTitle": "Dividir PDF",
+    "splitPdfDesc": "Extrae páginas específicas o separa tu PDF en varios archivos.",
+    "pdfToImageTitle": "PDF a Imagen",
+    "pdfToImageDesc": "Convierte instantáneamente páginas PDF en imágenes JPG de alta calidad.",
+    "protectPdfTitle": "Proteger PDF",
+    "protectPdfDesc": "Protege tu PDF con una contraseña o elimina la protección existente."
+  },
+  "PdfMerge": {
+    "back": "Volver a Herramientas",
+    "title": "Unir Archivos PDF",
+    "description": "Combina varios PDF de forma segura. Tus archivos nunca salen de tu dispositivo.",
+    "selectFiles": "Seleccionar archivos PDF",
+    "dropHint": "Suelta los archivos aquí o haz clic para buscar",
+    "btnMerging": "Uniendo en tu dispositivo...",
+    "btnMerge": "Unir PDF Ahora",
+    "success": "¡PDF Unidos con Éxito!",
+    "btnDownload": "Descargar PDF",
+    "btnMore": "Unir Más",
+    "trust": "Procesado localmente. No se suben archivos a nuestros servidores."
+  },
+  "Layout": {
+    "footerRights": "Todos los derechos reservados.",
+    "privacy": "Política de Privacidad",
+    "terms": "Términos de Servicio",
+    "contact": "Contacto"
+  },
+  "Legal": {
+    "backToTools": "Volver a Herramientas",
+    "termsTitle": "Términos de Servicio",
+    "termsIntro": "Al utilizar VOLLU.app, aceptas estos términos. Por favor, léelos detenidamente.",
+    "liabilityTitle": "Exención de Responsabilidad",
+    "liabilityText": "VOLLU.app se proporciona 'TAL CUAL' sin ninguna garantía. No nos hacemos responsables de ninguna pérdida de datos, daños en archivos o consecuencias indirectas derivadas del uso de nuestras herramientas. El usuario asume todos los riesgos asociados al procesamiento de archivos.",
+    "privacyTitle": "Política de Privacidad",
+    "privacyIntro": "Tu privacidad es nuestra promesa central. Creemos en la privacidad radical para todos los usuarios.",
+    "dataHandlingTitle": "Cómo manejamos los archivos",
+    "dataHandlingText": "Nunca se suben archivos a nuestros servidores. Todo el procesamiento (fusión, edición, conversión) ocurre íntegramente en tu navegador utilizando la tecnología WebAssembly. Tus datos permanecen en tu dispositivo.",
+    "useOfServiceTitle": "1. Uso del Servicio",
+    "useOfServiceText": "VOLLU.app proporciona herramientas basadas en el navegador para uso personal και profesional. Aceptas utilizar estas herramientas de acuerdo con todas las leyes και regulaciones aplicables.",
+    "performanceTitle": "2. Rendimiento",
+    "performanceText": "Dado que todo el procesamiento es local (client-side), el rendimiento depende de las especificaciones de tu dispositivo. VOLLU no garantiza velocidades de procesamiento específicas.",
+    "noTrackingTitle": "1. Sin Cookies de Rastreo",
+    "noTrackingText": "VOLLU.app no utiliza cookies de rastreo. Utilizamos Umami (una herramienta de análisis autoalojada και centrada en la privacidad) para recopilar datos de uso anónimos sin identificar a los usuarios individuales.",
+    "zeroUploadTitle": "2. Política de Cero Carga",
+    "zeroUploadText": "Nuestra tecnología se basa en WebAssembly. Esto permite que los motores de conversión de PDF και edición de vídeo funcionen directamente en tu navegador. Nunca vemos tus archivos, nunca almacenamos tus datos και nunca compartimos tu información."
+  },
+  "SplitPDF": {
+    "title": "Dividir Páginas de PDF",
+    "description": "Extrae páginas o rangos específicos de tu documento localmente.",
+    "rangePlaceholder": "ej. 1-3, 5, 8-10",
+    "btnSplit": "Dividir PDF Ahora",
+    "btnSplitting": "Dividiendo localmente...",
+    "invalidRange": "Formato de rango de páginas no válido.",
+    "pageCount": "el documento tiene {count} páginas"
+  },
+  "PDFToImage": {
+    "title": "Convertidor de PDF a Imagen",
+    "description": "Convierte páginas de PDF en imágenes JPG de alta resolución (escala 2x).",
+    "btnConvert": "Convertir a Imágenes",
+    "btnConverting": "Renderizando páginas {current}/{total}...",
+    "downloadAll": "Descargar Todo (ZIP)",
+    "resolution": "Alta Resolución (equivalente a 300 DPI)"
+  },
+  "Security": {
+    "title": "Proteger y Desbloquear PDF",
+    "description": "Protege tus documentos con cifrado AES-128 o elimina contraseñas.",
+    "modeProtect": "Proteger PDF",
+    "modeUnlock": "Desbloquear PDF",
+    "password": "Contraseña",
+    "btnProtect": "Encriptar PDF",
+    "btnUnlock": "Eliminar Protección",
+    "statusLocal": "Archivo procesado localmente. No se enviaron datos al servidor."
+  }
+}

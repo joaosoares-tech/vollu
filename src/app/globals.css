@@ -1,26 +1,35 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  body {
+    @apply bg-bg text-dark font-sans;
+    overflow-x: hidden;
+    min-height: 100vh;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  .page-background {
+    @apply fixed inset-0 -z-10 bg-bg bg-page-pattern bg-cover bg-center bg-no-repeat opacity-[0.35];
+  }
+  .page-background::after {
+    content: '';
+    @apply absolute top-[-10%] left-1/2 w-[900px] h-[900px] -translate-x-1/2 rounded-full bg-hero-glow pointer-events-none;
+  }
+  
+  .glass-card {
+    @apply bg-card backdrop-blur-md border border-border shadow-sm;
+  }
 }

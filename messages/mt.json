@@ -1,0 +1,88 @@
+{
+  "Index": {
+    "badge": "Pjattaforma Ewropea Sigura",
+    "title": "Għodod Web Ewropej Siguri",
+    "description": "Apps bbażati fuq il-browser b'saħħithom li jaħdmu kompletament online. Mgħaġġla, privati u kkodifikati bis-sħiħ.",
+    "searchPlaceholder": "Fittex għodod...",
+    "platform": "Pjattaforma",
+    "toolsTitle": "Għodod Għalik",
+    "pdfMergeTitle": "Amalgama PDF",
+    "pdfMergeDesc": "Għaqqad fajls PDF multipli f'dokument wieħed b'mod sikur fil-browser tiegħek.",
+    "videoEditorSoon": "Editur tal-Vidjo (Dalwaqt)",
+    "videoEditorDesc": "Aqta', ittrimmja u tejjeb il-vidjows direttament fil-browser tiegħek.",
+    "gdpr": "Konformi mal-GDPR",
+    "euInfra": "Infrastruttura tas-Server fl-UE",
+    "encrypted": "Ikkodifikat End-to-End",
+    "splitPdfTitle": "Aqsam PDF",
+    "splitPdfDesc": "Oħroġ paġni speċifiċi jew issepara l-PDF tiegħek f'fajls multipli.",
+    "pdfToImageTitle": "PDF għal Immaġni",
+    "pdfToImageDesc": "Ikkonverti paġni PDF f'immaġnijiet JPG ta' kwalità għolja istantanjament.",
+    "protectPdfTitle": "Ipproteġi l-PDF",
+    "protectPdfDesc": "Sikura l-PDF tiegħek b'password jew neħħi l-protezzjoni eżistenti."
+  },
+  "PdfMerge": {
+    "back": "Lura għall-Għodod",
+    "title": "Amalgama Fajls PDF",
+    "description": "Għaqqad PDFs multipli b'mod sikur. Il-fajls tiegħek qatt ma jitilqu mit-tagħmir tiegħek.",
+    "selectFiles": "Agħżel fajls PDF",
+    "dropHint": "Waqqa' l-fajls hawn jew ikklikkja biex tfittex",
+    "btnMerging": "Amalgamazzjoni fuq it-tagħmir tiegħek...",
+    "btnMerge": "Amalgama l-PDFs Issa",
+    "success": "PDFs Amalgammati b'Suċċess!",
+    "btnDownload": "Niżżel il-PDF",
+    "btnMore": "Amalgama Aktar",
+    "trust": "Ipproċessat lokalment. L-ebda fajl ma jittella' fuq is-servers tagħna."
+  },
+  "Layout": {
+    "footerRights": "Id-drittijiet kollha riżervati.",
+    "privacy": "Politika tal-Privatezza",
+    "terms": "Termini tas-Servizz",
+    "contact": "Kuntatt"
+  },
+  "Legal": {
+    "backToTools": "Lura għall-Għodod",
+    "termsTitle": "Termini tas-Servizz",
+    "termsIntro": "Billi tuża VOLLU.app, inti taqbel ma' dawn it-termini. Jekk jogħġbok aqrahom bir-reqqa.",
+    "liabilityTitle": "Eżenzjoni mir-Responsabbiltà",
+    "liabilityText": "VOLLU.app huwa pprovdut 'KIF INHU' mingħajr l-ebda garanzija. Aħna m'aħniex responsabbli għal kwalunkwe telf ta' dejta, ħsara lill-fajls, jew konsegwenzi indiretti li jirriżultaw mill-użu tal-għodod tagħna. L-utent jassumi r-riskji kollha assoċjati mal-ipproċessar tal-fajls.",
+    "privacyTitle": "Politika tal-Privatezza",
+    "privacyIntro": "Il-privatezza tiegħek hija l-wegħda ewlenija tagħna. Aħna nemmnu f'privatezza radikali għall-utenti kollha.",
+    "dataHandlingTitle": "Kif nittrattaw il-fajls",
+    "dataHandlingText": "L-ebda fajl qatt ma jittella' fuq is-servers tagħna. L-ipproċessar kollu (amalgamazzjoni, editjar, konverżjoni) iseħħ kompletament fil-browser tiegħek permezz tat-teknoloġija WebAssembly. Id-dejta tiegħek tibqa' fuq it-tagħmir tiegħek.",
+    "useOfServiceTitle": "1. Użu tas-Servizz",
+    "useOfServiceText": "VOLLU.app jipprovdi għodod ibbażati fuq il-browser għal użu personali u professjonali. Inti taqbel li tuża dawn l-għodod b'konformità mal-liġijiet u r-regolamenti kollha applikabbli.",
+    "performanceTitle": "2. Prestazzjoni",
+    "performanceText": "Peress li l-ipproċessar kollu huwa fuq in-naħa tal-klijent, il-prestazzjoni tiddependi fuq l-ispeċifikazzjonijiet tat-tagħmir tiegħek. VOLLU ma jiggarantix veloċitajiet ta' pproċessar speċifiċi.",
+    "noTrackingTitle": "1. L-ebda Tracking Cookies",
+    "noTrackingText": "VOLLU.app ma jużax tracking cookies. Aħna nużaw Umami (għodda analitika awto-ospitata u ffukata fuq il-privatezza) biex niġbru dejta anonima dwar l-użu mingħajr ma nidentifikaw utenti individwali.",
+    "zeroUploadTitle": "2. Politika ta' Zero Upload",
+    "zeroUploadText": "It-teknoloġija tagħna hija bbażata fuq WebAssembly. Dan jippermetti li l-magni tal-konverżjoni tal-PDF u l-editjar tal-vidjow jaħdmu direttament fil-browser tiegħek. Aħna qatt ma naraw il-fajls tiegħek, qatt ma naħżnu d-dejta tiegħek, u qatt ma naqsmu l-informazzjoni tiegħek."
+  },
+  "SplitPDF": {
+    "title": "Aqsam il-Paġni tal-PDF",
+    "description": "Oħroġ paġni jew meded speċifiċi lokalment mid-dokument tiegħek.",
+    "rangePlaceholder": "eż. 1-3, 5, 8-10",
+    "btnSplit": "Aqsam il-PDF Issa",
+    "btnSplitting": "Qsim lokalment...",
+    "invalidRange": "Format tal-firxa tal-paġni invalidu.",
+    "pageCount": "id-dokument għandu {count} paġni"
+  },
+  "PDFToImage": {
+    "title": "Konvertitur minn PDF għal Immaġni",
+    "description": "Ikkonverti paġni PDF f'immaġnijiet JPG ta' kwalità għolja (skala 2x).",
+    "btnConvert": "Ikkonverti f'Immaġnijiet",
+    "btnConverting": "Rendering tal-paġni {current}/{total}...",
+    "downloadAll": "Niżżel Kollox (ZIP)",
+    "resolution": "Riżoluzzjoni Għolja (ekwivalenti għal 300 DPI)"
+  },
+  "Security": {
+    "title": "Ipproteġi u Iftaħ il-PDF",
+    "description": "Sikura d-dokumenti tiegħek b'kriptaġġ AES-128 jew neħħi l-passwords.",
+    "modeProtect": "Ipproteġi l-PDF",
+    "modeUnlock": "Iftaħ il-PDF",
+    "password": "Password",
+    "btnProtect": "Ikkripta l-PDF",
+    "btnUnlock": "Neħħi l-Protezzjoni",
+    "statusLocal": "Fajl ipproċessat lokalment. L-ebda dejta ma ntbagħtet lis-server."
+  }
+}

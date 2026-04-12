@@ -1,0 +1,88 @@
+{
+  "Index": {
+    "badge": "Sigurna europska platforma",
+    "title": "Sigurni europski web alati",
+    "description": "Snažne aplikacije u pregledniku koje rade u potpunosti na mreži. Brzo, privatno i potpuno kriptirano.",
+    "searchPlaceholder": "Pretraži alate...",
+    "platform": "Platforma",
+    "toolsTitle": "Alati za vas",
+    "pdfMergeTitle": "Spajanje PDF-a",
+    "pdfMergeDesc": "Sigurno spojite više PDF datoteka u jedan dokument u svom pregledniku.",
+    "videoEditorSoon": "Video urednik (Uskoro)",
+    "videoEditorDesc": "Obrežite, izrežite i poboljšajte videozapise izravno u svom pregledniku.",
+    "gdpr": "Usklađeno s GDPR-om",
+    "euInfra": "Europska infrastruktura poslužitelja",
+    "encrypted": "Kriptirano od kraja do kraja",
+    "splitPdfTitle": "Podijeli PDF",
+    "splitPdfDesc": "Izvucite određene stranice ili podijelite svoj PDF u više datoteka.",
+    "pdfToImageTitle": "PDF u sliku",
+    "pdfToImageDesc": "Trenutačno pretvorite stranice PDF-a u visokokvalitetne JPG slike.",
+    "protectPdfTitle": "Zaštiti PDF",
+    "protectPdfDesc": "Zaštitite svoj PDF lozinkom ili uklonite postojeću zaštitu."
+  },
+  "PdfMerge": {
+    "back": "Povratak na alate",
+    "title": "Spajanje PDF datoteka",
+    "description": "Sigurno spojite više PDF-ova. Vaše datoteke nikada ne napuštaju vaš uređaj.",
+    "selectFiles": "Odaberi PDF datoteke",
+    "dropHint": "Ispustite datoteke ovdje ili kliknite za pregledavanje",
+    "btnMerging": "Spajanje na vašem uređaju...",
+    "btnMerge": "Spoji PDF-ove sada",
+    "success": "PDF-ovi uspješno spojeni!",
+    "btnDownload": "Preuzmi PDF",
+    "btnMore": "Spoji još",
+    "trust": "Obrađeno lokalno. Niti jedna datoteka se ne učitava na naše poslužitelje."
+  },
+  "Layout": {
+    "footerRights": "Sva prava pridržana.",
+    "privacy": "Pravila privatnosti",
+    "terms": "Uvjeti pružanja usluge",
+    "contact": "Kontakt"
+  },
+  "Legal": {
+    "backToTools": "Povratak na alate",
+    "termsTitle": "Uvjeti pružanja usluge",
+    "termsIntro": "Korištenjem VOLLU.app pristajete na ove uvjete. Molimo vas da ih pažljivo pročitate.",
+    "liabilityTitle": "Izuzeće od odgovornosti",
+    "liabilityText": "VOLLU.app se pruža 'KAKAV JEST' bez ikakvih jamstava. Nismo odgovorni za gubitak podataka, oštećenje datoteka ili neizravne posljedice proizašle iz korištenja naših alata. Korisnik preuzima sve rizike povezane s obradom datoteka.",
+    "privacyTitle": "Pravila privatnosti",
+    "privacyIntro": "Vaša privatnost je naše glavno obećanje. Vjerujemo u radikalnu privatnost za sve korisnike.",
+    "dataHandlingTitle": "Kako postupamo s datotekama",
+    "dataHandlingText": "Niti jedna datoteka se nikada ne učitava na naše poslužitelje. Sva obrada (spajanje, uređivanje, pretvorba) odvija se u potpunosti u vašem pregledniku pomoću tehnologije WebAssembly. Vaši podaci ostaju na vašem uređaju.",
+    "useOfServiceTitle": "1. Upotreba usluge",
+    "useOfServiceText": "VOLLU.app pruža alate u pregledniku za osobnu i profesionalnu upotrebu. Pristajete koristiti ove alate u skladu sa svim primjenjivim zakonima i propisima.",
+    "performanceTitle": "2. Performanse",
+    "performanceText": "Budući da je sva obrada na strani klijenta, performanse ovise o specifikacijama vašeg uređaja. VOLLU ne jamči određene brzine obrade.",
+    "noTrackingTitle": "1. Bez kolačića za praćenje",
+    "noTrackingText": "VOLLU.app ne koristi kolačiće za praćenje. Koristimo Umami (vlastiti analitički alat usmjeren na privatnost) za prikupljanje anonimnih podataka o upotrebi bez identificiranja pojedinačnih korisnika.",
+    "zeroUploadTitle": "2. Politika Zero Upload",
+    "zeroUploadText": "Naša tehnologija temelji se na WebAssembly-u. To omogućuje mehanizmima za pretvorbu PDF-a i uređivanje videa da rade izravno u vašem pregledniku. Nikada ne vidimo vaše datoteke, nikada ne pohranjujemo vaše podatke i nikada ne dijelimo vaše podatke."
+  },
+  "SplitPDF": {
+    "title": "Podijeli PDF stranice",
+    "description": "Lokalno izvucite određene stranice ili raspone iz svog dokumenta.",
+    "rangePlaceholder": "npr. 1-3, 5, 8-10",
+    "btnSplit": "Podijeli PDF sada",
+    "btnSplitting": "Dijeljenje lokalno...",
+    "invalidRange": "Nevažeći format raspona stranica.",
+    "pageCount": "dokument ima {count} stranica"
+  },
+  "PDFToImage": {
+    "title": "Pretvarač PDF-a u sliku",
+    "description": "Pretvorite stranice PDF-a u visokokvalitetne JPG slike (skala 2x).",
+    "btnConvert": "Pretvori u slike",
+    "btnConverting": "Renderiranje stranica {current}/{total}...",
+    "downloadAll": "Preuzmi sve (ZIP)",
+    "resolution": "Visoka rezolucija (ekvivalent 300 DPI)"
+  },
+  "Security": {
+    "title": "Zaštiti i otključaj PDF",
+    "description": "Osigurajte svoje dokumente AES-128 enkripcijom ili uklonite lozinke.",
+    "modeProtect": "Zaštiti PDF",
+    "modeUnlock": "Otključaj PDF",
+    "password": "Lozinka",
+    "btnProtect": "Kriptiraj PDF",
+    "btnUnlock": "Ukloni zaštitu",
+    "statusLocal": "Datoteka obrađena lokalno. Podaci nisu poslani na poslužitelj."
+  }
+}

@@ -1,0 +1,16 @@
+#!/usr/bin/expect -f
+set password "UfQ4U4jNpS7nSthh"
+set host "212.95.40.164"
+set user "root"
+
+spawn ssh -oStrictHostKeyChecking=no $user@$host {
+    echo "--- CONFIG FILE ---"
+    cat /etc/nginx/sites-enabled/vollu.app.conf
+    echo "--- FIREWALL STATUS ---"
+    ufw status || iptables -L -n
+    echo "--- NGINX STATUS ---"
+    systemctl status nginx --no-pager
+}
+expect "password:"
+send "$password\r"
+expect eof

@@ -1,0 +1,88 @@
+{
+  "Index": {
+    "badge": "Veilig Europees Platform",
+    "title": "Veilige Europese Webtools",
+    "description": "Krachtige browser-gebaseerde apps die volledig online draaien. Snel, privé en volledig versleuteld.",
+    "searchPlaceholder": "Tools zoeken...",
+    "platform": "Platform",
+    "toolsTitle": "Tools Voor U",
+    "pdfMergeTitle": "PDF Samenvoegen",
+    "pdfMergeDesc": "Combineer meerdere PDF's veilig in uw browser.",
+    "videoEditorSoon": "Video Editor (Binnenkort)",
+    "videoEditorDesc": "Trim, knip en verbeter video's direct in uw browser.",
+    "gdpr": "AVG-conform",
+    "euInfra": "EU Server-infrastructuur",
+    "encrypted": "Eind-tot-eind Versleuteld",
+    "splitPdfTitle": "PDF Splitsen",
+    "splitPdfDesc": "Extraheer specifieke pagina's of scheid uw PDF in meerdere bestanden.",
+    "pdfToImageTitle": "PDF naar Afbeelding",
+    "pdfToImageDesc": "Converteer PDF-pagina's direct naar hoogwaardige JPG-afbeeldingen.",
+    "protectPdfTitle": "PDF Beveiligen",
+    "protectPdfDesc": "Beveilig uw PDF met een wachtwoord of verwijder bestaande beveiliging."
+  },
+  "PdfMerge": {
+    "back": "Terug naar Tools",
+    "title": "PDF Bestanden Samenvoegen",
+    "description": "Combineer meerdere PDF's veilig. Uw bestanden verlaten nooit uw apparaat.",
+    "selectFiles": "Selecteer PDF-bestanden",
+    "dropHint": "Sleep bestanden hierheen of klik om te bladeren",
+    "btnMerging": "Samenvoegen op uw apparaat...",
+    "btnMerge": "Nu PDF's Samenvoegen",
+    "success": "PDF's Succesvol Samengetevoegd!",
+    "btnDownload": "PDF Downloaden",
+    "btnMore": "Meer Samenvoegen",
+    "trust": "Lokaal verwerkt. Geen bestanden worden geüpload naar onze servers."
+  },
+  "Layout": {
+    "footerRights": "Alle rechten voorbehouden.",
+    "privacy": "Privacybeleid",
+    "terms": "Servicevoorwaarden",
+    "contact": "Contact"
+  },
+  "Legal": {
+    "backToTools": "Terug naar Tools",
+    "termsTitle": "Servicevoorwaarden",
+    "termsIntro": "Door VOLLU.app te gebruiken, gaat u akkoord met deze voorwaarden. Lees ze aandachtig door.",
+    "liabilityTitle": "Vrijstelling van Aansprakelijkheid",
+    "liabilityText": "VOLLU.app wordt geleverd 'AS IS' zonder enige garanties. Wij zijn niet verantwoordelijk voor gegevensverlies, bestandsbeschadiging of indirecte gevolgen voortvloeiend uit het gebruik van onze tools. De gebruiker neemt alle risico's verbonden aan bestandsverwerking op zich.",
+    "privacyTitle": "Privacybeleid",
+    "privacyIntro": "Uw privacy is onze kernbelofte. Wij geloven in radicale privacy voor alle gebruikers.",
+    "dataHandlingTitle": "Hoe we met bestanden omgaan",
+    "dataHandlingText": "Er worden nooit bestanden geüpload naar onze servers. Alle verwerking (samenvoegen, bewerken, converteren) gebeurt volledig in uw browser met behulp van WebAssembly-technologie. Uw gegevens blijven op uw apparaat.",
+    "useOfServiceTitle": "1. Gebruik van de Dienst",
+    "useOfServiceText": "VOLLU.app biedt browser-gebaseerde tools voor persoonlijk en professioneel gebruik. U gaat ermee akkoord deze tools te gebruiken in overeenstemming met alle toepasselijke wetten en regels.",
+    "performanceTitle": "2. Prestaties",
+    "performanceText": "Aangezien alle verwerking lokaal gebeurt, is de prestatie afhankelijk van uw apparaatspecificaties. VOLLU garandeert geen specifieke verwerkingssnelheden.",
+    "noTrackingTitle": "1. Geen Tracking Cookies",
+    "noTrackingText": "VOLLU.app gebruikt geen tracking cookies. We gebruiken Umami (een zelfgehoste, privacygerichte analysetool) om anonieme gebruiksgegevens te verzamelen zonder individuele gebruikers te identificeren.",
+    "zeroUploadTitle": "2. Zero Upload Beleid",
+    "zeroUploadText": "Onze technologie is gebouwd op WebAssembly. Hiermee kunnen de PDF-conversie- en videobewerkingsengines rechtstreeks in uw browser draaien. We zien uw bestanden nooit, we slaan uw gegevens nooit op en we delen uw informatie nooit."
+  },
+  "SplitPDF": {
+    "title": "PDF Pagina's Splitsen",
+    "description": "Extraheer specifieke pagina's of bereiken lokaal uit uw document.",
+    "rangePlaceholder": "bijv. 1-3, 5, 8-10",
+    "btnSplit": "Nu PDF Splitsen",
+    "btnSplitting": "Lokaal splitsen...",
+    "invalidRange": "Ongeldig paginabereikformaat.",
+    "pageCount": "document heeft {count} pagina's"
+  },
+  "PDFToImage": {
+    "title": "PDF naar Afbeelding Converter",
+    "description": "Converteer PDF-pagina's naar hoogwaardige JPG-afbeeldingen (2x schaal).",
+    "btnConvert": "Converteren naar Afbeeldingen",
+    "btnConverting": "Pagina's renderen {current}/{total}...",
+    "downloadAll": "Alles Downloaden (ZIP)",
+    "resolution": "Hoge Resolutie (gelijk aan 300 DPI)"
+  },
+  "Security": {
+    "title": "PDF Beveiligen & Ontgrendelen",
+    "description": "Beveilig uw documenten met AES-128 versleuteling of verwijder wachtwoorden.",
+    "modeProtect": "PDF Beveiligen",
+    "modeUnlock": "PDF Ontgrendelen",
+    "password": "Wachtwoord",
+    "btnProtect": "PDF Versleutelen",
+    "btnUnlock": "Beveiliging Verwijderen",
+    "statusLocal": "Bestand lokaal verwerkt. Geen gegevens naar de server verzonden."
+  }
+}

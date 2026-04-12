@@ -1,0 +1,88 @@
+{
+  "Index": {
+    "badge": "Plateforme Européenne Sécurisée",
+    "title": "Outils Web Européens Sécurisés",
+    "description": "Des applications puissantes basées sur le navigateur, fonctionnant entièrement en ligne. Rapide, privé et entièrement crypté.",
+    "searchPlaceholder": "Rechercher des outils...",
+    "platform": "Plateforme",
+    "toolsTitle": "Des Outils Pour Vous",
+    "pdfMergeTitle": "Fusionner PDF",
+    "pdfMergeDesc": "Combinez plusieurs fichiers PDF en un seul document en toute sécurité dans votre navigateur.",
+    "videoEditorSoon": "Éditeur Vidéo (Bientôt)",
+    "videoEditorDesc": "Taillez, coupez et améliorez des vidéos directement dans votre navigateur.",
+    "gdpr": "Conforme au RGPD",
+    "euInfra": "Infrastructure de Serveurs en UE",
+    "encrypted": "Crypté de Bout en Bout",
+    "splitPdfTitle": "Diviser PDF",
+    "splitPdfDesc": "Extrayez des pages spécifiques ou séparez votre PDF en plusieurs fichiers.",
+    "pdfToImageTitle": "PDF en Image",
+    "pdfToImageDesc": "Convertissez instantanément des pages PDF en images JPG de haute qualité.",
+    "protectPdfTitle": "Protéger PDF",
+    "protectPdfDesc": "Sécurisez votre PDF avec un mot de passe ou supprimez la protection existante."
+  },
+  "PdfMerge": {
+    "back": "Retour aux Outils",
+    "title": "Fusionner des Fichiers PDF",
+    "description": "Combinez plusieurs PDF en toute sécurité. Vos fichiers ne quittent jamais votre appareil.",
+    "selectFiles": "Sélectionner des fichiers PDF",
+    "dropHint": "Déposez les fichiers ici ou cliquez pour parcourir",
+    "btnMerging": "Fusion en cours sur votre appareil...",
+    "btnMerge": "Fusionner les PDF maintenant",
+    "success": "PDF Fusionnés avec Succès !",
+    "btnDownload": "Télécharger le PDF",
+    "btnMore": "Fusionner davantage",
+    "trust": "Traité localement. Aucun fichier n'est téléchargé sur nos serveurs."
+  },
+  "Layout": {
+    "footerRights": "Tous droits réservés.",
+    "privacy": "Politique de Confidentialité",
+    "terms": "Conditions d'Utilisation",
+    "contact": "Contact"
+  },
+  "Legal": {
+    "backToTools": "Retour aux Outils",
+    "termsTitle": "Conditions d'Utilisation",
+    "termsIntro": "En utilisant VOLLU.app, vous acceptez ces conditions. Veuillez les lire attentivement.",
+    "liabilityTitle": "Exonération de Responsabilité",
+    "liabilityText": "VOLLU.app est fourni 'EN L'ÉTAT' sans aucune garantie. Nous ne sommes pas responsables de la perte de données, de l'endommagement de fichiers ou des conséquences indirectes découlant de l'utilisation de nos outils. L'utilisateur assume tous les risques associés au traitement des fichiers.",
+    "privacyTitle": "Politique de Confidentialité",
+    "privacyIntro": "Votre vie privée est notre promesse centrale. Nous croyons en une confidentialité radicale pour tous les utilisateurs.",
+    "dataHandlingTitle": "Comment nous traitons les fichiers",
+    "dataHandlingText": "Aucun fichier n'est jamais téléchargé sur nos serveurs. Tout le traitement (fusion, édition, conversion) se passe entièrement dans votre navigateur grâce à la technologie WebAssembly. Vos données restent sur votre appareil.",
+    "useOfServiceTitle": "1. Utilisation du Service",
+    "useOfServiceText": "VOLLU.app fournit des outils basés sur le navigateur pour un usage personnel et professionnel. Vous acceptez d'utiliser ces outils conformément à toutes les lois et réglementations applicables.",
+    "performanceTitle": "2. Performance",
+    "performanceText": "Puisque tout le traitement est local, la performance dépend des spécifications de votre appareil. VOLLU ne garantit pas de vitesses de traitement spécifiques.",
+    "noTrackingTitle": "1. Pas de Cookies de Suivi",
+    "noTrackingText": "VOLLU.app n'utilise pas de cookies de suivi. Nous utilisons Umami (un outil d'analyse auto-hébergé et axé sur la confidentialité) pour recueillir des données d'utilisation anonymes sans identifier les utilisateurs individuels.",
+    "zeroUploadTitle": "2. Politique de Zéro Téléchargement",
+    "zeroUploadText": "Notre technologie est basée sur WebAssembly. Cela permet aux moteurs de conversion PDF et d'édition vidéo de fonctionner directement dans votre navigateur. Nous ne voyons jamais vos fichiers, nous ne stockons jamais vos données et nous ne partageons jamais vos informations."
+  },
+  "SplitPDF": {
+    "title": "Diviser les Pages PDF",
+    "description": "Extrayez des pages ou des plages spécifiques de votre document localement.",
+    "rangePlaceholder": "ex. 1-3, 5, 8-10",
+    "btnSplit": "Diviser le PDF maintenant",
+    "btnSplitting": "Division locale...",
+    "invalidRange": "Format de plage de pages invalide.",
+    "pageCount": "le document a {count} pages"
+  },
+  "PDFToImage": {
+    "title": "Convertisseur PDF en Image",
+    "description": "Convertissez des pages PDF en images JPG haute résolution (échelle 2x).",
+    "btnConvert": "Convertir en Images",
+    "btnConverting": "Rendu des pages {current}/{total}...",
+    "downloadAll": "Tout Télécharger (ZIP)",
+    "resolution": "Haute Résolution (équivalent 300 DPI)"
+  },
+  "Security": {
+    "title": "Protéger & Déverrouiller le PDF",
+    "description": "Sécurisez vos documents avec le cryptage AES-128 ou supprimez les mots de passe.",
+    "modeProtect": "Protéger le PDF",
+    "modeUnlock": "Déverrouiller le PDF",
+    "password": "Mot de passe",
+    "btnProtect": "Crypter le PDF",
+    "btnUnlock": "Supprimer la Protection",
+    "statusLocal": "Fichier traité localement. Aucune donnée envoyée au serveur."
+  }
+}

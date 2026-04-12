@@ -1,0 +1,10 @@
+#!/usr/bin/expect -f
+set timeout 60
+spawn ssh -oStrictHostKeyChecking=no root@212.95.40.164
+expect "password:"
+send "Vollu@2025\r"
+expect "#"
+send "su - vollu -c 'pm2 logs vollu.app --lines 50 --no-colors'\r"
+expect "#"
+send "exit\r"
+expect eof

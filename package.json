@@ -1,5 +1,5 @@
 {
-  "name": "vollu-tmp",
+  "name": "vollu-app",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,18 +9,39 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@ffmpeg/core": "^0.12.10",
+    "@ffmpeg/core-mt": "^0.12.10",
+    "@ffmpeg/ffmpeg": "^0.12.15",
+    "@ffmpeg/util": "^0.12.2",
+    "@types/spark-md5": "^3.0.5",
+    "clsx": "^2.1.1",
+    "exifreader": "^4.38.1",
+    "framer-motion": "^12.38.0",
+    "jszip": "^3.10.1",
+    "lucide-react": "^1.8.0",
+    "mathjs": "^15.2.0",
     "next": "16.2.3",
+    "next-intl": "^4.9.1",
+    "node-vibrant": "^4.0.4",
+    "pdf-lib-with-encrypt": "^1.2.1",
+    "pdfjs-dist": "^5.6.205",
+    "qrcode.react": "^4.2.0",
     "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "react-dom": "19.2.4",
+    "spark-md5": "^3.0.2",
+    "svgo": "^4.0.1",
+    "tailwind-merge": "^3.5.0"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4",
+    "@types/jszip": "^3.4.0",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "autoprefixer": "^10.4.27",
     "eslint": "^9",
     "eslint-config-next": "16.2.3",
-    "tailwindcss": "^4",
+    "postcss": "^8.5.9",
+    "tailwindcss": "3.4",
     "typescript": "^5"
   }
 }

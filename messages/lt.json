@@ -1,0 +1,88 @@
+{
+  "Index": {
+    "badge": "Saugi Europos platforma",
+    "title": "Saugūs Europos internetiniai įrankiai",
+    "description": "Galingos naršyklės programėlės, veikiančios visiškai internete. Greitos, privačios ir visiškai užšifruotos.",
+    "searchPlaceholder": "Ieškoti įrankių...",
+    "platform": "Platforma",
+    "toolsTitle": "Įrankiai jums",
+    "pdfMergeTitle": "Sujungti PDF",
+    "pdfMergeDesc": "Saugiai sujunkite kelis PDF failus į vieną dokumentą savo naršyklėje.",
+    "videoEditorSoon": "Vaizdo įrašų redaktorius (netrukus)",
+    "videoEditorDesc": "Apkarpykite, pjaukite ir tobulinkite vaizdo įrašus tiesiog savo naršyklėje.",
+    "gdpr": "Atitinka BDAR",
+    "euInfra": "ES serverių infrastruktūra",
+    "encrypted": "Užšifruota nuo galo iki galo",
+    "splitPdfTitle": "Skaidyti PDF",
+    "splitPdfDesc": "Ištraukite konkrečius puslapius arba padalinkite PDF į kelis failus.",
+    "pdfToImageTitle": "PDF į vaizdą",
+    "pdfToImageDesc": "Akimirksniu konvertuokite PDF puslapius į aukštos kokybės JPG vaizdus.",
+    "protectPdfTitle": "Apsaugoti PDF",
+    "protectPdfDesc": "Apsaugokite savo PDF slaptažodžiu arba pašalinkite esamą apsaugą."
+  },
+  "PdfMerge": {
+    "back": "Grįžti į įrankius",
+    "title": "Sujungti PDF failus",
+    "description": "Saugiai sujunkite kelis PDF failus. Jūsų failai niekada nepalieka jūsų įrenginio.",
+    "selectFiles": "Pasirinkite PDF failus",
+    "dropHint": "Vilkite failus čia arba spustelėkite, kad naršytumėte",
+    "btnMerging": "Jungiamas jūsų įrenginyje...",
+    "btnMerge": "Sujungti PDF dabar",
+    "success": "PDF sėkmingai sujungti!",
+    "btnDownload": "Atsisiųsti PDF",
+    "btnMore": "Jungti daugiau",
+    "trust": "Apdorota lokaliai. Failai nesiunčiami į mūsų serverius."
+  },
+  "Layout": {
+    "footerRights": "Visos teisės saugomos.",
+    "privacy": "Privatumo politika",
+    "terms": "Paslaugų teikimo sąlygos",
+    "contact": "Kontaktai"
+  },
+  "Legal": {
+    "backToTools": "Grįžti į įrankius",
+    "termsTitle": "Paslaugų teikimo sąlygos",
+    "termsIntro": "Naudodamiesi VOLLU.app, sutinkate su šiomis sąlygomis. Prašome jas atidžiai perskaityti.",
+    "liabilityTitle": "Atsakomybės apribojimas",
+    "liabilityText": "VOLLU.app teikiama 'TOKIA, KOKIA YRA', be jokių garantijų. Mes neatsakome už jokius duomenų praradimus, failų sugadinimą ar netiesiogines pasekmes, atsiradusias naudojant mūsų įrankius. Vartotojas prisiima visą riziką, susijusią su failų apdorojimu.",
+    "privacyTitle": "Privatumo politika",
+    "privacyIntro": "Jūsų privatumas yra mūsų pagrindinis pažadas. Mes tikime visišku visų vartotojų privatumu.",
+    "dataHandlingTitle": "Kaip mes tvarkome failus",
+    "dataHandlingText": "Failai niekada nesiunčiami į mūsų serverius. Visas apdorojimas (jungimas, redagavimas, konvertavimas) vyksta visiškai jūsų naršyklėje naudojant WebAssembly technologiją. Jūsų duomenys lieka jūsų įrenginyje.",
+    "useOfServiceTitle": "1. Paslaugos naudojimas",
+    "useOfServiceText": "VOLLU.app teikia naršyklės įrankius asmeniniam ir profesionaliam naudojimui. Jūs sutinkate naudoti šiuos įrankius laikydamiesi visų galiojančių įstatymų ir taisyklių.",
+    "performanceTitle": "2. Našumas",
+    "performanceText": "Kadangi visas apdorojimas vyksta kliento pusėje, našumas priklauso nuo jūsų įrenginio specifikacijų. VOLLU negarantuoja konkretaus apdorojimo greičio.",
+    "noTrackingTitle": "1. Jokių sekimo slapukų",
+    "noTrackingText": "VOLLU.app nenaudoja sekimo slapukų. Naudojame Umami (pačių priglobtą, į privatumą orientuotą analizės įrankį) anoniminiams naudojimo duomenims rinkti neidentifikuojant individualių vartotojų.",
+    "zeroUploadTitle": "2. Nulles augšupielādes politika",
+    "zeroUploadText": "Mūsų technologija pagrįsta WebAssembly. Tai leidžia PDF konvertavimo ir vaizdo redagavimo varikliams veikti tiesiog jūsų naršyklėje. Mes niekada nematome jūsų failų, niekada nesaugome jūsų duomenų ir niekada nesidalijame jūsų informacija."
+  },
+  "SplitPDF": {
+    "title": "Skaidyti PDF puslapius",
+    "description": "Ištraukite konkrečius puslapius arba diapazonus lokaliai iš savo dokumento.",
+    "rangePlaceholder": "pvz., 1-3, 5, 8-10",
+    "btnSplit": "Skaidyti PDF dabar",
+    "btnSplitting": "Skaidoma lokaliai...",
+    "invalidRange": "Neteisingas puslapių diapazono formatas.",
+    "pageCount": "dokumentas turi {count} puslapius"
+  },
+  "PDFToImage": {
+    "title": "PDF į vaizdą konverteris",
+    "description": "Konvertuokite PDF puslapius į aukštos kokybės JPG vaizdus (2x mastelis).",
+    "btnConvert": "Konvertuoti į vaizdus",
+    "btnConverting": "Puslapių generavimas {current}/{total}...",
+    "downloadAll": "Atsisiųsti viską (ZIP)",
+    "resolution": "Aukšta raiška (atitinka 300 DPI)"
+  },
+  "Security": {
+    "title": "Apsaugoti ir atrakinti PDF",
+    "description": "Apsaugokite savo dokumentus AES-128 šifravimu arba pašalinkite slaptažodžius.",
+    "modeProtect": "Apsaugoti PDF",
+    "modeUnlock": "Atrakinti PDF",
+    "password": "Slaptažodis",
+    "btnProtect": "Užšifruoti PDF",
+    "btnUnlock": "Pašalinti apsaugą",
+    "statusLocal": "Failas apdorotas lokaliai. Duomenys nebuvo išsiųsti į serverį."
+  }
+}

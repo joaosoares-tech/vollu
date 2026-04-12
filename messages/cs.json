@@ -1,0 +1,88 @@
+{
+  "Index": {
+    "badge": "Zabezpečená evropská platforma",
+    "title": "Zabezpečené evropské webové nástroje",
+    "description": "Výkonné aplikace v prohlížeči, které běží zcela online. Rychlé, soukromé a plně šifrované.",
+    "searchPlaceholder": "Hledat nástroje...",
+    "platform": "Platforma",
+    "toolsTitle": "Nástroje pro vás",
+    "pdfMergeTitle": "Sloučit PDF",
+    "pdfMergeDesc": "Zkombinujte více souborů PDF do jednoho dokumentu bezpečně ve vašem prohlížeči.",
+    "videoEditorSoon": "Video editor (již brzy)",
+    "videoEditorDesc": "Ořezávejte, stříhejte a vylepšujte videa přímo ve svém prohlížeči.",
+    "gdpr": "V souladu s GDPR",
+    "euInfra": "Serverová infrastruktura v EU",
+    "encrypted": "Šifrováno end-to-end",
+    "splitPdfTitle": "Rozdělit PDF",
+    "splitPdfDesc": "Extrahujte konkrétní stránky nebo rozdělte PDF do více souborů.",
+    "pdfToImageTitle": "PDF do obrázku",
+    "pdfToImageDesc": "Okamžitě převeďte stránky PDF na vysoce kvalitní obrázky JPG.",
+    "protectPdfTitle": "Chránit PDF",
+    "protectPdfDesc": "Zabezpečte své PDF heslem nebo odstraňte stávající ochranu."
+  },
+  "PdfMerge": {
+    "back": "Zpět k nástrojům",
+    "title": "Sloučit soubory PDF",
+    "description": "Bezpečně kombinujte více souborů PDF. Vaše soubory nikdy neopustí vaše zařízení.",
+    "selectFiles": "Vybrat soubory PDF",
+    "dropHint": "Přetáhněte soubory sem nebo klikněte pro procházení",
+    "btnMerging": "Slučování na vašem zařízení...",
+    "btnMerge": "Sloučit PDF nyní",
+    "success": "PDF úspěšně sloučena!",
+    "btnDownload": "Stáhnout PDF",
+    "btnMore": "Sloučit další",
+    "trust": "Zpracováno lokálně. Na naše servery se nenahrávají žádné soubory."
+  },
+  "Layout": {
+    "footerRights": "Všechna práva vyhrazena.",
+    "privacy": "Zásady ochrany osobních údajů",
+    "terms": "Podmínky služby",
+    "contact": "Kontakt"
+  },
+  "Legal": {
+    "backToTools": "Zpět k nástrojům",
+    "termsTitle": "Podmínky služby",
+    "termsIntro": "Používáním VOLLU.app souhlasíte s těmito podmínkami. Přečtěte si je prosím pozorně.",
+    "liabilityTitle": "Zproštění odpovědnosti",
+    "liabilityText": "VOLLU.app je poskytován 'TAK, JAK JE' bez jakýchkoli záruk. Neneseme odpovědnost za žádnou ztrátu dat, poškození souborů nebo nepřímé následky vyplývající z používání našich nástrojů. Uživatel přebírá veškerá rizika spojená se zpracováním souborů.",
+    "privacyTitle": "Zásady ochrany osobních údajů",
+    "privacyIntro": "Vaše soukromí je naším hlavním příslibem. Věříme v radikální soukromí pro všechny uživatele.",
+    "dataHandlingTitle": "Jak nakládáme se soubory",
+    "dataHandlingText": "Na naše servery se nikdy nenahrávají žádné soubory. Veškeré zpracování (slučování, úpravy, konverze) probíhá zcela ve vašem prohlížeči pomocí technologie WebAssembly. Vaše data zůstávají ve vašem zařízení.",
+    "useOfServiceTitle": "1. Používání služby",
+    "useOfServiceText": "VOLLU.app poskytuje nástroje založené na prohlížeči pro osobní i profesionální použití. Souhlasíte s používáním těchto nástrojů v souladu se všemi platnými zákony a předpisy.",
+    "performanceTitle": "2. Výkon",
+    "performanceText": "Protože veškeré zpracování probíhá na straně klienta, výkon závisí na specifikacích vašeho zařízení. VOLLU nezaručuje konkrétní rychlosti zpracování.",
+    "noTrackingTitle": "1. Žádné sledovací soubory cookie",
+    "noTrackingText": "VOLLU.app nepoužívá sledovací soubory cookie. Používáme Umami (vlastní analytický nástroj zaměřený na soukromí) ke shromažďování anonymních údajů o používání bez identifikace jednotlivých uživatelů.",
+    "zeroUploadTitle": "2. Zásada Zero Upload",
+    "zeroUploadText": "Naše technologie je založena na WebAssembly. To umožňuje, aby moduly pro konverzi PDF a střih videa běžely přímo ve vašem prohlížeči. Nikdy nevidíme vaše soubory, nikdy neukládáme vaše data a nikdy nesdílíme vaše informace."
+  },
+  "SplitPDF": {
+    "title": "Rozdělit stránky PDF",
+    "description": "Extrahujte konkrétní stránky nebo rozsah lokálně z vašeho dokumentu.",
+    "rangePlaceholder": "např. 1-3, 5, 8-10",
+    "btnSplit": "Rozdělit PDF nyní",
+    "btnSplitting": "Rozdělování lokálně...",
+    "invalidRange": "Neplatný formát rozsahu stránek.",
+    "pageCount": "dokument má {count} stran"
+  },
+  "PDFToImage": {
+    "title": "Převodník PDF do obrázků",
+    "description": "Převeďte stránky PDF na vysoce kvalitní obrázky JPG (měřítko 2x).",
+    "btnConvert": "Převést na obrázky",
+    "btnConverting": "Vykreslování stránek {current}/{total}...",
+    "downloadAll": "Stáhnout vše (ZIP)",
+    "resolution": "Vysoké rozlišení (ekvivalent 300 DPI)"
+  },
+  "Security": {
+    "title": "Chránit a odemknout PDF",
+    "description": "Zabezpečte své dokumenty šifrováním AES-128 nebo odstraňte hesla.",
+    "modeProtect": "Chránit PDF",
+    "modeUnlock": "Odemknout PDF",
+    "password": "Heslo",
+    "btnProtect": "Zašifrovat PDF",
+    "btnUnlock": "Odstranit ochranu",
+    "statusLocal": "Soubor zpracován lokálně. Na server nebyla odeslána žádná data."
+  }
+}

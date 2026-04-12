@@ -1,0 +1,12 @@
+#!/usr/bin/expect -f
+set password "UfQ4U4jNpS7nSthh"
+set host "212.95.40.164"
+set user "root"
+
+spawn ssh -oStrictHostKeyChecking=no $user@$host {
+    cat /etc/nginx/sites-enabled/vollu.app.conf
+    nginx -T | grep -A 20 "server {"
+}
+expect "password:"
+send "$password\r"
+expect eof

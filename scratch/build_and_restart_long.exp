@@ -1,0 +1,18 @@
+#!/usr/bin/expect -f
+set timeout 600
+set password "UfQ4U4jNpS7nSthh"
+set host "212.95.40.164"
+set user "root"
+
+spawn ssh -oStrictHostKeyChecking=no $user@$host {
+    echo "--- Building and Restarting ---"
+    cd /home/vollu/htdocs/vollu.app
+    su - vollu -c "cd /home/vollu/htdocs/vollu.app && npm run build"
+    su - vollu -c "pm2 delete vollu.app || true"
+    su - vollu -c "cd /home/vollu/htdocs/vollu.app && pm2 start npm --name 'vollu.app' -- start -- -p 3011"
+    su - vollu -c "pm2 save"
+    su - vollu -c "pm2 list"
+}
+expect "password:"
+send "$password\r"
+expect eof

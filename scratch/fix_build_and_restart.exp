@@ -1,0 +1,25 @@
+#!/usr/bin/expect -f
+set password "UfQ4U4jNpS7nSthh"
+set host "212.95.40.164"
+set user "root"
+
+spawn ssh -oStrictHostKeyChecking=no $user@$host {
+    echo "--- Fresh Build and Restart ---"
+    # Ensure folder and cleanup
+    mkdir -p /home/vollu/htdocs/vollu.app
+    rm -rf /home/vollu/htdocs/vollu.app/*
+    
+    echo "--- Extracting Source ---"
+    tar -xzf /home/vollu/htdocs/vollu_nextjs_source.tar.gz -C /home/vollu/htdocs/vollu.app
+    chown -R vollu:vollu /home/vollu/htdocs/vollu.app
+    
+    echo "--- Building as vollu ---"
+    su - vollu -c "cd /home/vollu/htdocs/vollu.app && npm install && npm run build"
+    
+    echo "--- Restarting PM2 ---"
+    su - vollu -c "cd /home/vollu/htdocs/vollu.app && pm2 restart vollu.app || pm2 start npm --name 'vollu.app' -- start -- -p 3011"
+    su - vollu -c "pm2 save"
+}
+expect "password:"
+send "$password\r"
+expect eof

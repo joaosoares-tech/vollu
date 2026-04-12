@@ -1,0 +1,88 @@
+{
+  "Index": {
+    "badge": "Säker Europeisk Plattform",
+    "title": "Säkra Europeiska Webbverktyg",
+    "description": "Kraftfulla webbläsarbaserade appar som körs helt online. Snabb, privat och fullt krypterad.",
+    "searchPlaceholder": "Sök verktyg...",
+    "platform": "Plattform",
+    "toolsTitle": "Verktyg För Dig",
+    "pdfMergeTitle": "Slå ihop PDF",
+    "pdfMergeDesc": "Kombinera flera PDF-filer till ett enda dokument säkert i din webbläsare.",
+    "videoEditorSoon": "Videoredigerare (Snart)",
+    "videoEditorDesc": "Trimma, klipp och förbättra videor direkt i din webbläsare.",
+    "gdpr": "GDPR-kompatibel",
+    "euInfra": "EU-serverinfrastruktur",
+    "encrypted": "Totalsträckskrypterad",
+    "splitPdfTitle": "Dela PDF",
+    "splitPdfDesc": "Extrahera specifika sidor eller dela upp din PDF i flera filer.",
+    "pdfToImageTitle": "PDF till Bild",
+    "pdfToImageDesc": "Konvertera PDF-sidor till högkvalitativa JPG-bilder direkt.",
+    "protectPdfTitle": "Skydda PDF",
+    "protectPdfDesc": "Skydda din PDF med ett lösenord eller ta bort befintligt skydd."
+  },
+  "PdfMerge": {
+    "back": "Tillbaka till verktyg",
+    "title": "Slå ihop PDF-filer",
+    "description": "Kombinera flera PDF-filer säkert. Dina filer lämnar aldrig din enhet.",
+    "selectFiles": "Välj PDF-filer",
+    "dropHint": "Släpp filer här eller klicka för att bläddra",
+    "btnMerging": "Slår ihop på din enhet...",
+    "btnMerge": "Slå ihop PDF-filer nu",
+    "success": "PDF-filer sammanslagna framgångsrikt!",
+    "btnDownload": "Ladda ner PDF",
+    "btnMore": "Slå ihop fler",
+    "trust": "Behandlas lokalt. Inga filer laddas upp till våra servrar."
+  },
+  "Layout": {
+    "footerRights": "Alla rättigheter förbehållna.",
+    "privacy": "Integritetspolicy",
+    "terms": "Användarvillkor",
+    "contact": "Kontakt"
+  },
+  "Legal": {
+    "backToTools": "Tillbaka till verktyg",
+    "termsTitle": "Användarvillkor",
+    "termsIntro": "Genom att använda VOLLU.app godkänner du dessa villkor. Läs dem noggrant.",
+    "liabilityTitle": "Ansvarsfriskrivning",
+    "liabilityText": "VOLLU.app tillhandahålls 'I BEFINTLIGT SKICK' utan några garantier. Vi ansvarar inte för dataförlust, filskador eller indirekta konsekvenser till följd av användningen av våra verktyg. Användaren tar alla risker förknippade med filbehandling.",
+    "privacyTitle": "Integritetspolicy",
+    "privacyIntro": "Din integritet är vårt kärnlöfte. Vi tror på radikal integritet för alla användare.",
+    "dataHandlingTitle": "Hur vi hanterar filer",
+    "dataHandlingText": "Inga filer laddas någonsinde upp till våra servrar. All behandling (sammanslagning, redigering, konvertering) sker helt i din webbläsare med WebAssembly-teknik. Din data stannar på din enhet.",
+    "useOfServiceTitle": "1. Användning av tjänsten",
+    "useOfServiceText": "VOLLU.app tillhandahåller webbläsarbaserade verktyg för personlig och professionell användning. Du samtycker till att använda dessa verktyg i enlighet med alla tillämpliga lagar och förordningar.",
+    "performanceTitle": "2. Prestanda",
+    "performanceText": "Eftersom all behandling sker lokalt (client-side) beror prestandan på din enhets specifikationer. VOLLU garanterar inte specifika behandlingshastigheter.",
+    "noTrackingTitle": "1. Inga spårningscookies",
+    "noTrackingText": "VOLLU.app använder inte spårningscookies. Vi använder Umami (ett självhostat, integritetsfokuserat analysverktyg) för att samla in anonyma användningsdata utan att identifiera enskilda användare.",
+    "zeroUploadTitle": "2. Zero Upload-policy",
+    "zeroUploadText": "Vår teknik bygger på WebAssembly. Detta gör att PDF-konvertering och videoredigering kan köras direkt i din webbläsare. Vi ser aldrig dina filer, vi lagrar aldrig din data och vi delar aldrig din information."
+  },
+  "SplitPDF": {
+    "title": "Dela PDF-sidor",
+    "description": "Extrahera specifika sidor eller intervall lokalt från ditt dokument.",
+    "rangePlaceholder": "t.ex. 1-3, 5, 8-10",
+    "btnSplit": "Dela PDF nu",
+    "btnSplitting": "Delar lokalt...",
+    "invalidRange": "Ogiltigt sidintervall-format.",
+    "pageCount": "dokumentet har {count} sidor"
+  },
+  "PDFToImage": {
+    "title": "PDF till Bild-konverterare",
+    "description": "Konvertera PDF-sidor till högkvalitativa JPG-bilder (2x skala).",
+    "btnConvert": "Konvertera till bilder",
+    "btnConverting": "Renderar sidor {current}/{total}...",
+    "downloadAll": "Ladda ner alla (ZIP)",
+    "resolution": "Hög upplösning (motsvarar 300 DPI)"
+  },
+  "Security": {
+    "title": "Skydda & Lås upp PDF",
+    "description": "Säkra dina dokument med AES-128-kryptering eller ta bort lösenord.",
+    "modeProtect": "Skydda PDF",
+    "modeUnlock": "Lås upp PDF",
+    "password": "Lösenord",
+    "btnProtect": "Kryptera PDF",
+    "btnUnlock": "Ta bort skydd",
+    "statusLocal": "Filen behandlades lokalt. Ingen data skickades till servern."
+  }
+}

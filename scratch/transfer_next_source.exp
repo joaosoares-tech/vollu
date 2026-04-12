@@ -1,0 +1,11 @@
+#!/usr/bin/expect -f
+set password "UfQ4U4jNpS7nSthh"
+set host "212.95.40.164"
+set user "root"
+set local_file "vollu_nextjs_source.tar.gz"
+set remote_path "/home/vollu/htdocs/vollu_nextjs_source.tar.gz"
+
+spawn scp -oStrictHostKeyChecking=no $local_file $user@$host:$remote_path
+expect "password:"
+send "$password\r"
+expect eof

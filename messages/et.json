@@ -1,0 +1,88 @@
+{
+  "Index": {
+    "badge": "Turvaline Euroopa Platvorm",
+    "title": "Turvalised Euroopa Veebitööriistad",
+    "description": "Võimsad brauseripõhised rakendused, mis töötavad täielikult veebis. Kiired, privaatsed ja täielikult krüpteeritud.",
+    "searchPlaceholder": "Otsi tööriistu...",
+    "platform": "Platvorm",
+    "toolsTitle": "Tööriistad Sulle",
+    "pdfMergeTitle": "Ühenda PDF",
+    "pdfMergeDesc": "Ühenda mitu PDF-faili üheks dokumendiks turvaliselt oma brauseris.",
+    "videoEditorSoon": "Video Redaktor (Varsti)",
+    "videoEditorDesc": "Kärbi, lõika ja täiusta videoid otse oma brauseris.",
+    "gdpr": "GDPR-iga ühilduv",
+    "euInfra": "EL-i serverite infrastruktuur",
+    "encrypted": "Lõpuni krüpteeritud",
+    "splitPdfTitle": "Jaga PDF",
+    "splitPdfDesc": "Võta välja konkreetsed leheküljed või jaga oma PDF mitmeks failiks.",
+    "pdfToImageTitle": "PDF Pildiks",
+    "pdfToImageDesc": "Muuda PDF-leheküljed kohe kvaliteetseteks JPG-piltideks.",
+    "protectPdfTitle": "Kaitse PDF-i",
+    "protectPdfDesc": "Kaitse oma PDF-i parooliga või eemalda olemasolev kaitse."
+  },
+  "PdfMerge": {
+    "back": "Tagasi tööriistade juurde",
+    "title": "Ühenda PDF-failid",
+    "description": "Ühenda mitu PDF-i turvaliselt. Sinu failid ei lahku kunagi sinu seadmest.",
+    "selectFiles": "Vali PDF-failid",
+    "dropHint": "Lohista failid siia või klõpsa sirvimiseks",
+    "btnMerging": "Ühendamine sinu seadmes...",
+    "btnMerge": "Ühenda PDF-id kohe",
+    "success": "PDF-id edukalt ühendatud!",
+    "btnDownload": "Laadi PDF alla",
+    "btnMore": "Ühenda veel",
+    "trust": "Töödeldud lokaalselt. Ühtegi faili ei laadita meie serveritesse."
+  },
+  "Layout": {
+    "footerRights": "Kõik õigused kaitstud.",
+    "privacy": "Privaatsuspoliitika",
+    "terms": "Kasutustingimused",
+    "contact": "Kontakt"
+  },
+  "Legal": {
+    "backToTools": "Tagasi tööriistade juurde",
+    "termsTitle": "Kasutustingimused",
+    "termsIntro": "VOLLU.app-i kasutades nõustud nende tingimustega. Palun loe need hoolikalt läbi.",
+    "liabilityTitle": "Vastutusest vabastamine",
+    "liabilityText": "VOLLU.app-i pakutakse 'NAGU ON' ilma igasuguste garantiideta. Me ei vastuta andmete kadumise, failide kahjustumise või meie tööriistade kasutamisest tingitud kaudsete tagajärgede eest. Kasutaja võtab endale kõik failide töötlemisega seotud riskid.",
+    "privacyTitle": "Privaatsuspoliitika",
+    "privacyIntro": "Sinu privaatsus on meie peamine lubadus. Me usume radikaalsesse privaatsusse kõigi kasutajate jaoks.",
+    "dataHandlingTitle": "Kuidas me faile käsitleme",
+    "dataHandlingText": "Ühtegi faili ei laadita kunagi meie serveritesse. Kogu töötlemine (ühendamine, redigeerimine, konverteerimine) toimub täielikult sinu brauseris, kasutades WebAssembly tehnoloogiat. Sinu andmed jäävad sinu seadmesse.",
+    "useOfServiceTitle": "1. Teenuse kasutamine",
+    "useOfServiceText": "VOLLU.app pakub brauseripõhiseid tööriistu isiklikuks ja professionaalseks kasutamiseks. Nõustud kasutama neid tööriistu kooskõlas kõigi kehtivate seaduste ja määrustega.",
+    "performanceTitle": "2. Jõudlus",
+    "performanceText": "Kuna kogu töötlemine on kliendipoolne, sõltub jõudlus sinu seadme spetsifikatsioonidest. VOLLU ei garanteeri konkreetseid töötlemiskiirusi.",
+    "noTrackingTitle": "1. Küpsiseid ei kasutata",
+    "noTrackingText": "VOLLU.app ei kasuta jälitusküpsiseid. Kasutame Umamit (ise-hostitud, privaatsusele suunatud analüüsiriist), et koguda anonüümseid kasutusandmeid ilma üksikkasutajaid tuvastamata.",
+    "zeroUploadTitle": "2. Zero Upload poliitika",
+    "zeroUploadText": "Meie tehnoloogia põhineb WebAssembly-l. See võimaldab PDF-i konverteerimise ja video redigeerimise mootoritel töötada otse sinu brauseris. Me ei näe kunagi sinu faile, me ei salvesta kunagi sinu andmeid ja me ei jaga kunagi sinu teavet."
+  },
+  "SplitPDF": {
+    "title": "Jaga PDF lehekülgi",
+    "description": "Võta oma dokumendist lokaalselt välja konkreetsed leheküljed või vahemikud.",
+    "rangePlaceholder": "nt 1-3, 5, 8-10",
+    "btnSplit": "Jaga PDF kohe",
+    "btnSplitting": "Jagamine lokaalselt...",
+    "invalidRange": "Vigane leheküljevahemiku vorming.",
+    "pageCount": "dokumendil on {count} lehekülge"
+  },
+  "PDFToImage": {
+    "title": "PDF pildiks konverteerija",
+    "description": "Muuda PDF-leheküljed kvaliteetseteks JPG-piltideks (2x mõõtkava).",
+    "btnConvert": "Muuda piltideks",
+    "btnConverting": "Lehekülgede renderdamine {current}/{total}...",
+    "downloadAll": "Laadi kõik alla (ZIP)",
+    "resolution": "Kõrge eraldusvõime (vastab 300 DPI-le)"
+  },
+  "Security": {
+    "title": "Kaitse ja ava PDF-i",
+    "description": "Kaitse oma dokumente AES-128 krüpteerimisega või eemalda paroolid.",
+    "modeProtect": "Kaitse PDF-i",
+    "modeUnlock": "Ava PDF",
+    "password": "Parool",
+    "btnProtect": "Krüpteeri PDF",
+    "btnUnlock": "Eemalda kaitse",
+    "statusLocal": "Fail töödeldud lokaalselt. Andmeid ei saadetud serverisse."
+  }
+}

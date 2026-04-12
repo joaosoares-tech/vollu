@@ -1,0 +1,88 @@
+{
+  "Index": {
+    "badge": "Turvallinen Eurooppalainen Alusta",
+    "title": "Turvalliset Eurooppalaiset Verkkotyökalut",
+    "description": "Tehokkaat selainpohjaiset sovellukset, jotka toimivat täysin verkossa. Nopeita, yksityisiä ja täysin salattuja.",
+    "searchPlaceholder": "Etsi työkaluja...",
+    "platform": "Alusta",
+    "toolsTitle": "Työkalut Sinulle",
+    "pdfMergeTitle": "Yhdistä PDF",
+    "pdfMergeDesc": "Yhdistä useita PDF-tiedostoja yhdeksi dokumentiksi turvallisesti selaimessasi.",
+    "videoEditorSoon": "Videoeditori (Tulossa)",
+    "videoEditorDesc": "Trimmaa, leikkaa ja paranna videoita suoraan selaimessasi.",
+    "gdpr": "GDPR-yhteensopiva",
+    "euInfra": "EU-palvelininfrastruktuuri",
+    "encrypted": "Päästä päähän salattu",
+    "splitPdfTitle": "Jaa PDF",
+    "splitPdfDesc": "Poimi tiettyjä sivuja tai jaa PDF useisiin tiedostoihin.",
+    "pdfToImageTitle": "PDF kuvaksi",
+    "pdfToImageDesc": "Muunna PDF-sivut korkealaatuisiksi JPG-kuviksi välittömästi.",
+    "protectPdfTitle": "Suojaa PDF",
+    "protectPdfDesc": "Suojaa PDF-tiedostosi salasanalla tai poista nykyinen suojaus."
+  },
+  "PdfMerge": {
+    "back": "Takaisin työkaluihin",
+    "title": "Yhdistä PDF-tiedostoja",
+    "description": "Yhdistä useita PDF-tiedostoja turvallisesti. Tiedostosi eivät koskaan lähde laitteeltasi.",
+    "selectFiles": "Valitse PDF-tiedostot",
+    "dropHint": "Pudota tiedostot tähän tai napsauta selataksesi",
+    "btnMerging": "Yhdistetään laitteellasi...",
+    "btnMerge": "Yhdistä PDF-tiedostot nyt",
+    "success": "PDF-tiedostot yhdistetty onnistuneesti!",
+    "btnDownload": "Lataa PDF",
+    "btnMore": "Yhdistä lisää",
+    "trust": "Käsitelty paikallisesti. Tiedostoja ei ladata palvelimillemme."
+  },
+  "Layout": {
+    "footerRights": "Kaikki oikeudet pidätetään.",
+    "privacy": "Tietosuojaseloste",
+    "terms": "Käyttöehdot",
+    "contact": "Ota yhteyttä"
+  },
+  "Legal": {
+    "backToTools": "Takaisin työkaluihin",
+    "termsTitle": "Käyttöehdot",
+    "termsIntro": "Käyttämällä VOLLU.app-palvelua hyväksyt nämä ehdot. Lue ne huolellisesti.",
+    "liabilityTitle": "Vastuuvapauslauseke",
+    "liabilityText": "VOLLU.app toimitetaan 'SELLAISENA KUIN SE ON' ilman mitään takuita. Emme ole vastuussa tietojen katoamisesta, tiedostojen vaurioitumisesta tai välillisistä seurauksista, jotka aiheutuvat työkalujemme käytöstä. Käyttäjä vastaa kaikista tiedostojen käsittelyyn liittyvistä riskeistä.",
+    "privacyTitle": "Tietosuojaseloste",
+    "privacyIntro": "Yksityisyytesi on keskeinen lupauksemme. Uskomme ehdottomaan yksityisyyteen kaikille käyttäjille.",
+    "dataHandlingTitle": "Miten käsittelemme tiedostoja",
+    "dataHandlingText": "Tiedostoja ei koskaan ladata palvelimillemme. Kaikki käsittely (yhdistäminen, muokkaaminen, muuntaminen) tapahtuu täysin selaimessasi WebAssembly-teknologian avulla. Tietosi pysyvät laitteellasi.",
+    "useOfServiceTitle": "1. Palvelun käyttö",
+    "useOfServiceText": "VOLLU.app tarjoaa selainpohjaisia työkaluja henkilökohtaiseen ja ammatilliseen käyttöön. Sitoudut käyttämään näitä työkaluja kaikkien sovellettavien lakien ja asetusten mukaisesti.",
+    "performanceTitle": "2. Suorituskyky",
+    "performanceText": "Koska kaikki käsittely on paikallista (client-side), suorituskyky riippuu laitteesi ominaisuuksista. VOLLU ei takaa tiettyjä käsittelynopeuksia.",
+    "noTrackingTitle": "1. Ei seurantatiedostoja",
+    "noTrackingText": "VOLLU.app ei käytä seurantatiedostoja (cookies). Käytämme Umamia (itse isännöity, yksityisyyteen keskittyvä analytiikkatyökalu) kerätäksemme anonyymiä käyttötietoa ilman yksittäisten käyttäjien tunnistamista.",
+    "zeroUploadTitle": "2. Zero Upload -käytäntö",
+    "zeroUploadText": "Teknologiamme perustuu WebAssemblyyn. Tämän ansiosta PDF-muunnos- ja videonmuokkausmoottorit voivat toimia suoraan selaimessasi. Emme koskaan näe tiedostojasi, emme koskaan tallenna tietojasi emmekä koskaan jaa tietojasi."
+  },
+  "SplitPDF": {
+    "title": "Jaa PDF-sivut",
+    "description": "Poimi tiettyjä sivuja tai alueita paikallisesti dokumentistasi.",
+    "rangePlaceholder": "esim. 1-3, 5, 8-10",
+    "btnSplit": "Jaa PDF nyt",
+    "btnSplitting": "Jaetaan paikallisesti...",
+    "invalidRange": "Virheellinen sivualueen muoto.",
+    "pageCount": "dokumentissa on {count} sivua"
+  },
+  "PDFToImage": {
+    "title": "PDF kuvaksi -muunnin",
+    "description": "Muunna PDF-sivut korkealaatuisiksi JPG-kuviksi (2x-mittakaava).",
+    "btnConvert": "Muunna kuviksi",
+    "btnConverting": "Renderöidään sivuja {current}/{total}...",
+    "downloadAll": "Lataa kaikki (ZIP)",
+    "resolution": "Korkea resoluutio (vastaa 300 DPI:tä)"
+  },
+  "Security": {
+    "title": "Suojaa ja avaa PDF",
+    "description": "Suojaa dokumenttisi AES-128-salauksella tai poista salasanat.",
+    "modeProtect": "Suojaa PDF",
+    "modeUnlock": "Avaa PDF",
+    "password": "Salasana",
+    "btnProtect": "Salaa PDF",
+    "btnUnlock": "Poista suojaus",
+    "statusLocal": "Tiedosto käsitelty paikallisesti. Tietoja ei lähetetty palvelimelle."
+  }
+}

@@ -1,0 +1,22 @@
+#!/usr/bin/expect -f
+set timeout 60
+spawn ssh -oStrictHostKeyChecking=no root@212.95.40.164
+expect "password:"
+send "Vollu@2025\r"
+expect "#"
+send "su - vollu -c 'cd /home/vollu/htdocs/vollu.app && npm run start -- -p 3011'\r"
+expect {
+    "Error" { 
+        # Capture error and exit
+        sleep 5
+        send "\x03"
+    }
+    "ready" {
+        # Successfully started, but we want to see if it crashes shortly
+        sleep 5
+        send "\x03"
+    }
+}
+expect "#"
+send "exit\r"
+expect eof

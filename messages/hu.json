@@ -1,0 +1,88 @@
+{
+  "Index": {
+    "badge": "Biztonságos Európai Platform",
+    "title": "Biztonságos Európai Webes Eszközök",
+    "description": "Erőteljes, böngészőalapú alkalmazások, amelyek teljesen online futnak. Gyors, privát és teljes mértékben titkosított.",
+    "searchPlaceholder": "Eszközök keresése...",
+    "platform": "Platform",
+    "toolsTitle": "Eszközök Önnek",
+    "pdfMergeTitle": "PDF Egyesítése",
+    "pdfMergeDesc": "Kombináljon több PDF fájlt egyetlen dokumentummá biztonságosan a böngészőjében.",
+    "videoEditorSoon": "Videószerkesztő (Hamarosan)",
+    "videoEditorDesc": "Vágja meg, szerkessze és javítsa videóit közvetlenül a böngészőjében.",
+    "gdpr": "GDPR-megfelelő",
+    "euInfra": "Európai Szerver Infrastruktúra",
+    "encrypted": "Végpontok közötti titkosítás",
+    "splitPdfTitle": "PDF Szétválasztása",
+    "splitPdfDesc": "Vegyen ki konkrét oldalakat vagy bontsa több fájlra a PDF-et.",
+    "pdfToImageTitle": "PDF Képpé",
+    "pdfToImageDesc": "Alakítsa át a PDF oldalait azonnal kiváló minőségű JPG képekké.",
+    "protectPdfTitle": "PDF Védelem",
+    "protectPdfDesc": "Védje meg PDF-jét jelszóval vagy távolítsa el a meglévő védelmet."
+  },
+  "PdfMerge": {
+    "back": "Vissza az eszközökhöz",
+    "title": "PDF fájlok egyesítése",
+    "description": "Kombináljon több PDF-et biztonságosan. A fájljai soha nem hagyják el az eszközét.",
+    "selectFiles": "PDF fájlok kiválasztása",
+    "dropHint": "Húzza ide a fájlokat vagy kattintson a tallózáshoz",
+    "btnMerging": "Egyesítés az eszközön...",
+    "btnMerge": "PDF-ek egyesítése most",
+    "success": "PDF-ek sikeresen egyesítve!",
+    "btnDownload": "PDF Letöltése",
+    "btnMore": "Továbbiak egyesítése",
+    "trust": "Helyben feldolgozva. Semmilyen fájl nem kerül feltöltésre a szervereinkre."
+  },
+  "Layout": {
+    "footerRights": "Minden jog fenntartva.",
+    "privacy": "Adatvédelmi irányelvek",
+    "terms": "Általános szerződési feltételek",
+    "contact": "Kapcsolat"
+  },
+  "Legal": {
+    "backToTools": "Vissza az eszközökhöz",
+    "termsTitle": "Általános szerződési feltételek",
+    "termsIntro": "A VOLLU.app használatával elfogadja ezeket a feltételeket. Kérjük, olvassa el őket figyelmesen.",
+    "liabilityTitle": "Felelősség alóli mentesség",
+    "liabilityText": "A VOLLU.app 'AHOGY VAN' állapotban kerül biztosításra, mindenféle garancia nélkül. Nem vállalunk felelősséget az adatvesztésért, a fájlok sérüléséért vagy eszközeink használatából eredő közvetett következményekért. A felhasználó vállal minden, a fájlfeldolgozással kapcsolatos kockázatot.",
+    "privacyTitle": "Adatvédelmi irányelvek",
+    "privacyIntro": "Az Ön adatainak védelme a legfontosabb ígéretünk. Hiszünk a minden felhasználót megillető radikális adatvédelemben.",
+    "dataHandlingTitle": "Hogyan kezeljük a fájlokat",
+    "dataHandlingText": "Soha nem kerülnek fájlok feltöltésre a szervereinkre. Minden feldolgozás (egyesítés, szerkesztés, konvertálás) teljes mértékben a böngészőjében történik WebAssembly technológia segítségével. Az adatai az eszközén maradnak.",
+    "useOfServiceTitle": "1. A szolgáltatás használata",
+    "useOfServiceText": "A VOLLU.app böngészőalapú eszközöket biztosít személyes és szakmai használatra. Ön beleegyezik, hogy ezeket az eszközöket az összes vonatkozó törvénynek és szabályozásnak megfelelően használja.",
+    "performanceTitle": "2. Teljesítmény",
+    "performanceText": "Mivel minden feldolgozás kliensoldali, a teljesítmény az Ön eszközének specifikációitól függ. A VOLLU nem garantál konkrét feldolgozási sebességet.",
+    "noTrackingTitle": "1. Nincsenek követő sütik",
+    "noTrackingText": "A VOLLU.app nem használ követő sütiket. Az Umami (egy saját hálózaton tárolt, adatvédelem-központú elemző eszköz) szolgáltatást használjuk anonim használati adatok gyűjtésére az egyes felhasználók beazonosítása nélkül.",
+    "zeroUploadTitle": "2. Zero Upload irányelv",
+    "zeroUploadText": "Technológiánk a WebAssembly-n alapul. Ez lehetővé teszi, hogy a PDF-konvertáló és videószerkesztő motorok közvetlenül a böngészőjében fussanak. Soha nem látjuk a fájljait, soha nem tároljuk az adatait, és soha nem osztjuk meg az információit."
+  },
+  "SplitPDF": {
+    "title": "PDF Oldalak Szétvágása",
+    "description": "Vegyen ki konkrét oldalakat vagy tartományokat helyben a dokumentumból.",
+    "rangePlaceholder": "pl. 1-3, 5, 8-10",
+    "btnSplit": "PDF szétvágása most",
+    "btnSplitting": "Szétvágás helyben...",
+    "invalidRange": "Érvénytelen oldaltartomány formátum.",
+    "pageCount": "a dokumentum {count} oldalból áll"
+  },
+  "PDFToImage": {
+    "title": "PDF-ből Kép Konvertáló",
+    "description": "Alakítsa át a PDF oldalait kiváló minőségű JPG képekké (2x méretezés).",
+    "btnConvert": "Konvertálás képekké",
+    "btnConverting": "Oldalak renderelése {current}/{total}...",
+    "downloadAll": "Összes letöltése (ZIP)",
+    "resolution": "Nagy felbontás (300 DPI egyenértékű)"
+  },
+  "Security": {
+    "title": "PDF Védelem és Feloldás",
+    "description": "Biztosítsa dokumentumait AES-128 titkosítással vagy távolítsa el a jelszavakat.",
+    "modeProtect": "PDF Védelem",
+    "modeUnlock": "PDF Feloldás",
+    "password": "Jelszó",
+    "btnProtect": "PDF Titkosítása",
+    "btnUnlock": "Védelem Eltávolítása",
+    "statusLocal": "Fájl helyben feldolgozva. Semmilyen adat nem került elküldésre a szerverre."
+  }
+}

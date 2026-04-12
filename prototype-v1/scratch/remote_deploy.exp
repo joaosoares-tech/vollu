@@ -1,0 +1,20 @@
+#!/usr/bin/expect -f
+set password "UfQ4U4jNpS7nSthh"
+set host "212.95.40.164"
+set user "root"
+set deploy_path "/home/vollu/htdocs/vollu.app"
+set archive_path "/home/vollu/htdocs/vollu_deployment.tar.gz"
+set backup_path "/home/vollu/htdocs/backup_orig"
+
+spawn ssh -oStrictHostKeyChecking=no $user@$host {
+    mkdir -p /home/vollu/htdocs/backup_orig
+    cp -r /home/vollu/htdocs/vollu.app/. /home/vollu/htdocs/backup_orig/ 2>/dev/null || true
+    rm -rf /home/vollu/htdocs/vollu.app/*
+    tar -xzf /home/vollu/htdocs/vollu_deployment.tar.gz -C /home/vollu/htdocs/vollu.app
+    chown -R vollu:vollu /home/vollu/htdocs/vollu.app
+    chmod -R 755 /home/vollu/htdocs/vollu.app
+    ls -la /home/vollu/htdocs/vollu.app
+}
+expect "password:"
+send "$password\r"
+expect eof

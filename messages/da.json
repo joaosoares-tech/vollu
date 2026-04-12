@@ -1,0 +1,88 @@
+{
+  "Index": {
+    "badge": "Sikker Europæisk Platform",
+    "title": "Sikre Europæiske Webværktøjer",
+    "description": "Kraftfulde browserbaserede apps, der kører helt online. Hurtig, privat og fuldt krypteret.",
+    "searchPlaceholder": "Søg i værktøjer...",
+    "platform": "Platform",
+    "toolsTitle": "Værktøjer Til Dig",
+    "pdfMergeTitle": "Flet PDF",
+    "pdfMergeDesc": "Kombiner flere PDF-filer til ét dokument sikkert i din browser.",
+    "videoEditorSoon": "Video Editor (Snart)",
+    "videoEditorDesc": "Trim, klip og forbedr videoer direkte i din browser.",
+    "gdpr": "GDPR-kompatibel",
+    "euInfra": "EU Server-infrastruktur",
+    "encrypted": "Ende-til-ende Krypteret",
+    "splitPdfTitle": "Opdel PDF",
+    "splitPdfDesc": "Udtræk specifikke sider eller opdel din PDF i flere filer.",
+    "pdfToImageTitle": "PDF til Billede",
+    "pdfToImageDesc": "Konverter PDF-sider til højkvalitets JPG-billeder med det samme.",
+    "protectPdfTitle": "Beskyt PDF",
+    "protectPdfDesc": "Beskyt din PDF med en adgangskode eller fjern eksisterende beskyttelse."
+  },
+  "PdfMerge": {
+    "back": "Tilbage til Værktøjer",
+    "title": "Flet PDF-filer",
+    "description": "Kombiner flere PDF'er sikkert. Dine filer forlader aldrig din enhed.",
+    "selectFiles": "Vælg PDF-filer",
+    "dropHint": "Slip filer her eller klik for at gennemse",
+    "btnMerging": "Fletter på din enhed...",
+    "btnMerge": "Flet PDF'er Nu",
+    "success": "PDF'er Flettet Succesfuldt!",
+    "btnDownload": "Download PDF",
+    "btnMore": "Flet Flere",
+    "trust": "Behandlet lokalt. Ingen filer uploades til vores servere."
+  },
+  "Layout": {
+    "footerRights": "Alle rettigheder forbeholdes.",
+    "privacy": "Privatlivspolitik",
+    "terms": "Servicevilkår",
+    "contact": "Kontakt"
+  },
+  "Legal": {
+    "backToTools": "Tilbage til Værktøjer",
+    "termsTitle": "Servicevilkår",
+    "termsIntro": "Ved at bruge VOLLU.app accepterer du disse vilkår. Læs dem venligst omhyggeligt.",
+    "liabilityTitle": "Ansvarsfritagelse",
+    "liabilityText": "VOLLU.app leveres 'SOM DEN ER' uden nogen form for garantier. Vi er ikke ansvarlige for datatab, filskader eller indirekte konsekvenser som følge af brugen af vores værktøjer. Brugeren påtager sig alle risici forbundet med filbehandling.",
+    "privacyTitle": "Privatlivspolitik",
+    "privacyIntro": "Dit privatliv er vores kerne-løfte. Vi tror på radikalt privatliv for alle brugere.",
+    "dataHandlingTitle": "Hvordan vi håndterer filer",
+    "dataHandlingText": "Ingen filer bliver nogensinde uploadet til vores servere. Al behandling (fletning, redigering, konvertering) sker udelukkende i din browser ved hjælp af WebAssembly-teknologi. Dine data bliver på din enhed.",
+    "useOfServiceTitle": "1. Brug af Tjenesten",
+    "useOfServiceText": "VOLLU.app leverer browserbaserede værktøjer til personlig og professionel brug. Du accepterer at bruge disse værktøjer i overensstemmelse med alle gældende love og regler.",
+    "performanceTitle": "2. Ydeevne",
+    "performanceText": "Da al behandling er lokal, afhænger ydeevnen af din enheds specifikationer. VOLLU garanterer ikke specifikke behandlingshastigheder.",
+    "noTrackingTitle": "1. Ingen Sporingscookies",
+    "noTrackingText": "VOLLU.app bruger ikke sporingscookies. Vi bruger Umami (et selvhosted, privatlivsfokuseret analyseværktøj) til at indsamle anonyme brugsdata uden at identificere individuelle brugere.",
+    "zeroUploadTitle": "2. Zero Upload Politik",
+    "zeroUploadText": "Vores teknologi er bygget på WebAssembly. Dette gør det muligt for PDF-konverterings- og videoredigeringsmotorer at køre direkte i din browser. Vi ser aldrig dine filer, vi gemmer aldrig dine data, og vi deler aldrig dine oplysninger."
+  },
+  "SplitPDF": {
+    "title": "Opdel PDF-sider",
+    "description": "Udtræk specifikke sider eller områder lokalt fra dit dokument.",
+    "rangePlaceholder": "f.eks. 1-3, 5, 8-10",
+    "btnSplit": "Opdel PDF Nu",
+    "btnSplitting": "Opdeler lokalt...",
+    "invalidRange": "Ugyldigt sidetalsformat.",
+    "pageCount": "dokumentet har {count} sider"
+  },
+  "PDFToImage": {
+    "title": "PDF til Billede Konverter",
+    "description": "Konverter PDF-sider til højkvalitets JPG-billeder (2x skala).",
+    "btnConvert": "Konverter til Billeder",
+    "btnConverting": "Renderer sider {current}/{total}...",
+    "downloadAll": "Download Alt (ZIP)",
+    "resolution": "Høj Opløsning (svarer til 300 DPI)"
+  },
+  "Security": {
+    "title": "Beskyt og Lås Op PDF",
+    "description": "Beskyt dine dokumenter med AES-128 kryptering eller fjern adgangskoder.",
+    "modeProtect": "Beskyt PDF",
+    "modeUnlock": "Lås Op PDF",
+    "password": "Adgangskode",
+    "btnProtect": "Krypter PDF",
+    "btnUnlock": "Fjern Beskyttelse",
+    "statusLocal": "Fil behandlet lokalt. Ingen data sendt til serveren."
+  }
+}

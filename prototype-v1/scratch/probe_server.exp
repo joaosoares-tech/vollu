@@ -1,0 +1,27 @@
+#!/usr/bin/expect -f
+set password "UfQ4U4jNpS7nSthh"
+set host "212.95.40.164"
+set user "root"
+
+spawn ssh -oStrictHostKeyChecking=no $user@$host {
+    if [ -d /var/www/html ]; then
+        echo "ROOT:/var/www/html";
+    elif [ -d /var/www ]; then
+        echo "ROOT:/var/www";
+    else
+        echo "ROOT:NOT_FOUND";
+    fi;
+    if command -v nginx >/dev/null; then
+        echo "SERVER:nginx";
+    elif command -v apache2 >/dev/null; then
+        echo "SERVER:apache2";
+    elif command -v httpd >/dev/null; then
+        echo "SERVER:httpd";
+    else
+        echo "SERVER:NONE";
+    fi
+    ls -p /var/www/html 2>/dev/null | grep -v / | head -n 5
+}
+expect "password:"
+send "$password\r"
+expect eof

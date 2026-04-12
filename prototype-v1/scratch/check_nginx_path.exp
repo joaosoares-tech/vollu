@@ -1,0 +1,14 @@
+#!/usr/bin/expect -f
+set password "UfQ4U4jNpS7nSthh"
+set host "212.95.40.164"
+set user "root"
+
+spawn ssh -oStrictHostKeyChecking=no $user@$host {
+    echo "--- Nginx Site Configs ---"
+    grep -r "/home/vollu/htdocs/vollu.app" /etc/nginx/sites-enabled/
+    echo "--- Directory Check ---"
+    ls -ld /home/vollu/htdocs/vollu.app
+}
+expect "password:"
+send "$password\r"
+expect eof
