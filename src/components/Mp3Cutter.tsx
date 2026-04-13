@@ -50,7 +50,6 @@ export default function Mp3Cutter() {
       cursorColor: '#22d3ee',
       barWidth: 2,
       barRadius: 3,
-      responsive: true,
       height: 120,
       plugins: []
     });
