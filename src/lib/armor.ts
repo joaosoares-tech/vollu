@@ -56,7 +56,7 @@ export async function encryptFileStream(
             const iv = new Uint8Array(ivBase);
             new DataView(iv.buffer).setUint32(8, chunkIndex, true); 
 
-            const encryptedChunk = await crypto.subtle.encrypt({ name: 'AES-GCM', iv }, key, value);
+            const encryptedChunk = await crypto.subtle.encrypt({ name: 'AES-GCM', iv }, key, value as any);
             controller.enqueue(new Uint8Array(encryptedChunk));
             
             processed += value.length; chunkIndex++;
@@ -118,7 +118,7 @@ export async function decryptFileStream(
         async decryptChunk(chunk: Uint8Array, key: CryptoKey, ivBase: Uint8Array, index: number) {
             const iv = new Uint8Array(ivBase);
             new DataView(iv.buffer).setUint32(8, index, true);
-            return new Uint8Array(await crypto.subtle.decrypt({ name: 'AES-GCM', iv }, key, chunk));
+            return new Uint8Array(await crypto.subtle.decrypt({ name: 'AES-GCM', iv }, key, chunk as any));
         }
     } as any);
 }
