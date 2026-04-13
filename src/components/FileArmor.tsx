@@ -38,6 +38,15 @@ export default function FileArmor() {
     isMounted.current = true;
   }, []);
 
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const selected = e.target.files?.[0];
+    if (selected) {
+      setFile(selected);
+      setStatus('idle');
+      setProgress(0);
+    }
+  };
+
   const handleAction = async () => {
     if (!file || !password || !isMounted.current) return;
     setIsProcessing(true);
