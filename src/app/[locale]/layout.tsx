@@ -71,7 +71,7 @@ export default async function RootLayout({
   const t = await getTranslations('Layout');
 
   return (
-    <html lang={locale} className={inter.variable}>
+    <html lang={locale} className={cn(inter.variable, "dark")}>
       <body className={inter.className}>
         <NextIntlClientProvider messages={messages}>
           <div className="page-background" aria-hidden="true" />

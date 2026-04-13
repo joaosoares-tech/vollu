@@ -14,7 +14,7 @@
   }
   
   body {
-    @apply bg-bg text-dark font-sans;
+    @apply bg-bg text-dark font-sans dark:bg-dark-bg dark:text-dark-text;
     overflow-x: hidden;
     min-height: 100vh;
   }
@@ -22,7 +22,7 @@
 
 @layer utilities {
   .page-background {
-    @apply fixed inset-0 -z-10 bg-bg bg-page-pattern bg-cover bg-center bg-no-repeat opacity-[0.35];
+    @apply fixed inset-0 -z-10 bg-bg bg-page-pattern bg-cover bg-center bg-no-repeat opacity-[0.35] dark:bg-dark-bg dark:opacity-[0.15];
   }
   .page-background::after {
     content: '';
@@ -30,6 +30,6 @@
   }
   
   .glass-card {
-    @apply bg-card backdrop-blur-md border border-border shadow-sm;
+    @apply bg-card backdrop-blur-md border border-border shadow-sm dark:bg-dark-card dark:border-dark-border;
   }
 }
