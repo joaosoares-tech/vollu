@@ -2,6 +2,7 @@
 
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import imageCompression from 'browser-image-compression';
+// @ts-ignore
 import { optimize } from 'svgo/dist/svgo.browser.js';
 import JSZip from 'jszip';
 import { motion, AnimatePresence } from 'framer-motion';
