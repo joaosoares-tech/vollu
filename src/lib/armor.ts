@@ -36,7 +36,7 @@ export async function encryptFileStream(
     let processed = 0, chunkIndex = 0, headerSent = false;
 
     return new ReadableStream({
-        async pull(controller) {
+        async pull(controller: ReadableStreamDefaultController) {
             if (!headerSent) {
                 const header = new Uint8Array(28);
                 header.set(salt, 0); header.set(ivBase, 16);
@@ -75,7 +75,7 @@ export async function decryptFileStream(
     let leftover = new Uint8Array(0);
 
     return new ReadableStream({
-        async pull(controller) {
+        async pull(controller: ReadableStreamDefaultController) {
             const { done, value } = await reader.read();
             
             if (done) {
