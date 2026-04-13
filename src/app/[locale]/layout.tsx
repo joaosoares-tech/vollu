@@ -88,9 +88,6 @@ export default async function RootLayout({
 
               <div className="flex items-center gap-6">
                 <LanguagePicker />
-                <div className="w-[36px] h-[36px] rounded-full bg-gradient-to-br from-brand to-brand-light flex items-center justify-center text-white text-[13px] font-bold cursor-pointer hover:scale-105 hover:shadow-glow transition-all border-2 border-transparent hover:border-[rgba(30,74,255,0.15)]">
-                  J
-                </div>
               </div>
             </div>
           </nav>
