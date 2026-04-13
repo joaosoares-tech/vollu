@@ -279,5 +279,29 @@
     "processBtn": "Boost Volume",
     "processing": "Boosting audio: {progress}%",
     "downloadResult": "Download Processed File"
+  },
+  "VideoToGif": {
+    "title": "Video to GIF",
+    "description": "Convert video clips to high-quality GIFs with professional palette algorithms."
+  },
+  "Mp3Cutter": {
+    "title": "MP3 Cutter",
+    "description": "Precision-cut audio files with millisecond accuracy and real-time waveform visualization."
+  },
+  "AudioConverter": {
+    "title": "Audio Converter",
+    "description": "Batch conversion between MP3, WAV, and OGG with full bitrate control."
+  },
+  "SmartCompressor": {
+    "title": "Smart Compressor",
+    "description": "Optimize PNG, JPG, WebP, GIF, and SVG images with no visible quality loss."
+  },
+  "ImageConverter": {
+    "title": "Image Converter",
+    "description": "Convert photos to next-gen formats: WebP and AVIF with 100% privacy."
+  },
+  "FileArmor": {
+    "title": "File Armor",
+    "description": "Military-grade AES-GCM 256 encryption for files of any size, processed entirely in-browser."
   }
 }

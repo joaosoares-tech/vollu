@@ -113,5 +113,29 @@
     "btnProtect": "Encriptar PDF",
     "btnUnlock": "Eliminar Protección",
     "statusLocal": "Archivo procesado localmente. No se enviaron datos al servidor."
+  },
+  "VideoToGif": {
+    "title": "Vídeo a GIF",
+    "description": "Convierte clips de vídeo en GIFs de alta calidad con algoritmos de paleta profesionales."
+  },
+  "Mp3Cutter": {
+    "title": "Cortador de MP3",
+    "description": "Corta archivos de audio con precisión milimétrica y visualiza la forma de onda en tiempo real."
+  },
+  "AudioConverter": {
+    "title": "Conversor de Audio",
+    "description": "Conversión por lotes entre MP3, WAV y OGG con control total de tasa de bits."
+  },
+  "SmartCompressor": {
+    "title": "Compresor Inteligente",
+    "description": "Optimiza imágenes PNG, JPG, WebP, GIF y SVG sin pérdida visible de calidad."
+  },
+  "ImageConverter": {
+    "title": "Conversor de Imagen",
+    "description": "Convierte fotos a formatos de próxima generación: WebP y AVIF con 100% de privacidad."
+  },
+  "FileArmor": {
+    "title": "File Armor",
+    "description": "Encriptación militar AES-GCM 256 para archivos de cualquier tamaño, procesada totalmente en el navegador."
   }
 }
