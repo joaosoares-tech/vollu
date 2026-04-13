@@ -29,7 +29,7 @@ export async function encryptFileStream(
 ): Promise<ReadableStream> {
     const salt = crypto.getRandomValues(new Uint8Array(16));
     const ivBase = crypto.getRandomValues(new Uint8Array(12));
-    const key = await deriveKey(password, salt);
+    const key = await deriveKey(password, salt as any);
     
     // We use a Blob stream which provides chunks
     const reader = file.stream().getReader();
@@ -93,7 +93,7 @@ export async function decryptFileStream(
                 if (data.length < 28) { leftover = data; return; }
                 salt = data.slice(0, 16);
                 ivBase = data.slice(16, 28);
-                key = await deriveKey(password, salt);
+                key = await deriveKey(password, salt as any);
                 data = data.slice(28);
                 processed += 28;
             }
