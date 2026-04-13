@@ -113,7 +113,7 @@ export default async function RootLayout({
             </div>
           </footer>
         </NextIntlClientProvider>
-        <script defer src="https://cdn.w3b.pt/script.js" data-website-id="918e6879-3a44-40a5-9b78-3850dbab9916"></script>
+        <script defer src="https://cdn.w3b.pt/script.js" data-website-id="918e6879-3a44-40a5-9b78-3850dbab9916" crossOrigin="anonymous"></script>
       </body>
     </html>
   );

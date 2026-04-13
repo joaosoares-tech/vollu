@@ -277,6 +277,75 @@ export default function Home() {
             <h3 className="text-[15px] font-semibold text-dark mb-1">{t('volumeBoosterTitle')}</h3>
             <p className="text-[13px] text-secondary leading-[1.5]">{t('volumeBoosterDesc')}</p>
           </Link>
+
+          {/* NEW TOOLS */}
+
+          {/* Video to GIF Card */}
+          <Link href="/video-to-gif" className="group relative p-6 bg-card backdrop-blur-md border border-border rounded-xl shadow-sm transition-all hover:border-[rgba(30,74,255,0.15)] hover:shadow-lg hover:shadow-glow hover:-translate-y-[3px] overflow-hidden before:absolute before:top-0 before:left-0 before:right-0 before:h-[2px] before:bg-gradient-to-r before:from-transparent before:via-brand before:to-transparent before:opacity-0 hover:before:opacity-45">
+            <div className="w-[44px] h-[44px] flex items-center justify-center rounded-md bg-overlay text-brand mb-4 transition-all group-hover:bg-[rgba(30,74,255,0.08)] group-hover:scale-105">
+               <svg className="w-[22px] h-[22px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                <path d="M8 21h8"/><path d="M12 17v4"/><path d="m9 8 6 3-6 3V8z"/>
+              </svg>
+            </div>
+            <h3 className="text-[15px] font-semibold text-dark mb-1">{t('videoToGifTitle')}</h3>
+            <p className="text-[13px] text-secondary leading-[1.5]">{t('videoToGifDesc')}</p>
+          </Link>
+
+          {/* MP3 Cutter Card */}
+          <Link href="/mp3-cutter" className="group relative p-6 bg-card backdrop-blur-md border border-border rounded-xl shadow-sm transition-all hover:border-[rgba(30,74,255,0.15)] hover:shadow-lg hover:shadow-glow hover:-translate-y-[3px] overflow-hidden before:absolute before:top-0 before:left-0 before:right-0 before:h-[2px] before:bg-gradient-to-r before:from-transparent before:via-brand before:to-transparent before:opacity-0 hover:before:opacity-45">
+            <div className="w-[44px] h-[44px] flex items-center justify-center rounded-md bg-overlay text-brand mb-4 transition-all group-hover:bg-[rgba(30,74,255,0.08)] group-hover:scale-105">
+              <svg className="w-[22px] h-[22px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M3 10h4l3 8 4-12 3 8h4"/>
+              </svg>
+            </div>
+            <h3 className="text-[15px] font-semibold text-dark mb-1">{t('mp3CutterTitle')}</h3>
+            <p className="text-[13px] text-secondary leading-[1.5]">{t('mp3CutterDesc')}</p>
+          </Link>
+
+          {/* Audio Converter Card */}
+          <Link href="/audio-converter" className="group relative p-6 bg-card backdrop-blur-md border border-border rounded-xl shadow-sm transition-all hover:border-[rgba(30,74,255,0.15)] hover:shadow-lg hover:shadow-glow hover:-translate-y-[3px] overflow-hidden before:absolute before:top-0 before:left-0 before:right-0 before:h-[2px] before:bg-gradient-to-r before:from-transparent before:via-brand before:to-transparent before:opacity-0 hover:before:opacity-45">
+            <div className="w-[44px] h-[44px] flex items-center justify-center rounded-md bg-overlay text-brand mb-4 transition-all group-hover:bg-[rgba(30,74,255,0.08)] group-hover:scale-105">
+              <svg className="w-[22px] h-[22px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M22 10v6M2 10v6M6 4v16M10 4v16M14 4v16M18 4v16"/>
+              </svg>
+            </div>
+            <h3 className="text-[15px] font-semibold text-dark mb-1">{t('audioConverterTitle')}</h3>
+            <p className="text-[13px] text-secondary leading-[1.5]">{t('audioConverterDesc')}</p>
+          </Link>
+
+          {/* Smart Compressor Card */}
+          <Link href="/smart-compressor" className="group relative p-6 bg-card backdrop-blur-md border border-border rounded-xl shadow-sm transition-all hover:border-[rgba(30,74,255,0.15)] hover:shadow-lg hover:shadow-glow hover:-translate-y-[3px] overflow-hidden before:absolute before:top-0 before:left-0 before:right-0 before:h-[2px] before:bg-gradient-to-r before:from-transparent before:via-brand before:to-transparent before:opacity-0 hover:before:opacity-45">
+            <div className="w-[44px] h-[44px] flex items-center justify-center rounded-md bg-overlay text-brand mb-4 transition-all group-hover:bg-[rgba(30,74,255,0.08)] group-hover:scale-105">
+              <svg className="w-[22px] h-[22px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M4 14V4h16v10M4 14l5-5 5 5 5-5 5 5M4 14v7h16v-7"/>
+              </svg>
+            </div>
+            <h3 className="text-[15px] font-semibold text-dark mb-1">{t('smartCompressorTitle')}</h3>
+            <p className="text-[13px] text-secondary leading-[1.5]">{t('smartCompressorDesc')}</p>
+          </Link>
+
+          {/* Modern Image Converter Card */}
+          <Link href="/image-converter" className="group relative p-6 bg-card backdrop-blur-md border border-border rounded-xl shadow-sm transition-all hover:border-[rgba(30,74,255,0.15)] hover:shadow-lg hover:shadow-glow hover:-translate-y-[3px] overflow-hidden before:absolute before:top-0 before:left-0 before:right-0 before:h-[2px] before:bg-gradient-to-r before:from-transparent before:via-brand before:to-transparent before:opacity-0 hover:before:opacity-45">
+            <div className="w-[44px] h-[44px] flex items-center justify-center rounded-md bg-overlay text-brand mb-4 transition-all group-hover:bg-[rgba(30,74,255,0.08)] group-hover:scale-105">
+              <svg className="w-[22px] h-[22px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="12" cy="12" r="10"/><path d="M12 8l4 4-4 4M8 12h8"/>
+              </svg>
+            </div>
+            <h3 className="text-[15px] font-semibold text-dark mb-1">{t('imageConverterTitle')}</h3>
+            <p className="text-[13px] text-secondary leading-[1.5]">{t('imageConverterDesc')}</p>
+          </Link>
+
+          {/* File Armor Card */}
+          <Link href="/file-armor" className="group relative p-6 bg-card backdrop-blur-md border border-border rounded-xl shadow-sm transition-all hover:border-[rgba(30,74,255,0.15)] hover:shadow-lg hover:shadow-glow hover:-translate-y-[3px] overflow-hidden before:absolute before:top-0 before:left-0 before:right-0 before:h-[2px] before:bg-gradient-to-r before:from-transparent before:via-brand before:to-transparent before:opacity-0 hover:before:opacity-45">
+            <div className="w-[44px] h-[44px] flex items-center justify-center rounded-md bg-overlay text-brand mb-4 transition-all group-hover:bg-[rgba(30,74,255,0.08)] group-hover:scale-105">
+              <svg className="w-[22px] h-[22px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <h3 className="text-[15px] font-semibold text-dark mb-1">{t('fileArmorTitle')}</h3>
+            <p className="text-[13px] text-secondary leading-[1.5]">{t('fileArmorDesc')}</p>
+          </Link>
         </div>
       </section>
 

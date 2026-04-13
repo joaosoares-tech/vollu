@@ -57,6 +57,12 @@ export const routing = defineRouting({
     '/favicon-generator': '/favicon-generator',
     '/audio-extractor': '/audio-extractor',
     '/volume-booster': '/volume-booster',
+    '/video-to-gif': '/video-to-gif',
+    '/mp3-cutter': '/mp3-cutter',
+    '/audio-converter': '/audio-converter',
+    '/smart-compressor': '/smart-compressor',
+    '/image-converter': '/image-converter',
+    '/file-armor': '/file-armor',
   }
 });
 

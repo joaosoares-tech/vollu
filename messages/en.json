@@ -38,7 +38,19 @@
     "audioExtractorTitle": "Audio Extractor",
     "audioExtractorDesc": "Extract high-quality MP3 audio from your videos 100% in-browser.",
     "volumeBoosterTitle": "Volume Booster",
-    "volumeBoosterDesc": "Increase volume and normalize audio for videos and music with zero quality loss."
+    "volumeBoosterDesc": "Increase volume and normalize audio for videos and music with zero quality loss.",
+    "videoToGifTitle": "Video to GIF",
+    "videoToGifDesc": "Convert video clips to high-quality GIFs with professional palette algorithms.",
+    "mp3CutterTitle": "MP3 Cutter",
+    "mp3CutterDesc": "Precision-cut audio files with millisecond accuracy and real-time waveform visualization.",
+    "audioConverterTitle": "Audio Converter",
+    "audioConverterDesc": "Batch conversion between MP3, WAV, and OGG with full bitrate control.",
+    "smartCompressorTitle": "Smart Compressor",
+    "smartCompressorDesc": "Optimize PNG, JPG, WebP, GIF, and SVG images with no visible quality loss.",
+    "imageConverterTitle": "Image Converter",
+    "imageConverterDesc": "Convert photos to next-gen formats: WebP and AVIF with 100% privacy.",
+    "fileArmorTitle": "File Armor",
+    "fileArmorDesc": "Military-grade AES-GCM 256 encryption for files of any size, processed entirely in-browser."
   },
   "PdfMerge": {
     "back": "Back to Tools",
