@@ -7,6 +7,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations } from 'next-intl/server';
 import { Link, locales } from '@/navigation';
 import { LanguagePicker } from '@/components/layout/LanguagePicker';
+import Script from 'next/script';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -50,6 +51,15 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       card: 'summary_large_image',
       title: 'VOLLU.app',
       description: 'Secure European Web Tools',
+    },
+    icons: {
+      icon: [
+        { url: '/logo-icon.png' },
+        { url: '/logo-icon.png', sizes: '32x32', type: 'image/png' },
+      ],
+      apple: [
+        { url: '/logo-icon.png', sizes: '180x180', type: 'image/png' },
+      ],
     },
     robots: {
       index: true,
@@ -113,6 +123,12 @@ export default async function RootLayout({
             </div>
           </footer>
         </NextIntlClientProvider>
+        <Script 
+          async 
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8704121986938726"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
         <script defer src="https://cdn.w3b.pt/script.js" data-website-id="918e6879-3a44-40a5-9b78-3850dbab9916" crossOrigin="anonymous"></script>
       </body>
     </html>

@@ -50,7 +50,14 @@
     "imageConverterTitle": "Conversor de Imagem",
     "imageConverterDesc": "Converta fotos para formatos de próxima geração: WebP e AVIF com 100% de privacidade.",
     "fileArmorTitle": "File Armor",
-    "fileArmorDesc": "Encriptação militar AES-GCM 256 para ficheiros de qualquer tamanho, processada totalmente no browser."
+    "fileArmorDesc": "Encriptação militar AES-GCM 256 para ficheiros de qualquer tamanho, processada totalmente no browser.",
+    "backgroundRemoverTitle": "Remover Fundo IA",
+    "backgroundRemoverDesc": "IA poderosa no browser para remover fundos de imagens instantaneamente.",
+    "dnsCheckerTitle": "Verificador DNS Global",
+    "dnsCheckerDesc": "Consulte registos DNS em múltiplos servidores globais para detetar problemas de propagação.",
+    "visualMtrTitle": "MTR Visual",
+    "visualMtrDesc": "Combine Traceroute e Ping para diagnosticar problemas de latência e perda de pacotes.",
+    "noResults": "Nenhuma ferramenta encontrada"
   },
   "PdfMerge": {
     "back": "Voltar às Ferramentas",
@@ -63,7 +70,10 @@
     "success": "PDFs fundidos com sucesso!",
     "btnDownload": "Descarregar PDF",
     "btnMore": "Fundir mais",
-    "trust": "Processado localmente. Nenhum ficheiro é carregado para os nossos servidores."
+    "trust": "Processado localmente. Nenhum ficheiro é carregado para os nossos servidores.",
+    "error": "Ocorreu um erro ao fundir os PDFs.",
+    "removeFile": "Remover ficheiro",
+    "mergedFilename": "documento_fundido.pdf"
   },
   "Layout": {
     "title": "Ferramentas Web Europeias Seguras",
@@ -112,7 +122,11 @@
     "darkMuted": "Suave Escura",
     "lightVibrant": "Vibrante Clara",
     "lightMuted": "Suave Clara",
-    "loading": "Analisando cores..."
+    "loading": "Analisando cores...",
+    "changeImage": "Trocar Imagem",
+    "safeLocalAnalysis": "Análise Local Segura",
+    "analysisDesc1": "Esta imagem está a ser processada inteiramente no seu navegador usando o motor Vibrant.",
+    "analysisDesc2": "As cores são extraídas em milissegundos sem nunca enviar dados para a cloud."
   },
   "Legal": {
     "backToTools": "Voltar às Ferramentas",
@@ -140,7 +154,11 @@
     "btnSplit": "Dividir PDF Agora",
     "btnSplitting": "A dividir localmente...",
     "invalidRange": "Formato de intervalo de páginas inválido.",
-    "pageCount": "documento tem {count} páginas"
+    "pageCount": "documento tem {count} páginas",
+    "error": "Erro ao carregar PDF",
+    "rangeLabel": "Definir Intervalos de Páginas",
+    "zipFilename": "ficheiros_divididos.zip",
+    "pdfFilename": "documento_dividido.pdf"
   },
   "PDFToImage": {
     "title": "Conversor de PDF para Imagem",
@@ -148,7 +166,12 @@
     "btnConvert": "Converter para Imagens",
     "btnConverting": "A renderizar páginas {current}/{total}...",
     "downloadAll": "Descarregar Tudo (ZIP)",
-    "resolution": "Alta Resolução (Equivalente a 300 DPI)"
+    "resolution": "Alta Resolução (Equivalente a 300 DPI)",
+    "error": "Erro ao converter PDF",
+    "imagesReady": "{count} imagens prontas",
+    "readyToConvert": "Pronto para converter",
+    "pageAlt": "Página {count}",
+    "filenameSuffix": "_imagens.zip"
   },
   "Security": {
     "title": "Proteger e Desbloquear PDF",
@@ -158,7 +181,14 @@
     "password": "Password",
     "btnProtect": "Encriptar PDF",
     "btnUnlock": "Remover Proteção",
-    "statusLocal": "Ficheiro processado localmente. Nenhum dado foi enviado para o servidor."
+    "statusLocal": "Ficheiro processado localmente. Nenhum dado foi enviado para o servidor.",
+    "error": "Erro ao processar segurança",
+    "ready": "O ficheiro está pronto para ser protegido",
+    "prompt": "Introduza a password para desbloquear",
+    "processing": "A processar segurança...",
+    "protectedFilename": "protegido.pdf",
+    "unlockedFilename": "desbloqueado.pdf",
+    "errorPassword": "Password incorreta ou ficheiro inválido"
   },
   "MetadataCleaner": {
     "title": "Limpeza de Metadados",
@@ -172,7 +202,9 @@
     "noTags": "Nenhuma tag de metadados encontrada.",
     "originalSize": "Tamanho Original",
     "newSize": "Novo Tamanho",
-    "download": "Descarregar Imagem Limpa"
+    "download": "Descarregar Imagem Limpa",
+    "detectedMetadata": "Metadados Detetados",
+    "moreTags": "+ {count} mais tags..."
   },
   "QRGenerator": {
     "title": "Gerador de QR Privado",
@@ -183,7 +215,8 @@
     "downloadSvg": "Descarregar SVG",
     "options": "Opções",
     "size": "Tamanho",
-    "highQuality": "Alta Qualidade (1000px)"
+    "highQuality": "Alta Qualidade (1000px)",
+    "waitingInput": "Aguardando input..."
   },
   "HashVerifier": {
     "title": "Verificador de Hash",
@@ -195,7 +228,11 @@
     "copy": "Copiar para a área de transferência",
     "copied": "Copiado!",
     "match": "Correspondência encontrada",
-    "noMatch": "Sem correspondência"
+    "noMatch": "Sem correspondência",
+    "algoCalculation": "Cálculo {algo}",
+    "waiting": "A aguardar...",
+    "compareHash": "Comparar Hash",
+    "pasteExpected": "Cole o hash esperado aqui..."
   },
   "TextEncryptor": {
     "title": "Encriptador de Texto",
@@ -212,6 +249,18 @@
     "download": "Descarregar Ficheiro Encriptado",
     "result": "Resultado Desencriptado",
     "errorPassword": "Password inválida ou ficheiro corrompido.",
+    "errorEncryption": "Falha na encriptação. Verifique a consola para detalhes.",
+    "errorFormat": "Formato de ficheiro .vollu inválido.",
+    "errorParse": "Não foi possível analisar o ficheiro .vollu.",
+    "successEncrypt": "Ficheiro Gerado e Descarregado!",
+    "selectFile": "Selecionar Ficheiro .vollu",
+    "selectDesc": "Clique para procurar as suas notas encriptadas",
+    "loaded": "Ficheiro Carregado com Sucesso",
+    "remove": "Remover",
+    "decryptPlaceholder": "Introduza a password de desencriptação...",
+    "startNew": "Iniciar Novo",
+    "privacyTitle": "Garantia de Privacidade",
+    "filenamePrefix": "nota_segura_",
     "securityNote": "A encriptação é realizada inteiramente no seu browser. O VOLLU nunca vê a sua password ou os seus dados."
   },
   "TechConverter": {
@@ -237,7 +286,8 @@
     "tib": "Tebibytes (TiB)",
     "pib": "Pebibytes (PiB)",
     "copy": "Valor Copiado!",
-    "precision": "Precisão de nível developer ativa."
+    "precision": "Precisão de nível developer ativa.",
+    "zeroLossDesc": "Calculado em micro-segundos usando aritmética math.js bignumber para garantir zero perda de precisão em conversões de escala petabyte."
   },
   "FaviconGenerator": {
     "title": "Gerador de Favicons",
@@ -256,7 +306,8 @@
       "ico": "Favicon Clássico (32x32)",
       "apple": "Apple Touch Icon (180x180)",
       "android": "Android Chrome Icon (512x512)"
-    }
+    },
+    "wakingHub": "A INICIAR HUB DE ATIVOS DIGITAIS"
   },
   "AudioExtractor": {
     "title": "Extrator de Áudio",
@@ -267,7 +318,15 @@
     "extractBtn": "Extrair MP3",
     "extracting": "A extrair áudio: {progress}%",
     "downloadMp3": "Descarregar MP3 extraído",
-    "formats": "Suporta MP4, MOV, WebM, AVI"
+    "formats": "Suporta MP4, MOV, WebM, AVI",
+    "errorFfmpeg": "Não foi possível carregar o FFmpeg. Verifique se o seu browser suporta SharedArrayBuffer (COOP/COEP).",
+    "errorProcess": "Erro ao processar vídeo. O ficheiro pode estar corrompido ou num formato não suportado.",
+    "statusTitle": "STATUS E RESULTADO",
+    "processingStatus": "A processar transformadas discretas de cosseno de alta fidelidade... O seu browser é agora uma estação de trabalho profissional.",
+    "idleStatus": "Extraia faixas de áudio com qualidade de codificação LAME profissional. 100% no Cliente. Alta Privacidade.",
+    "processLabel": "PROCESSO",
+    "extracted": "Áudio Extraído!",
+    "filenamePrefix": "extraido_"
   },
   "VolumeBooster": {
     "title": "Volume Booster",
@@ -277,31 +336,201 @@
     "normalizationLabel": "Normalização de Pico Inteligente",
     "normalizationDesc": "Previne clipping e distorção em volumes altos.",
     "processBtn": "Aumentar Volume",
-    "processing": "A processar áudio: {progress}%",
-    "downloadResult": "Descarregar Ficheiro Processado"
+    "processing": "Aumentando volume: {progress}%",
+    "downloadResult": "Descarregar Ficheiro Processado",
+    "loadingEngine": "A carregar motor FFmpeg...",
+    "ffmpegError": "Não foi possível carregar o FFmpeg. Verifique o suporte para SharedArrayBuffer.",
+    "processError": "Erro ao aumentar áudio. Verifique o formato do ficheiro.",
+    "formats": "MP4, MOV, WebM, MP3, WAV",
+    "processingHub": "CENTRO DE PROCESSAMENTO",
+    "processDesc1": "A aplicar normalização dinâmica e filtros de ganho. Isto garante volume elevado sem distorção.",
+    "processDesc2": "Recupere gravações de baixo volume. Aumente níveis e aplique normalização inteligente 100% localmente.",
+    "statusBoosting": "A PROCESSAR",
+    "successTitle": "Áudio Aumentado!",
+    "successDesc": "Normalização inteligente aplicada"
   },
   "VideoToGif": {
     "title": "Vídeo para GIF",
-    "description": "Converta clips de vídeo em GIFs de alta qualidade com algoritmos de paleta profissionais."
+    "description": "Converta clips de vídeo em GIFs de alta qualidade com algoritmos de paleta profissionais.",
+    "generateBtn": "Gerar GIF Animado",
+    "uploadBtn": "Upload Vídeo",
+    "processing": "PROCESSANDO...",
+    "segmentLabel": "Segmento do Vídeo",
+    "settings": "Definições",
+    "resolutionLabel": "Resolução de Saída",
+    "fpsLabel": "Frames (FPS)",
+    "success": "GIF Gerado!",
+    "paletteHint": "Paleta de cores otimizada",
+    "downloadBtn": "Download GIF",
+    "newBtn": "Novo Vídeo",
+    "errorSize": "Ficheiro demasiado grande para o browser (Máx 100MB)",
+    "errorConv": "Erro na conversão",
+    "errorInesp": "Erro inesperado"
   },
   "Mp3Cutter": {
     "title": "Cortador de MP3",
-    "description": "Corte ficheiros áudio com precisão milimétrica e visualize o waveform em tempo real."
+    "description": "Corte ficheiros áudio com precisão milimétrica e visualize o waveform em tempo real.",
+    "playSelection": "Play Seleção",
+    "cutBtn": "Cortar Clip",
+    "visualizerLabel": "Visualização de Onda",
+    "processing": "PROCESSANDO...",
+    "selectingAudio": "Selecionar Áudio",
+    "settings": "Configurações",
+    "fadeIn": "Fade In",
+    "fadeOut": "Fade Out",
+    "formatLabel": "Formato de Saída",
+    "readyDownload": "Pronto para Download",
+    "downloadBtn": "Download Clip"
   },
   "AudioConverter": {
     "title": "Conversor de Áudio",
-    "description": "Conversão em lote entre MP3, WAV e OGG com controlo total de bitrate."
+    "description": "Conversão em lote entre MP3, WAV e OGG com controlo total de bitrate.",
+    "formatLabel": "Formato de Saída",
+    "bitrateLabel": "Bitrate (Qualidade)",
+    "convertBtn": "Converter Fila",
+    "uploadBtn": "Upload Áudio",
+    "queueTitle": "Fila de Processamento",
+    "clearBtn": "Limpar Tudo",
+    "dropHint": "Arraste ou Selecione Média",
+    "doneStatus": "Pronto",
+    "error": "Erro",
+    "itemsCount": "{count} Itens",
+    "optimized": "Otimizado via WASM"
   },
   "SmartCompressor": {
     "title": "Compressor Inteligente",
-    "description": "Otimize imagens PNG, JPG, WebP, GIF e SVG sem perda visível de qualidade."
+    "description": "Otimize imagens PNG, JPG, WebP, GIF e SVG sem perda visível de qualidade.",
+    "compressAll": "Otimizar Tudo",
+    "downloadZip": "Download ZIP",
+    "dropTitle": "Solte as suas imagens aqui",
+    "dropHint": "ou clique para selecionar do seu dispositivo",
+    "selectBtn": "Selecionar Imagens",
+    "qualityLabel": "Qualidade Alvo",
+    "qualityHint": "Qualidade superior mantém mais detalhe mas ficheiros maiores.",
+    "queueTitle": "Lista de Ficheiros",
+    "clearBtn": "Limpar",
+    "addMore": "Adicionar Mais",
+    "comparisonLabel": "Comparação em tempo real",
+    "savingLabel": "Poupança de {percentage}%",
+    "original": "Original",
+    "optimized": "Otimizado",
+    "sliderHint": "Use o slider central para comparar a qualidade",
+    "svgHint": "Ativos SVG são otimizados sem perda de qualidade",
+    "emptyHint": "Selecione uma imagem para visualizar"
   },
   "ImageConverter": {
     "title": "Conversor de Imagem",
-    "description": "Converta fotos para formatos de próxima geração: WebP e AVIF com 100% de privacidade."
+    "description": "Converta fotos para formatos de próxima geração: WebP e AVIF com 100% de privacidade.",
+    "formatLabel": "Formato Alvo",
+    "avifBeta": "AVIF (Beta)",
+    "qualityLabel": "Qualidade",
+    "convertBtn": "Converter Tudo",
+    "uploadBtn": "Upload Imagens",
+    "queueTitle": "Fila de Processamento",
+    "clearBtn": "Limpar Tudo",
+    "dropHint": "Arraste ou Selecione Imagens",
+    "downloadZip": "Download Lote (.zip)"
   },
   "FileArmor": {
     "title": "File Armor",
-    "description": "Encriptação militar AES-GCM 256 para ficheiros de qualquer tamanho, processada totalmente no browser."
+    "description": "Encriptação militar AES-GCM 256 para ficheiros de qualquer tamanho, processada totalmente no browser.",
+    "modeEncrypt": "Encriptar",
+    "modeDecrypt": "Decriptar",
+    "passwordLabel": "Chave de Acesso",
+    "passwordHint": "Mínimo 8 caracteres",
+    "encryptBtn": "Iniciar Cifra",
+    "decryptBtn": "Desbloquear",
+    "processing": "Processando...",
+    "titleBox": "Cofre de Ficheiros",
+    "secureDesc": "Cifra segura 100% no seu browser",
+    "readyLock": "Pronto para Cifrar",
+    "lockedVault": "Cofre Trancado",
+    "changeFile": "Trocar Ficheiro",
+    "secureStream": "Fluxo Local Seguro Ativo",
+    "vaultStatus": "Estado do Cofre",
+    "arming": "Armando...",
+    "success": "Sucesso.",
+    "standby": "Em Espera",
+    "ramLabel": "Gestão de RAM",
+    "ramDesc": "Streams Incrementais (blocos de 64KB)",
+    "readyToLock": "Pronto para Trancar",
+    "processingLabel": "Processamento",
+    "aesEngine": "Motor AES-256-GCM",
+    "pbkdf2Label": "Derivação PBKDF2",
+    "compliant": "Conformidade FIPS 140-2",
+    "iterations": "600K Itr."
+  },
+  "BackgroundRemover": {
+    "title": "Remover Fundo IA",
+    "description": "Remova o fundo das suas imagens 100% no browser usando Inteligência Artificial.",
+    "selectImage": "Selecionar Imagem",
+    "dropHint": "Largue a imagem aqui ou clique para procurar",
+    "loadingModel": "A iniciar modelo de IA...",
+    "processing": "A remover fundo...",
+    "downloadPng": "Descarregar PNG Transparente",
+    "original": "Original",
+    "result": "Resultado",
+    "refineEdge": "Refinar Borda",
+    "error": "Falha ao carregar o modelo de IA. Por favor, tente novamente ou use um browser moderno.",
+    "errorProcess": "Falha no processamento. Por favor, tente uma imagem mais pequena.",
+    "aiSettings": "Configurações de IA",
+    "clientInference": "Inferência no Cliente",
+    "removerBtn": "Remover Fundo",
+    "gpuWarning": "Esta ferramenta utiliza aceleração por GPU (WebGL). Imagens maiores podem demorar alguns segundos a processar.",
+    "engineActive": "Motor de Inferência IA Ativo",
+    "webglAccelerated": "Aceleração WebGL Ativa",
+    "processingHub": "CENTRO DE PROCESSAMENTO",
+    "processDesc1": "Isolando o assunto usando MediaPipe Selfie Segmentation. Nenhum dado sai do seu dispositivo.",
+    "processDesc2": "Segmentação de IA de alto desempenho executada 100% localmente no seu navegador.",
+    "statusIsolating": "ISOLANDO",
+    "successTitle": "Fundo Removido!",
+    "successDesc": "Segmentação de IA Concluída"
+  },
+  "DnsChecker": {
+    "title": "Verificador DNS Global",
+    "description": "Consulte registos DNS em múltiplos servidores globais para detetar problemas de propagação.",
+    "domainPlaceholder": "exemplo.com",
+    "btnCheck": "Verificar Propagação",
+    "checking": "A consultar...",
+    "records": {
+      "A": "A (IPv4)",
+      "AAAA": "AAAA (IPv6)",
+      "CNAME": "CNAME",
+      "TXT": "TXT",
+      "NS": "NS",
+      "MX": "MX"
+    },
+    "providerGoogle": "Google Public DNS",
+    "providerCloudflare": "Cloudflare DNS",
+    "providerQuad9": "Quad9",
+    "providerAlibaba": "Alibaba Cloud",
+    "statusSuccess": "Resolvido",
+    "statusError": "Falha",
+    "noResults": "Nenhum registo encontrado"
+  },
+  "VisualMtr": {
+    "title": "MTR Visual",
+    "description": "Combine Traceroute e Ping para diagnosticar problemas de latência e perda de pacotes.",
+    "targetPlaceholder": "8.8.8.8 ou exemplo.com",
+    "btnStart": "Iniciar Diagnóstico",
+    "running": "A traçar rota...",
+    "hop": "Salto",
+    "host": "Host",
+    "loss": "Perda",
+    "avg": "Média",
+    "last": "Último",
+    "best": "Melhor",
+    "worst": "Pior",
+    "stdev": "Desvio",
+    "error": "Não foi possível realizar o traceroute.",
+    "simulatedNote": "Nota: Este diagnóstico é realizado através de probes HTTP/HTTPS globais a partir do seu browser para identificar latência em CDNs e Gateways principais."
+  },
+  "Categories": {
+    "all": "Todas",
+    "pdf": "PDF & Documentos",
+    "image": "Imagens & Design",
+    "video": "Vídeo & Áudio",
+    "security": "Segurança & Privacidade",
+    "dev": "Desenvolvimento & Redes"
   }
 }

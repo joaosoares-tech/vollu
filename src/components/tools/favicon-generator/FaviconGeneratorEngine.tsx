@@ -308,7 +308,7 @@ export function FaviconGeneratorEngine() {
               </div>
               <div className="text-center space-y-2">
                 <h3 className="text-2xl font-bold text-white">{t('generating')}</h3>
-                <p className="text-white/40 animate-pulse font-mono text-sm tracking-widest">WAKING UP DIGITAL ASSETS HUB</p>
+                <p className="text-white/40 animate-pulse font-mono text-sm tracking-widest">{t('wakingHub')}</p>
               </div>
            </div>
         </div>

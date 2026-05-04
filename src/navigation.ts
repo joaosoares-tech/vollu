@@ -63,6 +63,7 @@ export const routing = defineRouting({
     '/smart-compressor': '/smart-compressor',
     '/image-converter': '/image-converter',
     '/file-armor': '/file-armor',
+    '/background-remover': '/background-remover',
   }
 });
 

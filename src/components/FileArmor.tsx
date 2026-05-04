@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useRef, useEffect } from 'react';
+import { useTranslations } from 'next-intl';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Shield, 
@@ -23,6 +24,7 @@ import {
 import { encryptFileStream, decryptFileStream } from '@/lib/armor';
 
 export default function FileArmor() {
+  const t = useTranslations('FileArmor');
   const [file, setFile] = useState<File | null>(null);
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
@@ -62,13 +64,8 @@ export default function FileArmor() {
             stream = await decryptFileStream(file, password, (p) => setProgress(p));
         }
 
-        // Feature detection: FileSystemWritableFileStream (showSaveFilePicker)
-        // Note: This requires a Secure Context (HTTPS) and works in modern Chromium
-        let blob: Blob;
-        
-        // Fallback to Blob for all environments to ensure compatibility
         const response = new Response(stream);
-        blob = await response.blob();
+        const blob = await response.blob();
         
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
@@ -78,67 +75,56 @@ export default function FileArmor() {
         a.click();
         
         setStatus('done');
-        // Revoke after a delay to ensure download starts
         setTimeout(() => URL.revokeObjectURL(url), 5000);
     } catch (err) {
         console.error(err);
         setStatus('error');
-        setErrorMsg('Autenticação falhou. Password incorreta ou conteúdo corrompido.');
+        setErrorMsg(t('errorInesp'));
     } finally {
         setIsProcessing(false);
     }
   };
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-6 gap-6 p-6 min-h-screen bg-[#050811] text-white">
+    <div className="grid grid-cols-1 lg:grid-cols-6 gap-6 p-6 font-sans text-dark">
       {/* Sidebar Control Panel */}
       <motion.div 
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
-        className="lg:col-span-2 bg-white/5 backdrop-blur-3xl border border-blue-500/20 rounded-[40px] p-10 shadow-2xl flex flex-col justify-between"
+        className="lg:col-span-2 bg-white/30 backdrop-blur-xl border border-border rounded-[40px] p-10 shadow-sm flex flex-col justify-between"
       >
         <div>
-            <div className="flex items-center gap-4 mb-3">
-                <div className="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center shadow-glow-sm">
-                    <Shield className="w-6 h-6 text-white" />
-                </div>
-                <h1 className="text-3xl font-black bg-gradient-to-br from-white to-blue-300 bg-clip-text text-transparent tracking-tighter">
-                    File Armor
-                </h1>
-            </div>
-            <p className="text-blue-200/40 text-[9px] font-black uppercase tracking-[0.3em] mb-12 ml-1">Military Privacy Engine</p>
-
-            <div className="space-y-8">
-                <div className="bg-black/40 p-1.5 rounded-2xl flex border border-white/5">
+            <div className="space-y-10">
+                <div className="bg-dark/5 p-2 rounded-[24px] flex border border-border/50">
                     <button 
                         onClick={() => { setMode('encrypt'); setProgress(0); setStatus('idle'); }}
-                        className={`flex-1 py-4 rounded-xl text-xs font-black uppercase transition-all flex items-center justify-center gap-2 ${mode === 'encrypt' ? 'bg-blue-600 text-white shadow-xl shadow-blue-900/40' : 'text-white/20 hover:text-white/40'}`}
+                        className={`flex-1 py-4 rounded-[18px] text-[10px] font-black uppercase transition-all flex items-center justify-center gap-2 ${mode === 'encrypt' ? 'bg-blue-600 text-white shadow-xl shadow-blue-600/20' : 'text-secondary/40 hover:text-secondary'}`}
                     >
-                        <Lock className="w-3.5 h-3.5" /> Encriptar
+                        <Lock className="w-3.5 h-3.5" /> {t('modeEncrypt')}
                     </button>
                     <button 
                         onClick={() => { setMode('decrypt'); setProgress(0); setStatus('idle'); }}
-                        className={`flex-1 py-4 rounded-xl text-xs font-black uppercase transition-all flex items-center justify-center gap-2 ${mode === 'decrypt' ? 'bg-blue-600 text-white shadow-xl shadow-blue-900/40' : 'text-white/20 hover:text-white/40'}`}
+                        className={`flex-1 py-4 rounded-[18px] text-[10px] font-black uppercase transition-all flex items-center justify-center gap-2 ${mode === 'decrypt' ? 'bg-blue-600 text-white shadow-xl shadow-blue-600/20' : 'text-secondary/40 hover:text-secondary'}`}
                     >
-                        <Unlock className="w-3.5 h-3.5" /> Decriptar
+                        <Unlock className="w-3.5 h-3.5" /> {t('modeDecrypt')}
                     </button>
                 </div>
 
-                <div className="space-y-3">
-                    <label className="text-[10px] font-black uppercase text-blue-400 tracking-widest ml-1 opacity-60">Chave de Acesso</label>
+                <div className="space-y-4">
+                    <label className="text-[10px] font-black uppercase text-blue-600 tracking-[0.2em] ml-2">{t('passwordLabel')}</label>
                     <div className="relative">
                         <input 
                             type={showPassword ? 'text' : 'password'}
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
-                            placeholder="Password de 256 bits"
-                            className="w-full bg-white/5 border border-white/10 rounded-2xl h-16 px-6 font-mono text-lg focus:border-blue-500 focus:bg-white/10 outline-none transition-all"
+                            placeholder={t('passwordHint')}
+                            className="w-full bg-dark/5 border border-border rounded-3xl h-20 px-8 font-mono text-xl focus:border-blue-500 focus:bg-white/50 outline-none transition-all text-dark"
                         />
                         <button 
                             onClick={() => setShowPassword(!showPassword)}
-                            className="absolute right-6 top-1/2 -translate-y-1/2 text-white/20 hover:text-blue-400"
+                            className="absolute right-6 top-1/2 -translate-y-1/2 p-2 text-secondary/20 hover:text-blue-600 transition-colors"
                         >
-                            {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
+                            {showPassword ? <EyeOff className="w-6 h-6" /> : <Eye className="w-6 h-6" />}
                         </button>
                     </div>
                 </div>
@@ -146,17 +132,17 @@ export default function FileArmor() {
                 <button 
                     onClick={handleAction}
                     disabled={isProcessing || !file || !password}
-                    className="w-full h-20 bg-gradient-to-br from-blue-600 to-indigo-700 hover:from-blue-500 hover:to-indigo-600 rounded-3xl font-black uppercase text-lg flex items-center justify-center shadow-2xl shadow-blue-900/40 active:scale-95 transition-all disabled:opacity-10 group"
+                    className="w-full h-24 bg-gradient-to-br from-blue-600 to-indigo-700 hover:from-blue-500 hover:to-indigo-600 rounded-[32px] font-black uppercase text-lg flex items-center justify-center shadow-2xl shadow-blue-900/40 active:scale-95 transition-all disabled:opacity-20 group"
                 >
                     {isProcessing ? (
                         <div className="flex items-center">
-                            <RefreshCw className="w-6 h-6 animate-spin mr-3" />
-                            <span>Processando...</span>
+                            <RefreshCw className="w-7 h-7 animate-spin mr-4" />
+                            <span>{t('processing')}</span>
                         </div>
                     ) : (
                         <div className="flex items-center">
-                            <Zap className="w-5 h-5 mr-3 text-blue-300 group-hover:scale-125 transition-transform" />
-                            <span>{mode === 'encrypt' ? 'Iniciar Cifra' : 'Desbloquear'}</span>
+                            <Zap className="w-6 h-6 mr-4 text-blue-300 group-hover:scale-125 transition-transform" />
+                            <span>{mode === 'encrypt' ? t('encryptBtn') : t('decryptBtn')}</span>
                         </div>
                     )}
                 </button>
@@ -164,11 +150,11 @@ export default function FileArmor() {
         </div>
 
         <div className="mt-12 space-y-4">
-            <div className="flex items-center gap-4 text-white/20 p-4 border border-white/5 rounded-2xl">
-                <Cpu className="w-5 h-5" />
+            <div className="flex items-center gap-4 text-dark/20 p-5 border border-border rounded-3xl bg-white/5">
+                <Cpu className="w-6 h-6 text-blue-600/40" />
                 <div className="flex-1">
-                    <p className="text-[10px] font-black uppercase tracking-widest text-blue-400/60">RAM Management</p>
-                    <p className="text-[9px] font-bold">Incremental Streams Active (64KB chunks)</p>
+                    <p className="text-[10px] font-black uppercase tracking-widest text-blue-600/60">{t('ramLabel')}</p>
+                    <p className="text-[9px] font-bold text-secondary/40">{t('ramDesc')}</p>
                 </div>
             </div>
         </div>
@@ -181,112 +167,105 @@ export default function FileArmor() {
             initial={{ opacity: 0, scale: 0.98 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.1 }}
-            className="md:col-span-2 bg-[#0a0f1e] border border-white/5 rounded-[48px] p-12 relative overflow-hidden flex flex-col items-center justify-center min-h-[400px] shadow-2xl group"
+            className="md:col-span-2 bg-white/30 backdrop-blur-xl border border-border rounded-[56px] p-12 relative overflow-hidden flex flex-col items-center justify-center min-h-[450px] shadow-sm group"
           >
-            {/* Animated Shield Bg */}
-            <div className="absolute inset-0 flex items-center justify-center opacity-5">
-                <Shield className="w-[400px] h-[400px] text-blue-500" />
+            <div className="absolute inset-0 flex items-center justify-center opacity-[0.03]">
+                <Shield className="w-[500px] h-[500px] text-blue-600" />
             </div>
 
             {!file ? (
                 <label className="w-full h-full flex flex-col items-center justify-center cursor-pointer z-10">
                     <motion.div 
-                        whileHover={{ scale: 1.1, rotate: 5 }}
-                        className="w-28 h-28 bg-blue-600/10 rounded-[32px] flex items-center justify-center mb-8 border border-blue-500/20"
+                        whileHover={{ scale: 1.05, rotate: 2 }}
+                        className="w-32 h-32 bg-blue-600/10 rounded-[40px] flex items-center justify-center mb-10 border border-blue-500/20"
                     >
-                        <Upload className="w-10 h-10 text-blue-400" />
+                        <Upload className="w-12 h-12 text-blue-600" />
                     </motion.div>
-                    <h2 className="text-3xl font-black text-white/80 tracking-tight">Cofre de Ficheiros</h2>
-                    <p className="text-sm font-bold text-white/20 mt-4 uppercase tracking-[0.2em]">Cifra qualquer tamanho sem carregar na RAM</p>
+                    <h2 className="text-4xl font-black text-dark tracking-tight">{t('titleBox')}</h2>
+                    <p className="text-sm font-bold text-secondary/40 mt-5 uppercase tracking-[0.3em]">{t('secureDesc')}</p>
                     <input type="file" className="hidden" onChange={handleFileChange} />
                 </label>
             ) : (
                 <div className="z-10 text-center">
-                    <div className="relative w-40 h-40 mx-auto mb-10">
+                    <div className="relative w-48 h-48 mx-auto mb-10">
                         <motion.div 
-                            animate={{ rotate: isProcessing ? 360 : 0, scale: status === 'done' ? 1.1 : 1 }}
-                            transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-                            className="absolute inset-0 rounded-[40px] border-4 border-dashed border-blue-500/20 flex items-center justify-center"
+                            animate={{ rotate: isProcessing ? 360 : 0 }}
+                            transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+                            className="absolute inset-0 rounded-[50px] border-4 border-dashed border-blue-500/20"
                         />
-                        <div className="absolute inset-4 rounded-[30px] bg-blue-600/5 backdrop-blur-md flex items-center justify-center">
-                            {status === 'done' ? <ShieldCheck className="w-16 h-16 text-cyan-400" /> : <FileBox className="w-16 h-16 text-blue-500" />}
+                        <div className="absolute inset-5 rounded-[40px] bg-blue-600/5 backdrop-blur-md flex items-center justify-center">
+                            {status === 'done' ? <ShieldCheck className="w-20 h-20 text-green-500" /> : <FileBox className="w-20 h-20 text-blue-600" />}
                         </div>
                     </div>
-                    <h2 className="text-2xl font-black mb-2">{file.name}</h2>
-                    <p className="text-xs font-mono text-white/20">{(file.size / (1024 * 1024)).toFixed(2)} MB • {mode === 'encrypt' ? 'Origin' : 'Locked'}</p>
+                    <h2 className="text-3xl font-black mb-3 text-dark">{file.name}</h2>
+                    <p className="text-xs font-mono text-secondary/40 uppercase tracking-widest">{(file.size / (1024 * 1024)).toFixed(2)} MB • {mode === 'encrypt' ? t('readyToLock') : t('lockedVault')}</p>
                     
                     <button 
-                        onClick={() => setFile(null)} 
-                        className="mt-8 text-[9px] font-black uppercase text-red-400/40 hover:text-red-400 transition-colors tracking-widest border border-red-500/20 px-6 py-2 rounded-full"
+                        onClick={() => { setFile(null); setStatus('idle'); }} 
+                        className="mt-10 text-[10px] font-black uppercase text-red-400/40 hover:text-red-400 transition-colors tracking-[0.2em] border border-red-500/10 px-8 py-3 rounded-full hover:bg-red-500/5"
                     >
-                        Trocar Ficheiro
+                        {t('changeFile')}
                     </button>
                 </div>
             )}
           </motion.div>
 
           {/* Progress Card */}
-          <div className="bg-white/5 backdrop-blur-2xl border border-white/5 rounded-[48px] p-10 flex flex-col justify-between h-[320px] shadow-xl">
-              <div className="flex justify-between items-start">
+          <div className="bg-white/30 backdrop-blur-2xl border border-border rounded-[56px] p-12 flex flex-col justify-between h-[350px] shadow-sm relative overflow-hidden">
+              <div className="flex justify-between items-start z-10">
                   <div>
-                      <h3 className="text-xs font-black uppercase text-blue-400 tracking-widest mb-1">Cifragem</h3>
-                      <p className="text-[10px] text-white/20 font-bold">Fluxo de Dados Ativo</p>
+                      <h3 className="text-[10px] font-black uppercase text-blue-600 tracking-[0.2em] mb-2">{t('processingLabel')}</h3>
+                      <p className="text-[10px] text-secondary/40 font-bold uppercase tracking-widest">{t('aesEngine')}</p>
                   </div>
-                  <BarChart4 className="w-6 h-6 text-blue-500/40" />
+                  <BarChart4 className="w-6 h-6 text-blue-600/20" />
               </div>
 
-              <div className="space-y-6">
+              <div className="space-y-8 z-10">
                   <div className="flex justify-between items-baseline">
-                      <span className="text-6xl font-black text-white">{Math.round(progress * 100)}<span className="text-xl opacity-20 ml-2">%</span></span>
-                      <p className="text-[9px] font-black uppercase text-white/30 tracking-widest">PBKDF2 SHA-256</p>
+                      <span className="text-7xl font-black text-dark tracking-tighter">{Math.round(progress * 100)}<span className="text-2xl opacity-20 ml-2">%</span></span>
+                      <p className="text-[9px] font-black uppercase text-secondary/30 tracking-[0.3em]">{t('pbkdf2Label')}</p>
                   </div>
-                  <div className="h-5 bg-white/5 rounded-full overflow-hidden border border-white/10 p-1">
+                  <div className="h-6 bg-dark/5 rounded-full overflow-hidden border border-border p-1.5">
                       <motion.div 
                         initial={{ width: 0 }}
                         animate={{ width: `${progress * 100}%` }}
-                        className="h-full bg-gradient-to-r from-blue-700 via-indigo-500 to-cyan-400 rounded-full shadow-[0_0_30px_rgba(59,130,246,0.6)]"
+                        className="h-full bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 rounded-full shadow-[0_0_40px_rgba(59,130,246,0.4)]"
                       />
                   </div>
               </div>
 
-              <div className="flex items-center text-[10px] font-black uppercase tracking-widest text-cyan-500/40">
-                <RefreshCw className={`w-3.5 h-3.5 mr-3 ${isProcessing ? 'animate-spin' : ''}`} />
-                AES-GCM Authenticated Encryption
+              <div className="flex items-center text-[10px] font-black uppercase tracking-widest text-cyan-600/40 z-10">
+                <RefreshCw className={`w-4 h-4 mr-4 ${isProcessing ? 'animate-spin' : ''}`} />
+                {t('secureStream')}
               </div>
           </div>
 
           {/* Status/Security Bento */}
-          <div className="bg-gradient-to-br from-blue-600 to-indigo-900 rounded-[48px] p-10 flex flex-col justify-between shadow-2xl relative overflow-hidden h-[320px]">
-              <div className="absolute -right-8 -bottom-8 opacity-10">
-                  <ShieldCheck className="w-48 h-48 text-white" />
+          <div className="bg-white/30 backdrop-blur-xl border border-border rounded-[56px] p-12 flex flex-col justify-between shadow-sm relative overflow-hidden h-[350px]">
+              <div className="absolute -right-12 -bottom-12 opacity-[0.02]">
+                  <ShieldCheck className="w-64 h-64 text-blue-600" />
               </div>
 
-              <div>
-                  <h3 className="text-xs font-black uppercase text-white/40 tracking-widest mb-8">Nível de Proteção</h3>
-                  {status === 'processing' && <p className="text-3xl font-black animate-pulse">Armando Escudos...</p>}
-                  {status === 'done' && <p className="text-3xl font-black text-cyan-400">Sucesso. Protegido.</p>}
-                  {status === 'error' && <p className="text-2xl font-black text-red-200 uppercase">{errorMsg}</p>}
-                  {status === 'idle' && <p className="text-3xl font-black opacity-30">Cofre Aberto</p>}
+              <div className="z-10">
+                  <h3 className="text-[10px] font-black uppercase text-blue-600/40 tracking-[0.2em] mb-10">{t('vaultStatus')}</h3>
+                  {status === 'processing' && <p className="text-4xl font-black text-blue-600 animate-pulse tracking-tighter">{t('arming')}</p>}
+                  {status === 'done' && <p className="text-4xl font-black text-green-500 tracking-tighter">{t('success')}</p>}
+                  {status === 'error' && <p className="text-xl font-black text-red-500 uppercase leading-relaxed">{errorMsg}</p>}
+                   {status === 'idle' && <p className="text-4xl font-black text-secondary/5 tracking-tighter">{t('standby')}</p>}
               </div>
 
-              <div className="pt-8 border-t border-white/10 flex items-center justify-between z-10">
-                  <div className="flex items-center gap-3">
-                      <div className="w-2 h-2 rounded-full bg-cyan-400 shadow-glow" />
-                      <span className="text-[10px] font-black uppercase tracking-widest text-white/60">FIPS 140-2 Compliant Logic</span>
+              <div className="pt-10 border-t border-border/50 flex items-center justify-between z-10">
+                  <div className="flex items-center gap-4">
+                      <div className={`w-2.5 h-2.5 rounded-full ${status === 'done' ? 'bg-green-500 shadow-[0_0_15px_rgba(34,197,94,0.6)]' : 'bg-blue-600 shadow-[0_0_15px_rgba(37,99,235,0.4)]'}`} />
+                      <span className="text-[10px] font-black uppercase tracking-widest text-secondary/40">{t('compliant')}</span>
                   </div>
-                  <SecurityBadge />
+                  <div className="bg-dark/5 px-4 py-2 rounded-xl border border-border flex items-center gap-3">
+                    <Lock className="w-3.5 h-3.5 text-secondary/20" />
+                    <span className="text-[10px] font-black uppercase text-secondary/40">{t('iterations')}</span>
+                  </div>
               </div>
           </div>
       </div>
     </div>
   );
-}
-
-function SecurityBadge() {
-    return (
-        <div className="bg-white/10 px-3 py-1.5 rounded-lg border border-white/10 flex items-center gap-2">
-            <Lock className="w-3 h-3 text-white/40" />
-            <span className="text-[9px] font-black uppercase text-white/60">600K Itr.</span>
-        </div>
-    );
 }

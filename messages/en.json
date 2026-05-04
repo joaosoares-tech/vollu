@@ -50,7 +50,14 @@
     "imageConverterTitle": "Image Converter",
     "imageConverterDesc": "Convert photos to next-gen formats: WebP and AVIF with 100% privacy.",
     "fileArmorTitle": "File Armor",
-    "fileArmorDesc": "Military-grade AES-GCM 256 encryption for files of any size, processed entirely in-browser."
+    "fileArmorDesc": "Military-grade AES-GCM 256 encryption for files of any size, processed entirely in-browser.",
+    "backgroundRemoverTitle": "AI Background Remover",
+    "backgroundRemoverDesc": "Powerful client-side IA to remove backgrounds from images instantly.",
+    "dnsCheckerTitle": "Global DNS Checker",
+    "dnsCheckerDesc": "Check DNS records across multiple global servers to detect propagation issues.",
+    "visualMtrTitle": "Visual MTR",
+    "visualMtrDesc": "Combine Traceroute and Ping to diagnose latency and packet loss issues.",
+    "noResults": "No tools found"
   },
   "PdfMerge": {
     "back": "Back to Tools",
@@ -63,7 +70,10 @@
     "success": "PDFs Merged Successfully!",
     "btnDownload": "Download PDF",
     "btnMore": "Merge More",
-    "trust": "Processed locally. No files are uploaded to our servers."
+    "trust": "Processed locally. No files are uploaded to our servers.",
+    "error": "An error occurred while merging the PDFs.",
+    "removeFile": "Remove file",
+    "mergedFilename": "merged_document.pdf"
   },
   "Layout": {
     "title": "Secure European Web Tools",
@@ -112,7 +122,11 @@
     "darkMuted": "Dark Muted",
     "lightVibrant": "Light Vibrant",
     "lightMuted": "Light Muted",
-    "loading": "Analyzing colors..."
+    "loading": "Analyzing colors...",
+    "changeImage": "Change Image",
+    "safeLocalAnalysis": "Safe Local Analysis",
+    "analysisDesc1": "This image is being processed entirely in your browser using the Vibrant engine.",
+    "analysisDesc2": "Colors are extracted in milliseconds without ever sending data to the cloud."
   },
   "Legal": {
     "backToTools": "Back to Tools",
@@ -140,7 +154,11 @@
     "btnSplit": "Split PDF Now",
     "btnSplitting": "Splitting locally...",
     "invalidRange": "Invalid page range format.",
-    "pageCount": "document has {count} pages"
+    "pageCount": "document has {count} pages",
+    "error": "Error loading PDF",
+    "rangeLabel": "Set Page Ranges",
+    "zipFilename": "split_files.zip",
+    "pdfFilename": "split_document.pdf"
   },
   "PDFToImage": {
     "title": "PDF to Image Converter",
@@ -148,7 +166,12 @@
     "btnConvert": "Convert to Images",
     "btnConverting": "Rendering pages {current}/{total}...",
     "downloadAll": "Download All (ZIP)",
-    "resolution": "High Resolution (300 DPI equivalent)"
+    "resolution": "High Resolution (300 DPI equivalent)",
+    "error": "Error converting PDF",
+    "imagesReady": "{count} images ready",
+    "readyToConvert": "Ready to convert",
+    "pageAlt": "Page {count}",
+    "filenameSuffix": "_images.zip"
   },
   "Security": {
     "title": "Protect & Unlock PDF",
@@ -158,7 +181,14 @@
     "password": "Password",
     "btnProtect": "Encrypt PDF",
     "btnUnlock": "Remove Protection",
-    "statusLocal": "File processed locally. No data was sent to the server."
+    "statusLocal": "File processed locally. No data was sent to the server.",
+    "error": "Error processing security",
+    "ready": "File is ready to secure",
+    "prompt": "Enter password to unlock",
+    "processing": "Processing Security...",
+    "protectedFilename": "protected.pdf",
+    "unlockedFilename": "unlocked.pdf",
+    "errorPassword": "Incorrect password or invalid file"
   },
   "MetadataCleaner": {
     "title": "Metadata Cleaner",
@@ -172,7 +202,9 @@
     "noTags": "No metadata tags found.",
     "originalSize": "Original Size",
     "newSize": "New Size",
-    "download": "Download Clean Image"
+    "download": "Download Clean Image",
+    "detectedMetadata": "Detected Metadata",
+    "moreTags": "+ {count} more tags..."
   },
   "QRGenerator": {
     "title": "Private QR Generator",
@@ -183,7 +215,8 @@
     "downloadSvg": "Download SVG",
     "options": "Options",
     "size": "Size",
-    "highQuality": "High Quality (1000px)"
+    "highQuality": "High Quality (1000px)",
+    "waitingInput": "Waiting for input..."
   },
   "HashVerifier": {
     "title": "File Hash Verifier",
@@ -195,7 +228,11 @@
     "copy": "Copy to clipboard",
     "copied": "Copied!",
     "match": "Match found",
-    "noMatch": "No match"
+    "noMatch": "No match",
+    "algoCalculation": "{algo} calculation",
+    "waiting": "Waiting...",
+    "compareHash": "Compare Hash",
+    "pasteExpected": "Paste expected hash here..."
   },
   "TextEncryptor": {
     "title": "Text Encryptor",
@@ -212,6 +249,18 @@
     "download": "Download Encrypted File",
     "result": "Decrypted Result",
     "errorPassword": "Invalid password or corrupted file.",
+    "errorEncryption": "Encryption failed. Check console for details.",
+    "errorFormat": "Invalid .vollu file format.",
+    "errorParse": "Could not parse .vollu file.",
+    "successEncrypt": "File Generated and Downloaded!",
+    "selectFile": "Select .vollu File",
+    "selectDesc": "Click to browse your encrypted notes",
+    "loaded": "File Loaded Successfully",
+    "remove": "Remove",
+    "decryptPlaceholder": "Enter decryption password...",
+    "startNew": "Start New",
+    "privacyTitle": "Privacy Guarantee",
+    "filenamePrefix": "secure_note_",
     "securityNote": "Encryption is performed entirely in your browser. VOLLU never sees your password or your data."
   },
   "TechConverter": {
@@ -237,7 +286,8 @@
     "tib": "Tebibytes (TiB)",
     "pib": "Pebibytes (PiB)",
     "copy": "Value Copied!",
-    "precision": "Developer-grade precision enabled."
+    "precision": "Developer-grade precision enabled.",
+    "zeroLossDesc": "Calculated in micro-seconds using math.js bignumber arithmetic to ensure zero precision loss across petabyte-scale conversions."
   },
   "FaviconGenerator": {
     "title": "Favicon Generator",
@@ -256,7 +306,8 @@
       "ico": "Classic Favicon (32x32)",
       "apple": "Apple Touch Icon (180x180)",
       "android": "Android Chrome Icon (512x512)"
-    }
+    },
+    "wakingHub": "WAKING UP DIGITAL ASSETS HUB"
   },
   "AudioExtractor": {
     "title": "Audio Extractor",
@@ -267,7 +318,15 @@
     "extractBtn": "Extract MP3",
     "extracting": "Extracting audio: {progress}%",
     "downloadMp3": "Download extracted MP3",
-    "formats": "Supports MP4, MOV, WebM, AVI"
+    "formats": "Supports MP4, MOV, WebM, AVI",
+    "errorFfmpeg": "Could not load FFmpeg. Ensure your browser supports SharedArrayBuffer (COOP/COEP).",
+    "errorProcess": "Error processing video. The file might be corrupted or in an unsupported format.",
+    "statusTitle": "STATUS & OUTPUT",
+    "processingStatus": "Processing high-fidelity discrete cosine transforms... Your browser is now a professional workstation.",
+    "idleStatus": "Extract audio tracks with professional LAME encoding quality. 100% Client-Side. High Privacy.",
+    "processLabel": "PROCESS",
+    "extracted": "Audio Extracted!",
+    "filenamePrefix": "extracted_"
   },
   "VolumeBooster": {
     "title": "Volume Booster",
@@ -278,30 +337,200 @@
     "normalizationDesc": "Prevents clipping and distorsion at high volumes.",
     "processBtn": "Boost Volume",
     "processing": "Boosting audio: {progress}%",
-    "downloadResult": "Download Processed File"
+    "downloadResult": "Download Processed File",
+    "loadingEngine": "Waking up FFmpeg engine...",
+    "ffmpegError": "Could not load FFmpeg. Check SharedArrayBuffer support.",
+    "processError": "Error boosting audio. Check file format support.",
+    "formats": "MP4, MOV, WebM, MP3, WAV",
+    "processingHub": "PROCESSING HUB",
+    "processDesc1": "Applying dynamic normalization and gain filters. This ensures high volume without peak clipping.",
+    "processDesc2": "Rescue low-volume recordings. Boost audio levels and apply smart normalization 100% locally.",
+    "statusBoosting": "BOOSTING",
+    "successTitle": "Audio Boosted!",
+    "successDesc": "Smart normalization applied"
   },
   "VideoToGif": {
     "title": "Video to GIF",
-    "description": "Convert video clips to high-quality GIFs with professional palette algorithms."
+    "description": "Convert video clips to high-quality GIFs with professional palette algorithms.",
+    "generateBtn": "Generate Animated GIF",
+    "uploadBtn": "Upload Video",
+    "processing": "PROCESSING...",
+    "segmentLabel": "Video Segment",
+    "settings": "Settings",
+    "resolutionLabel": "Output Resolution",
+    "fpsLabel": "Frames (FPS)",
+    "success": "GIF Generated!",
+    "paletteHint": "Optimized color palette",
+    "downloadBtn": "Download GIF",
+    "newBtn": "New Video",
+    "errorSize": "File too large for browser (Max 100MB)",
+    "errorConv": "Conversion error",
+    "errorInesp": "Unexpected error"
   },
   "Mp3Cutter": {
     "title": "MP3 Cutter",
-    "description": "Precision-cut audio files with millisecond accuracy and real-time waveform visualization."
+    "description": "Precision-cut audio files with millisecond accuracy and real-time waveform visualization.",
+    "playSelection": "Play Selection",
+    "cutBtn": "Cut Clip",
+    "visualizerLabel": "Waveform Visualization",
+    "processing": "PROCESSING...",
+    "selectingAudio": "Select Audio",
+    "settings": "Settings",
+    "fadeIn": "Fade In",
+    "fadeOut": "Fade Out",
+    "formatLabel": "Output Format",
+    "readyDownload": "Ready for Download",
+    "downloadBtn": "Download Clip"
   },
   "AudioConverter": {
     "title": "Audio Converter",
-    "description": "Batch conversion between MP3, WAV, and OGG with full bitrate control."
+    "description": "Batch conversion between MP3, WAV, and OGG with full bitrate control.",
+    "formatLabel": "Output Format",
+    "bitrateLabel": "Bitrate (Quality)",
+    "convertBtn": "Convert Queue",
+    "uploadBtn": "Upload Audio",
+    "queueTitle": "Processing Queue",
+    "clearBtn": "Clear All",
+    "dropHint": "Drag or Select Media",
+    "doneStatus": "Done",
+    "error": "Error",
+    "itemsCount": "{count} Items",
+    "optimized": "WASM Optimized"
   },
   "SmartCompressor": {
     "title": "Smart Compressor",
-    "description": "Optimize PNG, JPG, WebP, GIF, and SVG images with no visible quality loss."
+    "description": "Optimize PNG, JPG, WebP, GIF, and SVG images with no visible quality loss.",
+    "compressAll": "Optimize All",
+    "downloadZip": "Download ZIP",
+    "dropTitle": "Drop your images here",
+    "dropHint": "or click to select from your device",
+    "selectBtn": "Select Images",
+    "qualityLabel": "Target Quality",
+    "qualityHint": "Higher quality keeps more detail but results in larger files.",
+    "queueTitle": "File List",
+    "clearBtn": "Clear",
+    "addMore": "Add More",
+    "comparisonLabel": "Real-time comparison",
+    "savingLabel": "Saving of {percentage}%",
+    "original": "Original",
+    "optimized": "Optimized",
+    "sliderHint": "Use the center slider to compare quality",
+    "svgHint": "SVG assets are optimized without quality loss",
+    "emptyHint": "Select an image to preview"
   },
   "ImageConverter": {
     "title": "Image Converter",
-    "description": "Convert photos to next-gen formats: WebP and AVIF with 100% privacy."
+    "description": "Convert photos to next-gen formats: WebP and AVIF with 100% privacy.",
+    "formatLabel": "Target Format",
+    "avifBeta": "AVIF (Beta)",
+    "qualityLabel": "Quality",
+    "convertBtn": "Convert All",
+    "uploadBtn": "Upload Images",
+    "queueTitle": "Processing Queue",
+    "clearBtn": "Clear All",
+    "dropHint": "Drag or Select Images",
+    "downloadZip": "Download Batch (.zip)"
   },
   "FileArmor": {
     "title": "File Armor",
-    "description": "Military-grade AES-GCM 256 encryption for files of any size, processed entirely in-browser."
+    "description": "Military-grade AES-GCM 256 encryption for files of any size, processed entirely in-browser.",
+    "modeEncrypt": "Encrypt",
+    "modeDecrypt": "Decrypt",
+    "passwordLabel": "Access Key",
+    "passwordHint": "Minimum 8 characters",
+    "encryptBtn": "Start Encryption",
+    "decryptBtn": "Unlock",
+    "processing": "Processing...",
+    "titleBox": "File Vault",
+    "secureDesc": "100% secure in-browser encryption",
+    "readyLock": "Ready to Lock",
+    "lockedVault": "Locked Vault",
+    "changeFile": "Change File",
+    "secureStream": "Secure Local Stream Active",
+    "vaultStatus": "Vault Status",
+    "arming": "Arming...",
+    "success": "Success.",
+    "standby": "Standby",
+    "ramLabel": "RAM Management",
+    "ramDesc": "Incremental Streams (64KB chunks)",
+    "readyToLock": "Ready to Lock",
+    "processingLabel": "Processing",
+    "aesEngine": "AES-256-GCM Engine",
+    "pbkdf2Label": "PBKDF2 Derivation",
+    "compliant": "FIPS 140-2 Compliant",
+    "iterations": "600K Itr."
+  },
+  "BackgroundRemover": {
+    "title": "AI Background Remover",
+    "description": "Remove backgrounds from your images 100% in-browser using AI.",
+    "selectImage": "Select Image",
+    "dropHint": "Drop image here or click to browse",
+    "loadingModel": "Waking up AI model...",
+    "processing": "Removing background...",
+    "downloadPng": "Download Transparent PNG",
+    "original": "Original",
+    "result": "Result",
+    "refineEdge": "Refine Edge",
+    "error": "Failed to load AI model. Please try again or use a modern browser.",
+    "errorProcess": "Processing failed. Please try a smaller image.",
+    "aiSettings": "AI Settings",
+    "clientInference": "Client-Side Inference",
+    "removerBtn": "Remove Background",
+    "gpuWarning": "This tool uses GPU acceleration (WebGL). Larger images may take a few seconds to process.",
+    "engineActive": "AI Inference Engine Active",
+    "webglAccelerated": "WebGL Hardware Accelerated",
+    "processingHub": "PROCESSING HUB",
+    "processDesc1": "Isolating subject using MediaPipe Selfie Segmentation. No data leaves your device.",
+    "processDesc2": "High-performance AI segmentation running 100% locally in your browser.",
+    "statusIsolating": "ISOLATING",
+    "successTitle": "Background Removed!",
+    "successDesc": "AI Segmentation Complete"
+  },
+  "DnsChecker": {
+    "title": "Global DNS Checker",
+    "description": "Check DNS records across multiple global servers to detect propagation issues.",
+    "domainPlaceholder": "example.com",
+    "btnCheck": "Check Propagation",
+    "checking": "Querying...",
+    "records": {
+      "A": "A (IPv4)",
+      "AAAA": "AAAA (IPv6)",
+      "CNAME": "CNAME",
+      "TXT": "TXT",
+      "NS": "NS",
+      "MX": "MX"
+    },
+    "providerGoogle": "Google Public DNS",
+    "providerCloudflare": "Cloudflare DNS",
+    "providerQuad9": "Quad9",
+    "providerAlibaba": "Alibaba Cloud",
+    "statusSuccess": "Resolved",
+    "statusError": "Failed",
+    "noResults": "No records found"
+  },
+  "VisualMtr": {
+    "title": "Visual MTR",
+    "description": "Combine Traceroute and Ping to diagnose latency and packet loss issues.",
+    "targetPlaceholder": "8.8.8.8 or example.com",
+    "btnStart": "Start Diagnosis",
+    "running": "Tracing route...",
+    "hop": "Hop",
+    "host": "Host",
+    "loss": "Loss",
+    "avg": "Avg",
+    "last": "Last",
+    "best": "Best",
+    "worst": "Worst",
+    "stdev": "StDev",
+    "error": "Could not perform traceroute.",
+    "simulatedNote": "Note: This diagnosis is performed via global HTTP/HTTPS probes from your browser to identify latency across major CDNs and Gateways."
+  },
+  "Categories": {
+    "all": "All",
+    "pdf": "PDF & Documents",
+    "image": "Images & Design",
+    "video": "Video & Audio",
+    "security": "Security & Privacy",
+    "dev": "Development & Network"
   }
 }

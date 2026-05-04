@@ -43,7 +43,7 @@ export function AudioExtractorEngine() {
       setIsLoaded(true);
     } catch (err) {
       console.error('Failed to load FFmpeg:', err);
-      setError('Could not load FFmpeg. Ensure your browser supports SharedArrayBuffer (COOP/COEP).');
+      setError(t('errorFfmpeg'));
     }
   };
 
@@ -101,7 +101,7 @@ export function AudioExtractorEngine() {
       await ffmpeg.deleteFile(outputName);
     } catch (err) {
       console.error('Extraction error:', err);
-      setError('Error processing video. The file might be corrupted or in an unsupported format.');
+      setError(t('errorProcess'));
     } finally {
       setIsProcessing(false);
     }
@@ -203,7 +203,7 @@ export function AudioExtractorEngine() {
               <div className="space-y-6 relative z-10">
                 <h4 className="text-xs uppercase font-bold tracking-widest text-white/40 flex items-center gap-2">
                   <Sliders className="w-3 h-3 text-brand-light" />
-                  STATUS & OUTPUT
+                  {t('statusTitle')}
                 </h4>
 
                 {error ? (
@@ -215,14 +215,14 @@ export function AudioExtractorEngine() {
                   <div className="space-y-4">
                      <p className="text-[11px] text-white/30 leading-relaxed italic">
                         {isProcessing 
-                          ? "Processing high-fidelity discrete cosine transforms... Your browser is now a professional workstation." 
-                          : "Extract audio tracks with professional LAME encoding quality. 100% Client-Side. High Privacy."}
+                          ? t('processingStatus')
+                          : t('idleStatus')}
                      </p>
                      
                      {isProcessing && (
                        <div className="w-full space-y-2">
                           <div className="flex justify-between text-[10px] font-mono text-brand-light">
-                             <span>PROCESS</span>
+                             <span>{t('processLabel')}</span>
                              <span>{progress}%</span>
                           </div>
                           <div className="w-full h-1.5 bg-white/5 rounded-full overflow-hidden">
@@ -240,13 +240,13 @@ export function AudioExtractorEngine() {
                        <div className="w-16 h-16 rounded-full bg-brand/20 flex items-center justify-center border-2 border-brand/40 shadow-glow shadow-brand/10">
                           <Music className="w-8 h-8 text-brand-light animate-bounce" />
                        </div>
-                       <p className="text-sm font-bold text-white">Audio Extracted!</p>
+                       <p className="text-sm font-bold text-white">{t('extracted')}</p>
                        <audio src={resultUrl} controls className="w-full h-8 opacity-80" />
                     </div>
 
                     <a
                       href={resultUrl}
-                      download={`extracted_${file?.name.split('.')[0]}.mp3`}
+                      download={`${t('filenamePrefix')}${file?.name.split('.')[0]}.mp3`}
                       className="w-full bg-green-600 hover:bg-green-500 text-white font-bold py-4 rounded-2xl flex items-center justify-center gap-3 transition-all"
                     >
                       <Download className="w-5 h-5" />

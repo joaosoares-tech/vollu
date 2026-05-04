@@ -170,7 +170,7 @@ export function HashVerifierEngine() {
                 </div>
                 <div>
                   <p className="text-sm font-bold text-dark truncate max-w-[200px]">{file.name}</p>
-                  <p className="text-[10px] text-secondary font-bold uppercase">{algo} calculation</p>
+                  <p className="text-[10px] text-secondary font-bold uppercase">{t('algoCalculation', { algo })}</p>
                 </div>
               </div>
               <button 
@@ -201,7 +201,7 @@ export function HashVerifierEngine() {
                   "w-full p-5 rounded-2xl font-mono text-sm break-all transition-all border",
                   isProcessing ? "bg-[#f8fafc] text-secondary/30 italic" : "bg-white text-dark border-border shadow-sm"
                 )}>
-                  {isProcessing ? t('calculating') : (hash || 'Waiting...')}
+                  {isProcessing ? t('calculating') : (hash || t('waiting'))}
                 </div>
                 {isProcessing && (
                   <div className="absolute inset-0 flex items-center justify-end pr-5">
@@ -216,14 +216,14 @@ export function HashVerifierEngine() {
               <div className="space-y-3 animate-in fade-in slide-in-from-top-2 duration-500">
                 <div className="flex items-center gap-2 px-1">
                    <Search className="w-4 h-4 text-secondary" />
-                   <label className="text-[11px] font-bold text-secondary uppercase tracking-wider">Compare Hash</label>
+                   <label className="text-[11px] font-bold text-secondary uppercase tracking-wider">{t('compareHash')}</label>
                 </div>
                 <div className="relative">
                   <input 
                     type="text"
                     value={compareHash}
                     onChange={(e) => setCompareHash(e.target.value)}
-                    placeholder="Paste expected hash here..."
+                    placeholder={t('pasteExpected')}
                     className={cn(
                       "w-full h-14 px-5 rounded-2xl bg-white border outline-none transition-all text-sm font-mono",
                       compareHash 

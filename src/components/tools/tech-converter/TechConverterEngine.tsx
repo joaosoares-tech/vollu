@@ -241,7 +241,7 @@ export function TechConverterEngine() {
             <div className="mt-8 p-4 bg-brand/10 border border-brand/20 rounded-2xl flex items-center gap-4">
                <Zap className="w-5 h-5 text-brand-light flex-shrink-0 animate-pulse" />
                <p className="text-[11px] text-white/60 leading-relaxed font-mono italic">
-                 Calculated in micro-seconds using math.js bignumber arithmetic to ensure zero precision loss across petabyte-scale conversions.
+                 {t('zeroLossDesc')}
                </p>
             </div>
           </div>

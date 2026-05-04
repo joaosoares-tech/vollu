@@ -70,7 +70,7 @@ export function ProtectPDFEngine() {
         try {
           pdfDoc = await PDFDocument.load(arrayBuffer, { password });
         } catch (err) {
-          throw new Error('Incorrect password or invalid file');
+          throw new Error(t('errorPassword'));
         }
       }
 
@@ -78,7 +78,7 @@ export function ProtectPDFEngine() {
       const blob = new Blob([pdfBytes as any], { type: 'application/pdf' });
       setDownloadUrl(URL.createObjectURL(blob));
     } catch (err: any) {
-      setError(err.message || 'Error processing security');
+      setError(err.message || t('error'));
     } finally {
       setIsProcessing(false);
     }
@@ -143,7 +143,7 @@ export function ProtectPDFEngine() {
                 </div>
                 <div>
                   <p className="text-sm font-bold text-dark truncate max-w-[200px]">{file.name}</p>
-                  <p className="text-xs text-secondary">{mode === 'protect' ? 'File is ready to secure' : 'Enter password to unlock'}</p>
+                  <p className="text-xs text-secondary">{mode === 'protect' ? t('ready') : t('prompt')}</p>
                 </div>
               </div>
               <button 
@@ -194,12 +194,12 @@ export function ProtectPDFEngine() {
                   ) : (
                     mode === 'protect' ? <Lock className="w-5 h-5" /> : <Unlock className="w-5 h-5" />
                   )}
-                  {isProcessing ? 'Processing Security...' : (mode === 'protect' ? t('btnProtect') : t('btnUnlock'))}
+                  {isProcessing ? t('processing') : (mode === 'protect' ? t('btnProtect') : t('btnUnlock'))}
                 </button>
               ) : (
                 <a
                   href={downloadUrl}
-                  download={mode === 'protect' ? 'protected.pdf' : 'unlocked.pdf'}
+                  download={mode === 'protect' ? t('protectedFilename') : t('unlockedFilename')}
                   className="w-full h-16 rounded-2xl bg-gradient-to-r from-brand to-brand-light text-white font-bold text-lg shadow-xl shadow-brand/25 flex items-center justify-center gap-3 hover:scale-[1.02] active:scale-95 transition-all animate-glow-pulse"
                 >
                   <Download className="w-6 h-6" />

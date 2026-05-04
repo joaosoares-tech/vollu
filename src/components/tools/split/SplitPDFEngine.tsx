@@ -43,7 +43,7 @@ export function SplitPDFEngine() {
         const pdfDoc = await PDFDocument.load(arrayBuffer);
         setPageCount(pdfDoc.getPageCount());
       } catch (err) {
-        setError('Error loading PDF');
+        setError(t('error'));
       }
     }
   };
@@ -189,7 +189,7 @@ export function SplitPDFEngine() {
             <div className="space-y-3">
               <label className="text-sm font-bold text-dark flex items-center gap-2">
                 <Info className="w-4 h-4 text-brand" />
-                Set Page Ranges
+                {t('rangeLabel')}
               </label>
               <input 
                 type="text"
@@ -228,7 +228,7 @@ export function SplitPDFEngine() {
             ) : (
               <a
                 href={downloadUrl}
-                download={isZip ? 'split_files.zip' : 'split_module.pdf'}
+                download={isZip ? t('zipFilename') : t('pdfFilename')}
                 className="w-full h-16 rounded-2xl bg-gradient-to-r from-brand to-brand-light text-white font-bold text-lg shadow-xl shadow-brand/25 flex items-center justify-center gap-3 hover:scale-[1.02] active:scale-95 transition-all animate-glow-pulse"
               >
                 <Download className="w-6 h-6" />

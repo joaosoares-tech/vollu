@@ -40,8 +40,26 @@ export function SvgOptimizerEngine() {
   const [multipass, setMultipass] = useState(true);
   const [removeMetadata, setRemoveMetadata] = useState(true);
   const [previewId, setPreviewId] = useState<string | null>(null);
+  const [isDragging, setIsDragging] = useState(false);
 
   const fileInputRef = useRef<HTMLInputElement>(null);
+
+  const handleDragOver = (e: React.DragEvent) => {
+    e.preventDefault();
+    setIsDragging(true);
+  };
+
+  const handleDragLeave = () => {
+    setIsDragging(false);
+  };
+
+  const handleDrop = (e: React.DragEvent) => {
+    e.preventDefault();
+    setIsDragging(false);
+    if (e.dataTransfer.files) {
+      handleFiles(e.dataTransfer.files);
+    }
+  };
 
   const handleFiles = async (selectedFiles: FileList | File[]) => {
     setIsProcessing(true);
@@ -158,8 +176,16 @@ export function SvgOptimizerEngine() {
   const previewFile = files.find(f => f.id === previewId);
 
   return (
-    <div className="w-full max-w-4xl mx-auto space-y-8">
-      <div className="glass-card p-10 rounded-[32px] border border-[rgba(255,255,255,0.4)] shadow-2xl relative overflow-hidden animate-in fade-in duration-700">
+    <div 
+        onDragOver={handleDragOver}
+        onDragLeave={handleDragLeave}
+        onDrop={handleDrop}
+        className={cn("w-full max-w-4xl mx-auto space-y-8 transition-all", isDragging && "scale-[1.01]")}
+    >
+      <div className={cn(
+          "glass-card p-10 rounded-[32px] border shadow-2xl relative overflow-hidden animate-in fade-in duration-700 transition-colors",
+          isDragging ? "border-brand bg-brand/[0.05]" : "border-[rgba(255,255,255,0.4)]"
+      )}>
         
         {/* Header Section */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-10">
@@ -357,7 +383,8 @@ export function SvgOptimizerEngine() {
                </button>
                <button 
                  onClick={downloadAll}
-                 className="flex-1 h-16 rounded-2xl bg-brand text-white font-bold text-lg shadow-xl shadow-brand/25 flex items-center justify-center gap-3 hover:scale-[1.02] active:scale-95 transition-all group"
+                 disabled={isProcessing}
+                 className="flex-1 h-16 rounded-2xl bg-brand text-white font-bold text-lg shadow-xl shadow-brand/25 flex items-center justify-center gap-3 hover:scale-[1.02] active:scale-95 transition-all group disabled:opacity-50"
                >
                  <Download className="w-5 h-5 group-hover:translate-y-0.5 transition-transform" />
                  {files.length > 1 ? t('downloadZip') : t('download')}

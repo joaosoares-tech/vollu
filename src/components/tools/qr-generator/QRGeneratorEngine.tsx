@@ -146,7 +146,7 @@ export function QRGeneratorEngine() {
               ) : (
                 <div className="w-[256px] h-[256px] flex flex-col items-center justify-center gap-3 text-secondary/30">
                   <QrCode className="w-16 h-16 stroke-[1]" />
-                  <p className="text-xs font-medium italic">Waiting for input...</p>
+                  <p className="text-xs font-medium italic">{t('waitingInput')}</p>
                 </div>
               )}
             </div>

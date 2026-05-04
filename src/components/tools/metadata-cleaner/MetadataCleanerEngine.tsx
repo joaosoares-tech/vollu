@@ -196,7 +196,7 @@ export function MetadataCleanerEngine() {
               <div className="p-4 bg-white/50 rounded-2xl border border-border max-h-40 overflow-y-auto scrollbar-thin">
                 <div className="flex items-center gap-2 mb-3 text-[11px] font-bold text-secondary uppercase tracking-wider">
                   <Info className="w-3 h-3" />
-                  Detected Metadata
+                  {t('detectedMetadata')}
                 </div>
                 <div className="grid grid-cols-2 gap-x-6 gap-y-2">
                   {Object.entries(tags).slice(0, 20).map(([key, val]) => (
@@ -207,7 +207,7 @@ export function MetadataCleanerEngine() {
                   ))}
                   {tagCount > 20 && (
                     <div className="col-span-2 text-center text-[10px] text-secondary italic mt-1">
-                      + {tagCount - 20} more tags...
+                      {t('moreTags', { count: tagCount - 20 })}
                     </div>
                   )}
                 </div>

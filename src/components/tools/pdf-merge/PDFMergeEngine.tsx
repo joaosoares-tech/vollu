@@ -19,6 +19,7 @@ export function PDFMergeEngine() {
   const [isDragging, setIsDragging] = useState(false);
   const [isProcessing, setIsProcessing] = useState(false);
   const [resultUrl, setResultUrl] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleDragOver = (e: DragEvent<HTMLDivElement>) => {
@@ -51,6 +52,7 @@ export function PDFMergeEngine() {
     if (resultUrl) {
       URL.revokeObjectURL(resultUrl);
       setResultUrl(null);
+      setError(null);
     }
 
     const pdfFiles = newFiles.filter(file => file.type === 'application/pdf');
@@ -63,11 +65,13 @@ export function PDFMergeEngine() {
       file: file
     }));
 
+    setError(null);
     setFiles(prev => [...prev, ...addedFiles]);
   };
 
   const removeFile = (id: string) => {
     setFiles(prev => prev.filter(f => f.id !== id));
+    if (files.length <= 1) setError(null);
   };
 
   const handleMerge = async () => {
@@ -80,9 +84,10 @@ export function PDFMergeEngine() {
       
       const url = URL.createObjectURL(mergedBlob);
       setResultUrl(url);
+      setError(null);
     } catch (error) {
       console.error("Error merging PDFs:", error);
-      alert("An error occurred while merging the PDFs.");
+      setError(t('error'));
     } finally {
       setIsProcessing(false);
     }
@@ -133,6 +138,15 @@ export function PDFMergeEngine() {
           </div>
         )}
 
+        {error && (
+          <div className="mt-4 p-4 bg-red-50 border border-red-100 rounded-xl flex items-center gap-3 text-red-600 animate-in fade-in slide-in-from-top-2">
+            <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" />
+            </svg>
+            <p className="text-sm font-medium">{error}</p>
+          </div>
+        )}
+
         {/* File List */}
         {files.length > 0 && !resultUrl && (
           <div className="mt-8 space-y-3">
@@ -152,7 +166,7 @@ export function PDFMergeEngine() {
                       <p className="text-[12px] text-secondary">{formatSize(file.size)}</p>
                     </div>
                   </div>
-                  <button onClick={() => removeFile(file.id)} className="p-2 text-secondary hover:text-red-500 transition-colors" title="Remove file">
+                  <button onClick={() => removeFile(file.id)} className="p-2 text-secondary hover:text-red-500 transition-colors" title={t('removeFile')}>
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                     </svg>
@@ -193,7 +207,7 @@ export function PDFMergeEngine() {
             <div className="flex justify-center gap-4">
               <a 
                 href={resultUrl} 
-                download="merged_document.pdf"
+                download={t('mergedFilename')}
                 className="px-6 py-3 rounded-lg bg-brand text-white font-medium shadow-md hover:shadow-glow hover:-translate-y-0.5 transition-all text-sm flex items-center gap-2"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">

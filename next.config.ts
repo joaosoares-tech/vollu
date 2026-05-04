@@ -21,6 +21,7 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  transpilePackages: ["@tensorflow-models/body-segmentation", "@mediapipe/selfie_segmentation"],
 };
 
 export default withNextIntl(nextConfig);

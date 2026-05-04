@@ -163,7 +163,7 @@ export function ColorExtractorEngine() {
                           className="px-6 py-3 rounded-2xl bg-white text-dark font-bold text-sm flex items-center gap-2 hover:scale-105 active:scale-95 transition-all shadow-xl"
                         >
                            <RefreshCcw className="w-4 h-4" />
-                           Trocar Imagem
+                           {t('changeImage')}
                         </button>
                      </div>
                   </div>
@@ -173,9 +173,9 @@ export function ColorExtractorEngine() {
                         <ShieldCheck className="w-5 h-5 text-brand" />
                      </div>
                      <p className="text-[11px] font-medium text-secondary leading-relaxed">
-                        <span className="text-dark font-bold block mb-1">Análise Local Segura</span>
-                        Esta imagem está a ser processada inteiramente no seu navegador usando o motor Vibrant. 
-                        As cores são extraídas em milissegundos sem nunca enviar dados para a cloud.
+                        <span className="text-dark font-bold block mb-1">{t('safeLocalAnalysis')}</span>
+                        {t('analysisDesc1')} 
+                        {t('analysisDesc2')}
                      </p>
                   </div>
                </div>

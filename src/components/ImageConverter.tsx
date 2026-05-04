@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useRef, useEffect } from 'react';
+import { useTranslations } from 'next-intl';
 import { motion, AnimatePresence } from 'framer-motion';
 import JSZip from 'jszip';
 import { 
@@ -22,6 +23,7 @@ interface ConversionItem {
     file: File;
     originalUrl: string;
     convertedUrl: string | null;
+    convertedBlob: Blob | null;
     originalSize: number;
     convertedSize: number | null;
     status: 'idle' | 'processing' | 'done' | 'error';
@@ -29,18 +31,20 @@ interface ConversionItem {
 }
 
 export default function ImageConverter() {
+  const t = useTranslations('ImageConverter');
   const [items, setItems] = useState<ConversionItem[]>([]);
   const [quality, setQuality] = useState(80);
   const [globalFormat, setGlobalFormat] = useState<'webp' | 'avif'>('webp');
   const [isProcessingAll, setIsProcessingAll] = useState(false);
+  const [isDragging, setIsDragging] = useState(false);
   
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const files = Array.from(e.target.files || []);
+  const processFiles = (files: File[]) => {
     const newItems: ConversionItem[] = files.map(file => ({
         id: Math.random().toString(36).substring(7),
         file,
         originalUrl: URL.createObjectURL(file),
         convertedUrl: null,
+        convertedBlob: null,
         originalSize: file.size,
         convertedSize: null,
         status: 'idle',
@@ -49,7 +53,28 @@ export default function ImageConverter() {
     setItems(prev => [...prev, ...newItems]);
   };
 
-  const convertToWebP = async (file: File, q: number): Promise<Blob> => {
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const files = Array.from(e.target.files || []);
+    processFiles(files);
+  };
+
+  const handleDragOver = (e: React.DragEvent) => {
+    e.preventDefault();
+    setIsDragging(true);
+  };
+
+  const handleDragLeave = () => {
+    setIsDragging(false);
+  };
+
+  const handleDrop = (e: React.DragEvent) => {
+    e.preventDefault();
+    setIsDragging(false);
+    const files = Array.from(e.dataTransfer.files).filter(f => f.type.startsWith('image/'));
+    processFiles(files);
+  };
+
+  const convertImage = async (file: File, format: 'webp' | 'avif', q: number): Promise<Blob> => {
     return new Promise((resolve, reject) => {
         const img = new Image();
         img.onload = () => {
@@ -59,10 +84,14 @@ export default function ImageConverter() {
             const ctx = canvas.getContext('2d');
             if (!ctx) return reject('No context');
             ctx.drawImage(img, 0, 0);
+            
+            const mimeType = `image/${format}`;
             canvas.toBlob((blob) => {
-                if (blob) resolve(blob);
+                if (blob) {
+                    resolve(blob);
+                }
                 else reject('Conversion failed');
-            }, 'image/webp', q / 100);
+            }, mimeType, q / 100);
         };
         img.onerror = () => reject('Load failed');
         img.src = URL.createObjectURL(file);
@@ -81,20 +110,14 @@ export default function ImageConverter() {
         setItems(prev => prev.map(p => p.id === item.id ? { ...p, status: 'processing' } : p));
 
         try {
-            let resultBlob: Blob;
-            if (item.targetFormat === 'webp') {
-                resultBlob = await convertToWebP(item.file, quality);
-            } else {
-                // AVIF Placeholder: In a real app, this would use the WASM worker.
-                // For this demo, we'll use WebP as a high-quality fallback if WASM not loaded.
-                resultBlob = await convertToWebP(item.file, quality);
-            }
+            const resultBlob = await convertImage(item.file, item.targetFormat, quality);
             
             const convertedUrl = URL.createObjectURL(resultBlob);
             setItems(prev => prev.map(p => p.id === item.id ? { 
                 ...p, 
                 status: 'done', 
                 convertedUrl, 
+                convertedBlob: resultBlob,
                 convertedSize: resultBlob.size 
             } : p));
         } catch (err) {
@@ -105,33 +128,50 @@ export default function ImageConverter() {
   };
 
   const downloadAll = async () => {
+    if (items.length === 0) return;
     const zip = new JSZip();
+    let hasFiles = false;
+
     items.forEach(item => {
-        if (item.status === 'done' && item.convertedUrl) {
-            // Fetch blob and add to zip
+        if (item.status === 'done' && item.convertedBlob) {
+            const extension = item.targetFormat;
+            const fileName = item.file.name.split('.').slice(0, -1).join('.') || item.file.name;
+            zip.file(`${fileName}.${extension}`, item.convertedBlob);
+            hasFiles = true;
         }
     });
-    // ZIP logic...
+
+    if (hasFiles) {
+        const content = await zip.generateAsync({ type: 'blob' });
+        const url = URL.createObjectURL(content);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = `vollu-converted-images.zip`;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        setTimeout(() => URL.revokeObjectURL(url), 5000);
+    }
   };
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-6 min-h-screen bg-[#050811] text-white">
+    <div 
+        onDragOver={handleDragOver}
+        onDragLeave={handleDragLeave}
+        onDrop={handleDrop}
+        className="grid grid-cols-1 lg:grid-cols-3 gap-6 p-6 font-sans text-dark"
+    >
       {/* Settings Card */}
       <motion.div 
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
-        className="bg-white/5 backdrop-blur-3xl border border-blue-500/20 rounded-[32px] p-8 shadow-2xl flex flex-col"
+        className={`bg-white/30 backdrop-blur-xl border border-border rounded-[40px] p-8 shadow-sm flex flex-col transition-colors ${
+            isDragging ? 'bg-blue-50/20 border-blue-500' : ''
+        }`}
       >
-        <div className="mb-10">
-            <h1 className="text-3xl font-black bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent">
-                Image Converter
-            </h1>
-            <p className="text-blue-200/40 text-[10px] font-black uppercase tracking-widest mt-2 px-1">Next-Gen Web Formats</p>
-        </div>
-
-        <div className="space-y-8 flex-1">
+        <div className="space-y-10 flex-1">
             <div>
-                <label className="text-[10px] font-black uppercase text-blue-400 mb-4 block tracking-widest">Formato Alvo</label>
+                <label className="text-[10px] font-black uppercase text-blue-600 mb-5 block tracking-[0.2em]">{t('formatLabel')}</label>
                 <div className="grid grid-cols-2 gap-3">
                     {['webp', 'avif'].map((f) => (
                         <button
@@ -139,45 +179,45 @@ export default function ImageConverter() {
                             onClick={() => setGlobalFormat(f as any)}
                             className={`py-4 rounded-2xl text-xs font-black uppercase transition-all border ${
                                 globalFormat === f 
-                                ? 'bg-blue-600 border-blue-400 shadow-glow-sm' 
-                                : 'bg-white/5 border-white/5 hover:border-white/10 text-white/40'
+                                ? 'bg-blue-600 border-blue-400 text-white shadow-glow-sm' 
+                                : 'bg-white/40 border-border text-secondary/40 hover:border-blue-200'
                             }`}
                         >
-                            {f === 'avif' ? 'AVIF (Beta)' : 'WebP'}
+                            {f === 'avif' ? t('avifBeta') : 'WebP'}
                         </button>
                     ))}
                 </div>
             </div>
 
             <div>
-                <div className="flex justify-between items-center mb-4">
-                    <label className="text-[10px] font-black uppercase text-blue-400 tracking-widest">Qualidade</label>
-                    <span className="text-xs font-mono text-cyan-400">{quality}%</span>
+                <div className="flex justify-between items-center mb-5">
+                    <label className="text-[10px] font-black uppercase text-blue-600 tracking-[0.2em]">{t('qualityLabel')}</label>
+                    <span className="text-xs font-mono text-blue-600 font-bold">{quality}%</span>
                 </div>
                 <input 
                     type="range" min="1" max="100" 
                     value={quality} 
                     onChange={(e) => setQuality(parseInt(e.target.value))}
-                    className="w-full accent-cyan-400 h-1 bg-white/5 rounded-full appearance-none"
+                    className="w-full accent-blue-600 h-1.5 bg-dark/5 rounded-full appearance-none"
                 />
             </div>
 
-            <div className="pt-10">
+            <div className="pt-10 border-t border-border/50">
                 <button 
                     onClick={processBatch}
                     disabled={isProcessingAll || items.length === 0}
-                    className="w-full bg-gradient-to-br from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white py-5 rounded-2xl font-black uppercase text-sm flex items-center justify-center transition-all shadow-xl shadow-blue-900/20 disabled:opacity-20 active:scale-95"
+                    className="w-full bg-gradient-to-br from-blue-600 to-indigo-700 hover:from-blue-500 hover:to-indigo-600 text-white py-5 rounded-[24px] font-black uppercase text-sm flex items-center justify-center transition-all shadow-xl shadow-blue-900/20 disabled:opacity-20 active:scale-95"
                 >
                     {isProcessingAll ? <Loader2 className="w-5 h-5 animate-spin mr-3" /> : <RefreshCw className="w-5 h-5 mr-3" />}
-                    Converter Tudo
+                    {t('convertBtn')}
                 </button>
             </div>
         </div>
 
         <div className="mt-10">
-             <label className="cursor-pointer bg-white/5 hover:bg-white/10 border border-white/5 w-full h-14 rounded-2xl flex items-center justify-center font-bold text-xs transition-all uppercase tracking-widest text-blue-200/60">
+              <label className="cursor-pointer bg-dark/5 hover:bg-dark/10 border border-border w-full h-14 rounded-2xl flex items-center justify-center font-bold text-xs transition-all uppercase tracking-widest text-secondary/40">
                 <Upload className="w-4 h-4 mr-3" />
-                Upload Imagens
+                {t('uploadBtn')}
                 <input type="file" className="hidden" multiple accept="image/*" onChange={handleFileChange} />
              </label>
         </div>
@@ -188,25 +228,28 @@ export default function ImageConverter() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.1 }}
-        className="md:col-span-2 bg-[#0a0f1e]/80 backdrop-blur-xl border border-white/5 rounded-[40px] p-8 shadow-2xl relative overflow-hidden"
+        className="lg:col-span-2 bg-white/30 backdrop-blur-xl border border-border rounded-[48px] p-8 shadow-sm relative overflow-hidden h-[700px] flex flex-col"
       >
-        <div className="flex justify-between items-center mb-8 border-b border-white/5 pb-6">
-            <h2 className="font-black text-2xl tracking-tighter">Fila de Processamento</h2>
+        <div className="flex justify-between items-center mb-8 border-b border-border/50 pb-6">
+            <h2 className="font-black text-2xl tracking-tighter flex items-center">
+                {t('queueTitle')}
+                <span className="ml-4 bg-blue-600/10 text-blue-600 text-[10px] px-3 py-1 rounded-full font-black uppercase">{items.length} Imagens</span>
+            </h2>
             {items.length > 0 && (
                 <button 
                     onClick={() => setItems([])}
-                    className="text-[10px] font-black uppercase text-white/20 hover:text-red-400 transition-colors"
+                    className="text-[10px] font-black uppercase text-secondary/20 hover:text-red-500 transition-colors"
                 >
-                    Limpar Tudo
+                    {t('clearBtn')}
                 </button>
             )}
         </div>
 
-        <div className="space-y-4 max-h-[600px] overflow-y-auto pr-4 scrollbar-hide">
+        <div className="flex-1 overflow-y-auto pr-4 space-y-4 custom-scrollbar">
             {items.length === 0 && (
-                <div className="flex flex-col items-center justify-center h-[400px] text-white/5">
-                    <ImageIcon className="w-24 h-24 mb-6" />
-                    <p className="font-black uppercase tracking-[0.2em] text-xs">Arraste ou Selecione Ficheiros</p>
+                <div className="h-full flex flex-col items-center justify-center text-secondary/10 space-y-6">
+                    <ImageIcon className="w-32 h-32 opacity-5" />
+                    <p className="font-black uppercase tracking-[0.3em] text-xs">{t('dropHint')}</p>
                 </div>
             )}
 
@@ -214,46 +257,46 @@ export default function ImageConverter() {
                 {items.map((item) => (
                     <motion.div 
                         key={item.id}
-                        initial={{ opacity: 0, x: -10 }}
+                        initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 0, scale: 0.95 }}
-                        className="bg-white/5 border border-white/5 rounded-3xl p-5 flex items-center justify-between group hover:border-blue-500/30 transition-all"
+                        className="bg-white/40 border border-border/50 rounded-3xl p-5 flex items-center justify-between group hover:border-blue-500/30 transition-all shadow-sm"
                     >
                         <div className="flex items-center space-x-6 min-w-0">
-                            <div className="w-16 h-16 bg-black/40 rounded-2xl overflow-hidden flex-shrink-0 border border-white/5">
+                            <div className="w-16 h-16 bg-dark/5 rounded-2xl overflow-hidden flex-shrink-0 border border-border/50 group-hover:scale-105 transition-transform">
                                 <img src={item.originalUrl} className="w-full h-full object-cover" />
                             </div>
                             <div className="min-w-0">
-                                <p className="font-black text-sm truncate uppercase tracking-tighter mb-1">{item.file.name}</p>
-                                <div className="flex items-center space-x-3 text-[10px] font-bold text-white/30 truncate">
+                                <p className="font-black text-sm truncate uppercase tracking-tighter mb-1 text-dark">{item.file.name}</p>
+                                <div className="flex items-center space-x-3 text-[10px] font-bold text-secondary/30 uppercase tracking-widest truncate">
                                     <span>{(item.originalSize / 1024).toFixed(1)} KB</span>
-                                    <ArrowRight className="w-3 h-3" />
-                                    <span className="text-cyan-400 uppercase">{item.targetFormat}</span>
+                                    <ArrowRight className="w-3 h-3 text-blue-400" />
+                                    <span className="text-blue-600 font-black">{item.targetFormat}</span>
                                 </div>
                             </div>
                         </div>
 
-                        <div className="flex items-center space-x-6">
+                        <div className="flex items-center space-x-6 pl-4">
                             {item.status === 'done' && (
                                 <>
-                                    <div className="text-right">
-                                        <p className="text-[10px] font-black uppercase text-cyan-400 flex items-center">
+                                    <div className="text-right mr-2 hidden md:block">
+                                        <p className="text-[10px] font-black uppercase text-blue-600 flex items-center justify-end">
                                             <TrendingDown className="w-3 h-3 mr-1" />
                                             -{Math.round((1 - (item.convertedSize || 0) / item.originalSize) * 100)}%
                                         </p>
-                                        <p className="text-[9px] font-mono text-white/20">{(item.convertedSize! / 1024).toFixed(1)} KB</p>
+                                        <p className="text-[9px] font-mono text-secondary/20">{(item.convertedSize! / 1024).toFixed(1)} KB</p>
                                     </div>
                                     <a 
                                         href={item.convertedUrl!} 
                                         download={`converted-${item.file.name.split('.')[0]}.${item.targetFormat}`}
-                                        className="bg-blue-600/20 hover:bg-blue-600/40 text-blue-400 p-3 rounded-xl transition-all active:scale-90"
+                                        className="bg-blue-600/10 hover:bg-blue-600/30 text-blue-600 p-3 rounded-xl transition-all active:scale-90"
                                     >
-                                        <Download className="w-4 h-4" />
+                                        <Download className="w-5 h-5" />
                                     </a>
                                 </>
                             )}
                             {item.status === 'processing' && (
-                                <Loader2 className="w-6 h-6 text-blue-400 animate-spin" />
+                                <Loader2 className="w-6 h-6 text-blue-600 animate-spin" />
                             )}
                             {item.status === 'error' && (
                                 <AlertCircle className="w-6 h-6 text-red-500" />
@@ -264,13 +307,13 @@ export default function ImageConverter() {
             </AnimatePresence>
         </div>
 
-        {items.some(i => i.status === 'done') && (
-            <div className="absolute bottom-10 left-10 right-10">
+        {items.length > 0 && items.every(i => i.status === 'done' || i.status === 'error') && (
+            <div className="mt-8 pt-6 border-t border-border/50">
                  <button 
                   onClick={downloadAll}
-                  className="w-full bg-white text-black py-4 rounded-2xl font-black uppercase text-xs flex items-center justify-center hover:bg-white/90 transition-all shadow-2xl"
+                  className="w-full bg-dark text-white py-4 rounded-2xl font-black uppercase text-xs flex items-center justify-center hover:bg-dark/80 transition-all shadow-lg active:scale-95"
                  >
-                    <FileArchive className="w-4 h-4 mr-2" />
+                    <FileArchive className="w-4 h-4 mr-3" />
                     Download Lote (.zip)
                  </button>
             </div>

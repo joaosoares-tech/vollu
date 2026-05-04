@@ -45,7 +45,7 @@ export function VolumeBoosterEngine() {
       setIsLoaded(true);
     } catch (err) {
       console.error('Failed to load FFmpeg:', err);
-      setError('Could not load FFmpeg. Check SharedArrayBuffer support.');
+      setError(t('ffmpegError'));
     }
   };
 
@@ -109,7 +109,7 @@ export function VolumeBoosterEngine() {
       await ffmpeg.deleteFile(outputName);
     } catch (err) {
       console.error('Processing error:', err);
-      setError('Error boosting audio. Check file format support.');
+      setError(t('processError'));
     } finally {
       setIsProcessing(false);
     }
@@ -120,32 +120,32 @@ export function VolumeBoosterEngine() {
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
         
         {/* Input & Controls */}
-        <div className="lg:col-span-3 bg-[#0a0f1e]/90 backdrop-blur-xl rounded-[32px] border border-white/10 p-8 text-white relative min-h-[400px] flex flex-col justify-center">
+        <div className="lg:col-span-3 bg-white/30 backdrop-blur-xl rounded-[32px] border border-border p-8 text-dark relative min-h-[400px] flex flex-col justify-center">
           <div className="absolute top-0 right-0 p-8 opacity-5">
              <Volume2 className="w-32 h-32" />
           </div>
 
           {!file ? (
             <div className="relative group cursor-pointer" onClick={() => document.getElementById('volume-input')?.click()}>
-              <div className="flex flex-col items-center gap-6 p-12 border-2 border-dashed border-white/10 rounded-[28px] hover:border-brand-light/50 hover:bg-white/5 transition-all">
+              <div className="flex flex-col items-center gap-6 p-12 border-2 border-dashed border-border rounded-[28px] hover:border-brand-light/50 hover:bg-white/5 transition-all">
                  <div className="w-16 h-16 rounded-2xl bg-brand/20 flex items-center justify-center border border-brand/50 group-hover:scale-110 transition-transform shadow-glow shadow-brand/10">
                    <Maximize2 className="w-8 h-8 text-brand-light" />
                  </div>
                  <div className="text-center">
                    <p className="text-lg font-bold">{t('selectMedia')}</p>
-                   <p className="text-xs text-white/30 mt-2">MP4, MOV, WebM, MP3, WAV</p>
+                   <p className="text-xs text-secondary/40 mt-2">{t('formats')}</p>
                  </div>
               </div>
             </div>
           ) : (
             <div className="space-y-8 animate-in fade-in duration-500">
-               <div className="p-6 bg-white/5 border border-white/10 rounded-[24px] flex items-center gap-4">
+               <div className="p-6 bg-white/5 border border-border rounded-[24px] flex items-center gap-4">
                   <div className="w-12 h-12 rounded-xl bg-brand/10 flex items-center justify-center border border-brand/20">
                     {file.type.startsWith('video') ? <FileVideo className="w-6 h-6 text-brand" /> : <FileAudio className="w-6 h-6 text-brand" />}
                   </div>
                   <div className="min-w-0 flex-1">
                     <p className="text-sm font-bold truncate">{file.name}</p>
-                    <p className="text-[10px] text-white/40 uppercase font-mono">{(file.size / (1024 * 1024)).toFixed(2)} MB</p>
+                    <p className="text-[10px] text-secondary/40 uppercase font-mono">{(file.size / (1024 * 1024)).toFixed(2)} MB</p>
                   </div>
                   <button onClick={() => setFile(null)} className="p-2 hover:bg-red-500/20 hover:text-red-400 rounded-lg transition-colors">
                     <Check className="w-4 h-4 rotate-45" />
@@ -157,7 +157,7 @@ export function VolumeBoosterEngine() {
                   <div className="flex justify-between items-center px-1">
                     <div className="flex items-center gap-2">
                       <Activity className="w-3 h-3 text-brand-light" />
-                      <span className="text-[10px] uppercase font-bold tracking-widest text-white/40">{t('boostLabel')}</span>
+                      <span className="text-[10px] uppercase font-bold tracking-widest text-secondary/40">{t('boostLabel')}</span>
                     </div>
                     <span className="text-xl font-bold font-mono text-brand-light">{(volumeMult * 100).toFixed(0)}%</span>
                   </div>
@@ -170,7 +170,7 @@ export function VolumeBoosterEngine() {
                     onChange={(e) => setVolumeMult(parseFloat(e.target.value))}
                     className="w-full h-2 bg-white/10 rounded-lg appearance-none cursor-pointer accent-brand"
                   />
-                  <div className="flex justify-between text-[9px] font-mono text-white/20 px-1">
+                  <div className="flex justify-between text-[9px] font-mono text-secondary/20 px-1">
                     <span>100%</span>
                     <span>300%</span>
                     <span>500%</span>
@@ -178,16 +178,16 @@ export function VolumeBoosterEngine() {
                </div>
 
                {/* Normalization Toggle */}
-               <div className="flex items-center justify-between p-5 bg-white/5 border border-white/10 rounded-2xl">
+               <div className="flex items-center justify-between p-5 bg-white/5 border border-border rounded-2xl">
                   <div className="flex flex-col gap-1">
                     <span className="text-xs font-bold">{t('normalizationLabel')}</span>
-                    <span className="text-[10px] text-white/40">{t('normalizationDesc')}</span>
+                    <span className="text-[10px] text-secondary/40">{t('normalizationDesc')}</span>
                   </div>
                   <button
                     onClick={() => setUseNormalization(!useNormalization)}
                     className={cn(
                       "w-12 h-6 rounded-full p-1 transition-all flex items-center",
-                      useNormalization ? "bg-brand" : "bg-white/10"
+                      useNormalization ? "bg-brand" : "bg-dark/10"
                     )}
                   >
                     <div className={cn(
@@ -227,15 +227,15 @@ export function VolumeBoosterEngine() {
         {/* Info & Output area */}
         <div className="lg:col-span-2 space-y-6">
            {/* Output Card */}
-           <div className="h-full bg-[#1a1f2e] rounded-[32px] border border-white/5 p-8 flex flex-col group overflow-hidden relative">
+           <div className="h-full bg-white/30 backdrop-blur-xl rounded-[32px] border border-border p-8 flex flex-col group overflow-hidden relative">
               <div className="absolute -bottom-10 -right-10 opacity-5 group-hover:opacity-10 transition-all">
                 <Volume2 className="w-48 h-48" />
               </div>
 
               <div className="space-y-6 relative z-10 flex-1">
-                <h4 className="text-xs uppercase font-bold tracking-widest text-white/40 flex items-center gap-2">
+                <h4 className="text-xs uppercase font-bold tracking-widest text-secondary/40 flex items-center gap-2">
                   <Activity className="w-3 h-3 text-brand-light" />
-                  PROCESSING HUB
+                  {t('processingHub')}
                 </h4>
 
                 {error ? (
@@ -245,16 +245,16 @@ export function VolumeBoosterEngine() {
                   </div>
                 ) : !resultUrl ? (
                   <div className="space-y-4">
-                     <p className="text-[11px] text-white/30 leading-relaxed italic">
+                     <p className="text-[11px] text-secondary/30 leading-relaxed italic">
                         {isProcessing 
-                          ? "Applying dynamic normalization and gain filters. This ensures high volume without peak clipping." 
-                          : "Rescue low-volume recordings. Boost audio levels and apply smart normalization 100% locally."}
+                          ? t('processDesc1') 
+                          : t('processDesc2')}
                      </p>
                      
                      {isProcessing && (
                        <div className="w-full space-y-2 mt-8">
                           <div className="flex justify-between text-[10px] font-mono text-brand-light">
-                             <span>BOOSTING</span>
+                             <span>{t('statusBoosting')}</span>
                              <span>{progress}%</span>
                           </div>
                           <div className="w-full h-2 bg-white/5 rounded-full overflow-hidden border border-white/5 p-[1px]">
@@ -273,8 +273,8 @@ export function VolumeBoosterEngine() {
                           <Check className="w-10 h-10 text-brand-light" />
                        </div>
                        <div className="text-center">
-                          <p className="text-sm font-bold text-white">Audio Boosted!</p>
-                          <p className="text-[10px] text-white/40 uppercase font-mono mt-1">Smart normalization applied</p>
+                          <p className="text-sm font-bold text-dark">{t('successTitle')}</p>
+                          <p className="text-[10px] text-secondary/40 uppercase font-mono mt-1">{t('successDesc')}</p>
                        </div>
                        <audio src={resultUrl} controls className="w-full h-8 opacity-80" />
                     </div>
@@ -292,8 +292,8 @@ export function VolumeBoosterEngine() {
               </div>
 
               {!isLoaded && !error && (
-                <div className="mt-8 pt-6 border-t border-white/5">
-                   <div className="flex items-center gap-3 text-white/40">
+                <div className="mt-8 pt-6 border-t border-border">
+                   <div className="flex items-center gap-3 text-secondary/40">
                       <Loader2 className="w-4 h-4 animate-spin text-brand" />
                       <span className="text-[10px] font-mono uppercase tracking-widest">{t('loadingEngine')}</span>
                    </div>

@@ -92,7 +92,7 @@ export function PDFToImageEngine() {
       
       setImages(renderedImages);
     } catch (err) {
-      setError('Error converting PDF');
+      setError(t('error'));
       console.error(err);
     } finally {
       setIsProcessing(false);
@@ -112,7 +112,7 @@ export function PDFToImageEngine() {
     const url = URL.createObjectURL(content);
     const link = document.createElement('a');
     link.href = url;
-    link.download = `${file?.name?.replace('.pdf', '') || 'vollu'}_images.zip`;
+    link.download = `${file?.name?.replace('.pdf', '') || 'vollu'}${t('filenameSuffix')}`;
     link.click();
     URL.revokeObjectURL(url);
   };
@@ -168,7 +168,7 @@ export function PDFToImageEngine() {
                 </div>
                 <div>
                   <p className="text-sm font-bold text-dark truncate max-w-[200px]">{file.name}</p>
-                  <p className="text-xs text-secondary">{images.length > 0 ? `${images.length} images ready` : 'Ready to convert'}</p>
+                  <p className="text-xs text-secondary">{images.length > 0 ? t('imagesReady', { count: images.length }) : t('readyToConvert')}</p>
                 </div>
               </div>
               <button 
@@ -185,7 +185,7 @@ export function PDFToImageEngine() {
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-h-[300px] overflow-y-auto p-2 scrollbar-thin scrollbar-thumb-brand/20">
                 {images.map((src, i) => (
                   <div key={i} className="relative aspect-[3/4] group rounded-xl overflow-hidden border border-border shadow-sm">
-                    <img src={src} alt={`Page ${i+1}`} className="w-full h-full object-cover" />
+                    <img src={src} alt={t('pageAlt', { count: i + 1 })} className="w-full h-full object-cover" />
                     <div className="absolute inset-0 bg-brand/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                       <span className="bg-white/90 px-2 py-1 rounded text-[10px] font-bold text-brand shadow-sm">#{i+1}</span>
                     </div>
@@ -196,7 +196,7 @@ export function PDFToImageEngine() {
 
             {/* Action Area */}
             <div className="space-y-4">
-              {images.length === 0 ? (
+              {images.length === 0 || isProcessing ? (
                 <button
                   disabled={isProcessing}
                   onClick={convertToImages}

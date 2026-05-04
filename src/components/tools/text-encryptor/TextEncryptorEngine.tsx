@@ -102,7 +102,7 @@ export function TextEncryptorEngine() {
       
       const a = document.createElement('a');
       a.href = url;
-      a.download = `secure_note_${Date.now()}.vollu`;
+      a.download = `${t('filenamePrefix')}${Date.now()}.vollu`;
       a.click();
       URL.revokeObjectURL(url);
       
@@ -110,7 +110,7 @@ export function TextEncryptorEngine() {
       setText('');
       setPassword('');
     } catch (err) {
-      setError('Encryption failed. Check console for details.');
+      setError(t('errorEncryption'));
     } finally {
       setIsProcessing(false);
     }
@@ -127,10 +127,10 @@ export function TextEncryptorEngine() {
             setUploadedPack(pack);
             setError(null);
           } else {
-            setError('Invalid .vollu file format.');
+            setError(t('errorFormat'));
           }
         } catch (err) {
-          setError('Could not parse .vollu file.');
+          setError(t('errorParse'));
         }
       };
       reader.readAsText(file);
@@ -246,7 +246,7 @@ export function TextEncryptorEngine() {
             {success && (
               <div className="flex items-center gap-3 p-4 bg-green-50 rounded-2xl border border-green-200 animate-in fade-in slide-in-from-top-2">
                 <CheckCircle2 className="w-5 h-5 text-green-600" />
-                <p className="text-xs font-bold text-green-700">File Generated and Downloaded!</p>
+                <p className="text-xs font-bold text-green-700">{t('successEncrypt')}</p>
               </div>
             )}
           </div>
@@ -262,8 +262,8 @@ export function TextEncryptorEngine() {
                     <Upload className="w-8 h-8 text-secondary group-hover:text-brand" />
                   </div>
                   <div className="text-center">
-                    <p className="text-[17px] font-semibold text-dark mb-1">Select .vollu File</p>
-                    <p className="text-sm text-secondary">Click to browse your encrypted notes</p>
+                    <p className="text-[17px] font-semibold text-dark mb-1">{t('selectFile')}</p>
+                    <p className="text-sm text-secondary">{t('selectDesc')}</p>
                   </div>
                 </div>
               </div>
@@ -272,9 +272,9 @@ export function TextEncryptorEngine() {
                  <div className="p-4 bg-brand/5 rounded-2xl border border-brand/20 flex items-center justify-between">
                     <div className="flex items-center gap-3">
                        <FileText className="w-6 h-6 text-brand" />
-                       <span className="text-sm font-bold text-dark">File Loaded Successfully</span>
+                       <span className="text-sm font-bold text-dark">{t('loaded')}</span>
                     </div>
-                    <button onClick={reset} className="text-[10px] font-bold text-brand uppercase underline">Remove</button>
+                    <button onClick={reset} className="text-[10px] font-bold text-brand uppercase underline">{t('remove')}</button>
                  </div>
                  <div className="space-y-2">
                     <label className="text-xs font-bold text-secondary uppercase tracking-wider flex items-center gap-2 ml-1">
@@ -286,7 +286,7 @@ export function TextEncryptorEngine() {
                         type={showPassword ? 'text' : 'password'}
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
-                        placeholder="Enter decryption password..."
+                        placeholder={t('decryptPlaceholder')}
                         className="w-full h-14 pl-5 pr-12 rounded-2xl bg-[#f8fafc] border border-border focus:border-brand focus:ring-4 focus:ring-brand/5 outline-none transition-all text-dark font-bold font-mono"
                       />
                       <button
@@ -314,7 +314,7 @@ export function TextEncryptorEngine() {
                       onClick={reset}
                       className="text-[10px] font-bold text-brand uppercase underline"
                     >
-                      Start New
+                      {t('startNew')}
                     </button>
                  </div>
                  <div className="w-full h-64 p-6 rounded-2xl bg-white border border-brand/20 shadow-inner text-dark font-medium whitespace-pre-wrap overflow-y-auto">
@@ -341,7 +341,7 @@ export function TextEncryptorEngine() {
                 <ShieldCheck className="w-4 h-4 text-brand" />
              </div>
              <p className="text-[11px] leading-relaxed text-secondary italic">
-               <span className="font-bold text-dark not-italic block mb-1">Privacy Guarantee</span>
+               <span className="font-bold text-dark not-italic block mb-1">{t('privacyTitle')}</span>
                {t('securityNote')}
              </p>
           </div>
